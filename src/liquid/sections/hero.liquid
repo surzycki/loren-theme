@@ -1,0 +1,52 @@
+{% render 'hero' with {
+    settings: section.settings,
+    id: section.id
+} %}
+
+{% schema %}
+    {
+        "name": "Hero",
+        "settings": [
+                 {
+                    "type": "text",
+                    "id": "heading",
+                    "label": "Heading",
+                    "default": "New Heading"
+                  },
+                  {
+                    "type": "textarea",
+                    "id": "copy",
+                    "label": "Body Copy",
+                    "default": "Some copy"
+                  },
+                  {
+                    "type": "url",
+                    "id": "link_url",
+                    "label": "Link Url"
+                  },
+                  {
+                    "type": "text",
+                    "id": "link_text",
+                    "label": "Link Text",
+                    "default": "A link"
+                  },
+                  {
+                    "type": "image_picker",
+                    "id": "small_image",
+                    "label": "Small image",
+                    "info": "Dimensions: 768x768"
+                  },
+                  {
+                    "type": "image_picker",
+                    "id": "large_image",
+                    "label": "Large Image"
+                  }
+                ],
+        "presets": [
+                  {
+                    "name": "Hero",
+                    "category": "Image w/ text"
+                  }
+                ]
+    }
+{% endschema %}
