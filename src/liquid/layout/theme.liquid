@@ -13,11 +13,13 @@
   </head>
 
   <body>
-    <main>
-      {% section 'header' %}
+    {% section 'header' %}
+
+    <main class="content">
       {{ content_for_layout }}
-      {% section 'footer' %}
     </main>
+
+    {% section 'footer' %}
 
     <script src="{{ 'theme.js' | asset_url }}"></script>
   </body>

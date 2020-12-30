@@ -1,0 +1,83 @@
+<header class='sticky-top'>
+    <section class='bg-accent1 py-2'>
+        <div class='container'>
+            <div class='row d-flex'>
+                <div class='col-4'></div>
+                <div class='col-4 text-center text-white'>
+                    <strong>
+                        {{ 'general.notification.free_delivery' | t }}
+                    </strong>
+                </div>
+                <div class='col-4 text-end'>
+                    <a class='d-inline-block text-white' href=''>
+                        I
+                    </a>
+
+                    <a class='d-inline-block text-white' href=''>
+                        F
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class='mobile-container d-md-none'>
+        <input id='toggle' type='checkbox'>
+
+        <label class='toggle-container' for='toggle'>
+            <span class='button button-toggle'></span>
+        </label>
+
+        <nav class='mobile-nav'>
+            <a class='mobile-nav-item' href=''>
+                {{ 'general.navigation.our_coffee' | t }}
+            </a>
+            <a class='mobile-nav-item' href=''>
+                {{ 'general.navigation.value_chain' | t }}
+            </a>
+            <a class='mobile-nav-item' href=''>
+                {{ 'general.navigation.contact_us' | t  }}
+            </a>
+        </nav>
+
+        <div class='mobile-cart'>
+            Cart
+        </div>
+    </section>
+
+    <nav class='container d-none d-md-block'>
+        <div class='site-menu row justify-content-between align-items-center '>
+            <div class='col-4 justify-content-between d-flex'>
+                <a class='d-inline-block' href='#'>
+                    {{ 'general.navigation.our_coffee' | t }}
+                </a>
+
+                <a class='d-inline-block' href='#'>
+                    {{ 'general.navigation.value_chain' | t }}
+                </a>
+            </div>
+
+            <div class='col-4 text-center'>
+                Logo
+            </div>
+
+            <div class='col-4 justify-content-between d-flex'>
+                <a class='d-none d-lg-inline-block d-md-none' href='#'>
+                    {{ 'general.navigation.contact_us' | t  }}
+                </a>
+
+                <a class='d-md-inline-block d-lg-none' href='#'>
+                    {{ 'general.navigation.contact_us_shortened' | t  }}
+                </a>
+
+                <a class='d-inline-block' href='#'>
+                    <strong>
+                        {{ 'general.navigation.shopping_cart' | t  }}
+                    </strong>
+                </a>
+            </div>
+
+        </div>
+    </nav>
+</header>
+

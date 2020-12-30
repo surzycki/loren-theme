@@ -1,0 +1,14 @@
+{
+    "general": {
+        "notification": {
+            "free_delivery": "Livraison Gratuit"
+        },
+        "navigation": {
+            "our_coffee": "Nos Cafés",
+            "value_chain": "Chaîne de Valeur",
+            "contact_us": "Nous Contacter",
+            "contact_us_shortened": "Contact",
+            "shopping_cart": "Carrello (10)"
+        }
+    }
+}

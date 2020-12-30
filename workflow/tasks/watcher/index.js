@@ -39,6 +39,7 @@ const watcher = async () => {
 
   themekit.command('watch', {
     ignoredFiles: ['config/settings_data.json'],
+    allowLive: true
   });
 };
 

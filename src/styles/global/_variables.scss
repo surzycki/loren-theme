@@ -3,9 +3,31 @@ $primary-font-family: 'Articulat CF', sans-serif;
 $secondary-font-family: 'Rainer', serif;
 
 // colors
-$white: #FFFCF7;
-$black: #333333;
+// naming cooresponds with naming in source sketch file
+$background-light: #FFFCF7;
+$background-dark: #333333;
 
-$accent1: #F74300;
+$accent1: #F5460F;
 $accent2: #007D63;
 $accent3: #000000;
+
+// Bootstrap Override Variables
+// prevent warnings, by default, Bootstrap v5 sets 4.5 as the default value.
+// This value will cause color warnings.
+$white: #FFFCF7;
+$black: #000000;
+$body-color: $black;
+$body-bg: $background-light;
+$link-color: $black;
+
+$min-contrast-ratio: 4.0;
+
+$spacer: 1rem !default;
+$spacers: (
+  0: 0,
+  1: $spacer / 2,      // 8px
+  2: $spacer,          // 16px
+  3: $spacer * 1.5,    // 24px
+  4: $spacer * 2,      // 32px
+  5: $spacer * 3,      // 48px
+) !default;
