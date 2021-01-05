@@ -1,0 +1,22 @@
+footer {
+
+    .footer--title {
+        @include media-breakpoint-up(lg) {
+            width: 680px;
+        }
+
+        @include media-breakpoint-up(md) {
+            max-width: 680px;
+        }
+    }
+
+    ul {
+        a {
+            color: $white;
+            text-decoration: underline;
+            &:hover {
+                color: $white;
+            }
+        }
+    }
+}

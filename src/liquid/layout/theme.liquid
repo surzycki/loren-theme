@@ -13,9 +13,10 @@
   </head>
 
   <body>
+    {% include 'announcement-bar' %}
     {% section 'header' %}
 
-    <main class="content">
+    <main class="content pt-2">
       {{ content_for_layout }}
     </main>
 

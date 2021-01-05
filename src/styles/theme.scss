@@ -1,9 +1,14 @@
 @import './fonts';
-@import './global/variables';
+@import './variables';
 // When Sass is precompiled by its own CLI, it processes @imports by itself, and sometimes thus doesn’t understand ~ notation.
 // We will call node_modules directly.
 @import 'node_modules/bootstrap/scss/bootstrap';
+@import './typography';
+
 @import './components/navigation';
+@import './components/hero';
+@import './components/buttons';
+@import './components/footer';
 
 html {
     font-size: 16px;
@@ -16,6 +21,10 @@ body {
     passing: 0;
 }
 
+.container {
+  max-width: 1288px;
+}
+
 .bg-accent1 {
     background-color: $accent1;;
 }
@@ -23,20 +32,3 @@ body {
 // [class*=col-] {
 //     border: 1px solid #cccccc;
 // }
-
-.container {
-  max-width: 1288px;
-}
-
-.site-menu {
-    height: 96px;
-
-    a {
-        text-transform: uppercase;
-        text-decoration: none;
-
-        &:hover {
-            text-decoration: underline;
-        }
-    }
-}

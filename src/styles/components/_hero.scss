@@ -1,0 +1,13 @@
+.hero--subheading {
+    font-family: $primary-font-family;
+    font-size: 32px;
+    line-height: 40px;
+
+    @include media-breakpoint-up(lg) {
+        width: 912px;
+    }
+
+    @include media-breakpoint-up(md) {
+        max-width: 912px;
+    }
+}

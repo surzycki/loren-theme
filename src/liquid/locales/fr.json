@@ -9,6 +9,13 @@
             "contact_us": "Nous Contacter",
             "contact_us_shortened": "Contact",
             "shopping_cart": "Carrello (10)"
+        },
+        "hero": {
+            "title": "Espresso Biologico",
+            "sub_title": "Collection d’espressos italiens 100% biodégradables, respectueuse des artisans, pour chaque moment de la journée."
+        },
+        "button": {
+            "order_now": "Pré Commandez Maintenant"
         }
     }
 }

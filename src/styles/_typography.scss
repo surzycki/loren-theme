@@ -1,0 +1,46 @@
+.h1 {
+    font-family: $secondary-font-family;
+    font-size: 90px;
+    line-height: 96px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+
+.h2 {
+    font-family: $primary-font-family;
+    font-size: 20px;
+    line-height: 32px;
+    font-weight: 400;
+}
+
+
+.link-hover {
+    transition: all 0.1s ease-in-out;
+    position: relative;
+
+    &:before,
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: -1px;
+        width: 0px;
+        height: 2px;
+        transition: all 0.1s ease-in-out;
+        transition-duration: 0.2s;
+        opacity: 0;
+        background-color: $accent1;
+        left: 0;
+    }
+
+    &:hover {
+        text-decoration: none !important;
+        cursor: pointer;
+        &:before,
+        &:after {
+            width: 100%;
+            opacity: 1;
+           
+        }
+    }
+}
