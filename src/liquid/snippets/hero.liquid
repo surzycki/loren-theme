@@ -1,17 +1,20 @@
-<section class='container text-center'>
-    <h1 class='h1 mb-6'>
+<section class='container text-start text-sm-center d-flex flex-column pt-4 pt-sm-2'>
+    <h1 class='h1 mb-2 mb-sm-6 order-2 order-sm-0'>
         {{ 'general.hero.title' | t }}
     </h1>
 
-    <div style='max-width: 600px; height: 328px' class='mx-auto bg-secondary mb-5'>
-        IMAGE
+    <div class='mx-sm-auto mb-2 mb-sm-3 order-1 text-center ms-n1'>
+        <img class='img-fluid' src="{{ 'product-mattino.png' | asset_img_url: 'master' }}"
+             srcset="{{ 'product-mattino@2x.png' | asset_img_url: 'master' }} 2x,
+                  {{ 'product-mattino@3x.png' | asset_img_url: 'master' }} 3x"
+             alt='Mattino'>
     </div>
 
-    <h2 class='hero--subheading mb-4 mx-auto'>
+    <h2 class='h2 hero--subheading mb-5 mx-auto order-3 order-sm-2'>
         {{ 'general.hero.sub_title' | t }}
     </h2>
 
-    <a class='button--order mb-9' href='#'>
+    <a class='button--order mb-7 order-4' href='#'>
         {{ 'general.button.order_now' | t }}
     </a>
 </section>

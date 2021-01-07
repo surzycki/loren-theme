@@ -31,16 +31,16 @@ $transition-delay: 0.05s;
 }
 
 .mobile-logo {
-  position: absolute;
-  width: 200px;
-  top: 4px;
-  left: 50%;
-  margin-left: -100px;
-  text-align: center;
+    position: absolute;
+    width: 200px;
+    top: 8px;
+    left: 50%;
+    margin-left: -100px;
+    text-align: center;
 
-  img {
-    width: 86px;
-  }
+    img {
+//      width: 72px;
+    }
 }
 
 #toggle {
@@ -99,13 +99,6 @@ $transition-delay: 0.05s;
     }
   }
 
-  //& ~ .content {
-    //padding-top: 30px;
-
-   // &:before {
-   //   background-color: rgba(0, 0, 0, 0.0);
-   // }
-  //}
 }
 
 

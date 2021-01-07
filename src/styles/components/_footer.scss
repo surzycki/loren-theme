@@ -2,10 +2,10 @@ footer {
 
     .footer--title {
         @include media-breakpoint-up(lg) {
-            width: 680px;
+            max-width: 768px;
         }
 
-        @include media-breakpoint-up(md) {
+        @include media-breakpoint-down(md) {
             max-width: 680px;
         }
     }

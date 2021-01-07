@@ -9,11 +9,17 @@
             </div>
             <div class='col-md-4 text-end'>
                 <a class='d-none d-md-inline-block text-white' href='https://www.instagram.com/piu.cafe/' target='_blank'>
-                    {{ 'icon-instagram.png' | asset_img_url: '40x' | img_tag: 'Instagram' }}
+                    <img src="{{ 'icon-instagram.png' | asset_img_url: 'master' }}"
+                         srcset="{{ 'icon-instagram@2x.png' | asset_img_url: 'master' }} 2x,
+                              {{ 'icon-instgram@3x.png' | asset_img_url: 'master' }} 3x"
+                         alt='Instgram'>
                 </a>
 
                 <a class='d-none d-md-inline-block text-white me-n1' href='https://www.facebook.com/piu.cafe.italien' target='_blank'>
-                    {{ 'icon-facebook.png' | asset_img_url: '40x' | img_tag: 'Facebook' }}
+                    <img src="{{ 'icon-facebook.png' | asset_img_url: 'master' }}"
+                         srcset="{{ 'icon-facebook@2x.png' | asset_img_url: 'master' }} 2x,
+                              {{ 'icon-facebook@3x.png' | asset_img_url: 'master' }} 3x"
+                         alt='Facebook'>
                 </a>
             </div>
         </div>

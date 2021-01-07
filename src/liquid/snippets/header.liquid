@@ -1,4 +1,4 @@
-<header>
+<header class='mb-6 mb-sm-2'>
     <section class='mobile-container d-md-none bg-white'>
         <input id='toggle' type='checkbox'>
 
@@ -8,59 +8,76 @@
 
 
         <nav class='mobile-nav'>
-            <a class='mobile-nav-item' href=''>
-                {{ 'general.navigation.our_coffee' | t }}
-            </a>
-            <a class='mobile-nav-item' href=''>
-                {{ 'general.navigation.value_chain' | t }}
-            </a>
-            <a class='mobile-nav-item' href=''>
-                {{ 'general.navigation.contact_us' | t  }}
-            </a>
+            {% for link in linklists.main-menu.links %}
+                {% assign key = link.title | handleize %}
+                <a class='mobile-nav-item' href='{{ link.url }}'>
+                    {{ 'general.navigation.' | append: key | t }}
+                </a>
+            {% endfor %}
         </nav>
 
 
         <div class='mobile-logo'>
             <a href='/'>
-                {{ 'logo-dark.png' | asset_img_url: 'master' | img_tag: 'Piu Cafe' }}
+                <img src="{{ 'logo-dark@2x.png' | asset_img_url: '72x' }}"
+                    srcset="{{ 'logo-dark@2x.png' | asset_img_url: 'master' }} 2x,
+                        {{ 'logo-dark@3x.png' | asset_img_url: 'master' }} 3x"
+                    alt='Piu Cafe'>
             </a>
         </div>
 
         <div class='mobile-cart'>
-            Cart
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
+                <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
+            </svg>
         </div>
     </section>
 
     <nav class='container d-none d-md-block bg-white'>
         <div class='site-menu row justify-content-between align-items-center '>
-            <div class='col-4 justify-content-between d-flex'>
-                <a class='d-inline-block link-hover' href='#'>
-                    {{ 'general.navigation.our_coffee' | t }}
+            {% assign ourCoffeeLink = linklists.main-menu.links | where: "title", "Our Coffee" | first %}
+            {% assign valueChainLink = linklists.main-menu.links | where: "title", "Value Chain" | first %}
+            {% assign contactUsLink = linklists.main-menu.links | where: "title", "Contact Us" | first %}
+
+            <div class='col-3 justify-content-between d-flex'>
+                <a class='d-inline-block link-hover {% if ourCoffeeLink.current %} current {% endif %}'
+                   href='{{ ourCoffeeLink.url }}'
+                >
+                    {{ 'general.navigation.our-coffee' | t }}
                 </a>
 
-                <a class='d-inline-block link-hover' href='#'>
-                    {{ 'general.navigation.value_chain' | t }}
+                <a class='d-inline-block link-hover {% if valueChainLink.current %} current {% endif %}'
+                   href='{{ valueChainLink.url }}'
+                >
+                    {{ 'general.navigation.value-chain' | t }}
                 </a>
             </div>
 
-            <div class='col-4 text-center'>
+            <div class='col-6 text-center'>
                 <a href='/'>
-                    {{ 'logo-dark.png' | asset_img_url: '86x' | img_tag: 'Piu Cafe' }}
+                    <img src="{{ 'logo-dark@2x.png' | asset_img_url: '86x' }}"
+                         srcset="{{ 'logo-dark@2x.png' | asset_img_url: 'master' }} 2x,
+                            {{ 'logo-dark@3x.png' | asset_img_url: 'master' }} 3x"
+                         alt='Piu Cafe'>
                 </a>
             </div>
 
-            <div class='col-4 justify-content-between d-flex'>
-                <a class='d-none d-lg-inline-block d-md-none link-hover' href='#'>
-                    {{ 'general.navigation.contact_us' | t  }}
+            <div class='col-3 justify-content-between d-flex'>
+                <a class='d-none d-lg-inline-block d-md-none link-hover {% if contactUsLink.current %} current {% endif %}'
+                   href='{{ contactUsLink.url }}'
+                >
+                    {{ 'general.navigation.contact-us' | t  }}
                 </a>
 
-                <a class='d-md-inline-block d-lg-none link-hover' href='#'>
-                    {{ 'general.navigation.contact_us_shortened' | t  }}
+                <a class='d-md-inline-block d-lg-none link-hover {% if contactUsLink.current %} current {% endif %}'
+                   href='{{ contactUsLink.url  }}'
+                >
+                    {{ 'general.navigation.contact-us-shortened' | t  }}
                 </a>
 
                 <a class='d-inline-block link-hover' href='#'>
                     <strong>
-                        {{ 'general.navigation.shopping_cart' | t  }}
+                        {{ 'general.navigation.shopping-cart' | t  }}
                     </strong>
                 </a>
             </div>

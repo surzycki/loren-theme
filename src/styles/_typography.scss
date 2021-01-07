@@ -1,9 +1,16 @@
+
 .h1 {
     font-family: $secondary-font-family;
-    font-size: 90px;
-    line-height: 96px;
-    font-weight: 400;
-    letter-spacing: 1px;
+    font-size: 72px;
+    line-height: 80px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+
+
+    @include media-breakpoint-up(sm) {
+        font-size: 90px;
+        line-height: 96px;
+    }
 }
 
 
@@ -12,6 +19,33 @@
     font-size: 20px;
     line-height: 32px;
     font-weight: 400;
+
+    &.hero--subheading {
+        font-size: 24px;
+        line-height: 32px;
+
+        @include media-breakpoint-up(md) {
+            font-size: 30px;
+            line-height: 40px;
+        }
+    }
+
+    &.footer--title {
+        font-size: 24px;
+        line-height: 40px;
+    }
+}
+
+.h3 {
+    &.hero--list {
+        font-size: 24px;
+        line-height: 32px;
+
+        @include media-breakpoint-up(md) {
+            font-size: 30px;
+            line-height: 40px;
+        }
+    }
 }
 
 
@@ -41,6 +75,15 @@
             width: 100%;
             opacity: 1;
            
+        }
+    }
+
+    &.current {
+        cursor: default;
+        &:before,
+        &:after {
+            width: 100%;
+            opacity: 1;
         }
     }
 }

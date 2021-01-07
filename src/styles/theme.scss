@@ -9,6 +9,7 @@
 @import './components/hero';
 @import './components/buttons';
 @import './components/footer';
+@import './components/product_card';
 
 html {
     font-size: 16px;
@@ -21,12 +22,26 @@ body {
     passing: 0;
 }
 
+hr {
+    margin: 0;
+    opacity: 1;
+    background-color: #dedede;
+}
+
+ul, ol, dl {
+    margin: 0;
+}
+
 .container {
   max-width: 1288px;
 }
 
 .bg-accent1 {
-    background-color: $accent1;;
+    background-color: $accent1;
+}
+
+.text-accent1 {
+    color: $accent1;
 }
 
 // [class*=col-] {

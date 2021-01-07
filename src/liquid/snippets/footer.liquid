@@ -1,79 +1,89 @@
 <hr class='mb-16'/>
 
-<footer class='text-start text-md-center'>
-    <section class='container'>
+<footer class='text-start text-sm-center'>
+    <section class='container text-center'>
         <div class='mb-3'>
-            LOGO
+            <a href='/'>
+                <img src="{{ 'logo-dark@2x.png' | asset_img_url: '86x' }}"
+                     srcset="{{ 'logo-dark@2x.png' | asset_img_url: 'master' }} 2x,
+                          {{ 'logo-dark@3x.png' | asset_img_url: 'master' }} 3x"
+                     alt='Piu Cafe'>
+            </a>
         </div>
 
-        <h2 class='h2 footer--title mb-5 mx-auto'>
+        <h2 class='h2 footer--title mb-6 mx-auto'>
             {{ 'general.hero.sub_title' | t }}
         </h2>
 
-        <a class='button--order mb-16' href='#'>
+        <a class='button--order mb-19' href='#'>
             {{ 'general.button.order_now' | t }}
         </a>
 
-        <div class='mb-3'>&nbsp;</div>
     </section>
 
     <section class='bg-accent1 text-white'>
         <div class='container'>
-            <div class='row'>
-                <div class='col-sm-6 col-md-4 pt-5 py-md-12'>
+            <div class='row mb-3'>
+                <div class='col-sm-6 col-md-4 pt-5 pt-md-12'>
                     <ul class='list-unstyled fs-5'>
                         <li class='mb-3'>
                             <a href='#'>
-                                Conditions générales
+                                {{ 'general.footer.general_conditions' | t }}
                             </a>
                         </li>
                         <li class='mb-3'>
                             <a href='#'>
-                              Politique de confidentialité
+                                {{ 'general.footer.privacy_policy' | t }}
                             </a>
                         </li>
                         <li class='mb-3'>
                             <a href='#'>
-                              Mentions légales
+                                {{ 'general.footer.legal' | t }}
                             </a>
                         </li>
                     </ul>
                 </div>
 
-                <div class='d-none d-md-block col-md-4 py-8'>
-                    <div>
-                        Voyez ce que nous faisons
+                <div class='d-none d-md-block col-md-4 pt-8'>
+                    <div class='mb-3 fs-5'>
+                        {{ 'general.footer.what_we_do' | t }}
                     </div>
                     <div>
-                        <span>FB</span>
-                        <span>IN</span>
+                        <span class='px-2'>
+                            <img src="{{ 'icon-facebook-lg.png' | asset_img_url: 'master' }}"
+                                 srcset="{{ 'icon-facebook-lg@2x.png' | asset_img_url: 'master' }} 2x,
+                                      {{ 'icon-facebook@3x.png' | asset_img_url: 'master' }} 3x"
+                                 alt='Facebook'/>
+                        </span>
+                        <span class='px-2'>
+                            <img src="{{ 'icon-instagram-lg.png' | asset_img_url: 'master' }}"
+                                 srcset="{{ 'icon-instagram-lg@2x.png' | asset_img_url: 'master' }} 2x,
+                                      {{ 'icon-instagram-lg@3x.png' | asset_img_url: 'master' }} 3x"
+                                 alt='Instagram'/>
+                        </span>
                     </div>
                 </div>
 
-                <div class='col-sm-6 col-md-4 pt-sm-5 py-md-12'>
+                <div class='col-sm-6 col-md-4 pt-sm-5 pt-md-12'>
                     <ul class='list-unstyled fs-5'>
-                        <li class='mb-3'>
-                            <a href='#'>
-                                {{ 'general.navigation.our_coffee' | t }}
-                            </a>
-                        </li>
-                        <li class='mb-3'>
-                            <a href='#'>
-                                {{ 'general.navigation.value_chain' | t }}
-                            </a>
-                        </li>
-                        <li class='mb-3'>
-                            <a href='#'>
-                                {{ 'general.navigation.contact_us' | t  }}
-                            </a>
-                        </li>
+                        {% for link in linklists.main-menu.links %}
+                            {% assign key = link.title | handleize %}
+                            <li class='mb-3'>
+                                <a href='{{ link.url }}'>
+                                    {{ 'general.navigation.' | append: key | t }}
+                                </a>
+                            </li>
+                        {%  endfor %}
                     </ul>
                 </div>
             </div>
             <div class='row'>
-                <div class='col text-start text-md-center mb-1'>
+                <div class='col text-start text-sm-center mb-1'>
+                    <div class='fs-5 mb-1'>
+                        Copyright &copy; {{ 'now' | date: '%Y' }} CFC SAS.
+                    </div>
                     <div class='fs-6'>
-                        Copyright &copy; {{ 'now' | date: '%Y' }} CFC SAS. Made with ♡ by Più
+                        Made with ♡ by Più
                     </div>
                 </div>
             </div>

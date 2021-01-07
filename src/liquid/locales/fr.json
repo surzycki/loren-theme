@@ -4,18 +4,36 @@
             "free_delivery": "Livraison Gratuit"
         },
         "navigation": {
-            "our_coffee": "Nos Cafés",
-            "value_chain": "Chaîne de Valeur",
-            "contact_us": "Nous Contacter",
-            "contact_us_shortened": "Contact",
-            "shopping_cart": "Carrello (10)"
+            "our-coffee": "Nos Cafés",
+            "value-chain": "Chaîne de Valeur",
+            "contact-us": "Nous Contacter",
+            "contact-us-shortened": "Contact",
+            "shopping-cart": "Carrello (10)"
         },
         "hero": {
             "title": "Espresso Biologico",
             "sub_title": "Collection d’espressos italiens 100% biodégradables, respectueuse des artisans, pour chaque moment de la journée."
         },
+        "featured_products": {
+            "title": {
+                "every_hour": "Chaque Heure,",
+                "intensity": "La Bonne Intensité"
+            }
+        },
+        "engagements": {
+            "title": "Nos Engagements",
+            "capsule": "Des capsules compostables, 100% biodégradables.",
+            "free-trade": "Des cafés biologiques issus du commerce équitable.",
+            "recycle": "Un packaging entièrement recyclable."
+        },
         "button": {
             "order_now": "Pré Commandez Maintenant"
+        },
+        "footer": {
+            "general_conditions": "Conditions générales",
+            "privacy_policy": "Politique de confidentialité",
+            "legal":"Mentions légales",
+            "what_we_do": "Voyez ce que nous faisons"
         }
     }
 }

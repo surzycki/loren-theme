@@ -1,0 +1,16 @@
+{% assign image = 'icon-' | append: key %}
+
+<div class='row text-center text-md-start mb-5'>
+    <div class='col-12 col-md-2 mb-2 mb-md-0 pt-md-1'>
+        <img src="{{ image | append: '.png' | asset_img_url: 'master' }}"
+            srcset="{{ image | append: '@2x.png' | asset_img_url: 'master' }} 2x,
+                {{ image | append: '@3x.png' | asset_img_url: 'master' }} 3x"
+            alt='{{ key }}'
+            class='img-fluid'/>
+    </div>
+    <div class='col-12 col-md-9'>
+        <h3 class='h3 hero--list px-2 px-sm-8 px-md-0 ms-md-n1'>
+            {{ 'general.engagements.' | append: key | t }}
+        </h3>
+    </div>
+</div>
