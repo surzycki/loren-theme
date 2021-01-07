@@ -26,21 +26,14 @@
             <div class='row mb-3'>
                 <div class='col-sm-6 col-md-4 pt-5 pt-md-12'>
                     <ul class='list-unstyled fs-5'>
-                        <li class='mb-3'>
-                            <a href='#'>
-                                {{ 'general.footer.general_conditions' | t }}
-                            </a>
-                        </li>
-                        <li class='mb-3'>
-                            <a href='#'>
-                                {{ 'general.footer.privacy_policy' | t }}
-                            </a>
-                        </li>
-                        <li class='mb-3'>
-                            <a href='#'>
-                                {{ 'general.footer.legal' | t }}
-                            </a>
-                        </li>
+                        {% for link in linklists.footer.links %}
+                            {% assign key = link.title | handleize %}
+                            <li class='mb-3'>
+                                <a href='{{ link.url }}'>
+                                    {{ 'general.footer.' | append: key | t }}
+                                </a>
+                            </li>
+                        {%  endfor %}
                     </ul>
                 </div>
 
@@ -49,18 +42,22 @@
                         {{ 'general.footer.what_we_do' | t }}
                     </div>
                     <div>
-                        <span class='px-2'>
-                            <img src="{{ 'icon-facebook-lg.png' | asset_img_url: 'master' }}"
-                                 srcset="{{ 'icon-facebook-lg@2x.png' | asset_img_url: 'master' }} 2x,
-                                      {{ 'icon-facebook@3x.png' | asset_img_url: 'master' }} 3x"
-                                 alt='Facebook'/>
-                        </span>
-                        <span class='px-2'>
-                            <img src="{{ 'icon-instagram-lg.png' | asset_img_url: 'master' }}"
-                                 srcset="{{ 'icon-instagram-lg@2x.png' | asset_img_url: 'master' }} 2x,
-                                      {{ 'icon-instagram-lg@3x.png' | asset_img_url: 'master' }} 3x"
-                                 alt='Instagram'/>
-                        </span>
+                        <a href='https://www.facebook.com/piu.cafe.italien' target='_blank'>
+                            <span class='px-2'>
+                                <img src="{{ 'icon-facebook-lg.png' | asset_img_url: 'master' }}"
+                                    srcset="{{ 'icon-facebook-lg@2x.png' | asset_img_url: 'master' }} 2x,
+                                        {{ 'icon-facebook@3x.png' | asset_img_url: 'master' }} 3x"
+                                    alt='Facebook'/>
+                            </span>
+                        </a>
+                        <a href='https://www.instagram.com/piu.cafe/' target='_blank'>
+                            <span class='px-2'>
+                                <img src="{{ 'icon-instagram-lg.png' | asset_img_url: 'master' }}"
+                                    srcset="{{ 'icon-instagram-lg@2x.png' | asset_img_url: 'master' }} 2x,
+                                        {{ 'icon-instagram-lg@3x.png' | asset_img_url: 'master' }} 3x"
+                                    alt='Instagram'/>
+                            </span>
+                        </a>
                     </div>
                 </div>
 

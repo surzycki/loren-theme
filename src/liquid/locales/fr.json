@@ -30,9 +30,9 @@
             "order_now": "Pré Commandez Maintenant"
         },
         "footer": {
-            "general_conditions": "Conditions générales",
-            "privacy_policy": "Politique de confidentialité",
-            "legal":"Mentions légales",
+            "terms-of-service": "Conditions générales",
+            "privacy-policy": "Politique de confidentialité",
+            "legal-notice":"Mentions légales",
             "what_we_do": "Voyez ce que nous faisons"
         }
     }
