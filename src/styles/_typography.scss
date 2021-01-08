@@ -4,7 +4,7 @@
     font-size: 72px;
     line-height: 80px;
     font-weight: 700;
-    letter-spacing: 0.8px;
+    letter-spacing: 1.2px;
 
 
     @include media-breakpoint-up(sm) {
@@ -19,6 +19,11 @@
     font-size: 20px;
     line-height: 32px;
     font-weight: 400;
+
+    &.hero {
+        font-size: 30px;
+        line-height: 40px;
+    }
 
     &.hero--subheading {
         font-size: 24px;
@@ -48,6 +53,9 @@
     }
 }
 
+p {
+    margin: 0;
+}
 
 .link-hover {
     transition: all 0.1s ease-in-out;

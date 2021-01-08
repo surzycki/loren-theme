@@ -1,0 +1,44 @@
+{% assign modulo = forloop.index | modulo: 2 %}
+
+{% if forloop.index != 3 %}
+<div class='row mb-22'>
+{% else %}
+<div class='row mb-15'>
+{% endif %}
+    {% if modulo == 0 %}
+    <div class='col-12 col-md-7 ps-12 order-last'>
+    {% else %}
+    <div class='col-12 col-md-7 pe-12'>
+    {% endif %}
+        <img src="{{ product.featured_image | img_url: 'master' }}"
+             srcset="{{ product.featured_image | img_url: 'master', scale: 2 }} 2x,
+                  {{ product.featured_image | img_url: 'master', scale: 3 }} 3x"
+             alt="{{ product.featured_image.alt }}"
+             class='img-fluid'/>
+    </div>
+
+    {% if modulo == 0 %}
+    <div class='col-12 col-md-5 text-start order-end'>
+    {% else %}
+    <div class='col-12 col-md-5 text-end'>
+    {% endif %}
+
+        {% assign description = product.description | split: '<!-- section -->' %}
+
+        <h1 class='h1 mb-1'>
+            {{ product.title }}
+        </h1>
+
+        <h2 class='h2 mb-2'>
+            {{ description[3] }}
+        </h2>
+
+        {% if modulo == 0 %}
+        <p class='pe-2'>
+        {% else %}
+        <p class='ps-2'>
+        {% endif %}
+            {{ description[2] }}
+        </p>
+    </div>
+</div>

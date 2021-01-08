@@ -6,8 +6,9 @@
              alt="{{ product.featured_image.alt }}"
              class='img-fluid mb-1'/>
 
-        <p class='pe-3 pe-sm-0 px-xl-3 text-start text-sm-center'>
-            {{ product.description  }}
+        <p class='pe-3 pe-sm-0 px-xl-3 text-start text-sm-center' style='letter-spacing: 0px;'>
+            {% assign description = product.description | split: '<!-- section -->' %}
+            {{ description[1] }}
         </p>
     </div>
 </div>
