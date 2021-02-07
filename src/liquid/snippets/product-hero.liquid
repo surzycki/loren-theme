@@ -10,11 +10,13 @@
     {% else %}
     <div class='col-12 col-md-7 pe-12'>
     {% endif %}
+    <a href={{ product.url }}>
         <img src="{{ product.featured_image | img_url: 'master' }}"
-             srcset="{{ product.featured_image | img_url: 'master', scale: 2 }} 2x,
-                  {{ product.featured_image | img_url: 'master', scale: 3 }} 3x"
-             alt="{{ product.featured_image.alt }}"
-             class='img-fluid'/>
+                srcset="{{ product.featured_image | img_url: 'master', scale: 2 }} 2x,
+                    {{ product.featured_image | img_url: 'master', scale: 3 }} 3x"
+                alt="{{ product.featured_image.alt }}"
+                class='img-fluid'/>
+    </a>
     </div>
 
     {% if modulo == 0 %}
@@ -26,7 +28,9 @@
         {% assign description = product.description | split: '<!-- section -->' %}
 
         <h1 class='h1 mb-1'>
-            {{ product.title }}
+            <a href={{ product.url }}>
+                {{ product.title }}
+            </a>
         </h1>
 
         <h2 class='h2 mb-2'>
