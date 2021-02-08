@@ -1,5 +1,5 @@
 const example = () => {
-  console.info('This is an example to show the use of import/export syntax.')
+  console.info("Hi is an example to show the use of import/export syntax.");
 };
 
 export default example;

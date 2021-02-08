@@ -888,6 +888,11 @@
   resolved "https://registry.yarnpkg.com/@rollup/stream/-/stream-1.1.0.tgz#9e57fab95421c64346f0d813efa66f2e5a36a9fb"
   integrity sha512-agGnt8GhRPo3C5RIJIA7cI7DW3vGj1k4xKCxx2qQgYk1pE4mzupPhsbDHD1waVNc4U6cav7EzQ55MN5OS3zBWg==
 
+"@shopify/theme-cart@^4.1.0":
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/@shopify/theme-cart/-/theme-cart-4.1.0.tgz#eca2f2985a46af5c4d40f54be8db2b244edc1fc0"
+  integrity sha512-g4A88V+CrnkHu1JtwB+r/MakJs9DBvHBzafYwijFhK13D959HhG4DYOD475JSted0QReft+ce4F7z5/cA5vIBw==
+
 "@shopify/themekit@^1.1.6":
   version "1.1.6"
   resolved "https://registry.yarnpkg.com/@shopify/themekit/-/themekit-1.1.6.tgz#7c9438b49a394633a1268213b782515bfc077dab"
@@ -2153,6 +2158,11 @@ es6-iterator@^2.0.1, es6-iterator@^2.0.3, es6-iterator@~2.0.3:
     d "1"
     es5-ext "^0.10.35"
     es6-symbol "^3.1.1"
+
+es6-promise@^4.2.8:
+  version "4.2.8"
+  resolved "https://registry.yarnpkg.com/es6-promise/-/es6-promise-4.2.8.tgz#4eb21594c972bc40553d276e510539143db53e0a"
+  integrity sha512-HJDGx5daxeIvxdBxvG2cb9g4tEvwIk3i8+nhX0yGrYmZUzbkdg8QbDevheDB8gd0//uPj4c1EQua8Q+MViT0/w==
 
 es6-symbol@^3.1.1, es6-symbol@~3.1.3:
   version "3.1.3"
@@ -5337,6 +5347,11 @@ undertaker@^1.2.1:
     object.defaults "^1.0.0"
     object.reduce "^1.0.0"
     undertaker-registry "^1.0.0"
+
+unfetch@^4.2.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/unfetch/-/unfetch-4.2.0.tgz#7e21b0ef7d363d8d9af0fb929a5555f6ef97a3be"
+  integrity sha512-F9p7yYCn6cIW9El1zi0HI6vqpeIvBsr3dSuRO6Xuppb1u5rXpCPmMvLSyECLhybr9isec8Ohl0hPekMVrEinDA==
 
 unicode-canonical-property-names-ecmascript@^1.0.4:
   version "1.0.4"
