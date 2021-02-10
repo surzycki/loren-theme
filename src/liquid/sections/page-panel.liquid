@@ -1,0 +1,35 @@
+<section class='container mb-8'>
+    <div class='row'>
+        <div class='col-12 col-md-6 text-start'>
+            <div class='h2 hero pt-2'>
+                {{ section.settings.panel_content }}
+            </div>
+        </div>
+
+        <div class='col-12 col-md-6 text-end'>
+            <img class='lazy-loaded' src='https://via.placeholder.com/578x384' data-lazy-type='image' data-src='https://via.placeholder.com/578x384'/>
+        </div>
+    </div>
+</section>
+
+<hr class='mb-10'/>
+{% schema %}
+    {
+      "name": "Page Panel",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "panel_content",
+          "default": "This is Panel Content",
+          "label": "Panel Content"
+        }
+
+      ],
+      "presets": [
+        {
+          "name": "Page Panel",
+          "category": "Pages"
+        }
+      ]
+    }
+{% endschema %}
