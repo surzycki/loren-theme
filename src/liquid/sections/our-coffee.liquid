@@ -1,0 +1,105 @@
+{% for block in section.blocks %}
+    {% case block.type %}
+    {% when 'horizontal-line' %}
+    {% render 'horizontal-line' with {
+        settings: block.settings
+        } %}
+    {% when 'tag-line' %}
+    {% render 'tag-line' %}
+    {% when 'coffee-hero' %}
+    {% render 'coffee-hero' with {
+        settings: block.settings
+        } %}
+    {% when 'product-panel' %}
+    {% render 'product-panel' with {
+        settings: block.settings
+        product: all_products[block.settings.product]
+        } %}
+    {% endcase %}
+{% endfor %}
+
+
+{% schema %}
+                {
+                  "blocks": [
+                    {
+                      "type": "coffee-hero",
+                      "name": "Coffee Hero",
+                      "settings": [
+                        {
+                          "type": "text",
+                          "id": "title",
+                          "default": "Le Parfait Équilibre",
+                          "label": "Title"
+                        },
+                        {
+                          "type": "textarea",
+                          "id": "content",
+                          "label": "Content"
+                        },
+                        {
+                          "type": "image_picker",
+                          "id": "image",
+                          "label": "Image",
+                          "info": "Dimensions: 624x624"
+                        },
+                        {
+                          "type": "textarea",
+                          "id": "testimonial_content",
+                          "label": "Testimonial Content"
+                        },
+                        {
+                          "type": "text",
+                          "id": "testimonial_author",
+                          "default": "Author",
+                          "label": "Testimonial Author"
+                        },
+                        {
+                          "type": "image_picker",
+                          "id": "testimonial_image",
+                          "label": "Image",
+                          "info": "Dimensions: 64x64"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "product-panel",
+                      "name": "Product Panel",
+                      "settings": [
+                        {
+                          "type": "product",
+                          "id": "product",
+                          "label": "Product"
+                        },
+                        {
+                          "type": "radio",
+                          "id": "position",
+                          "label": "Position",
+                          "options": [
+                            { "value": "left", "label": "Left" },
+                            { "value": "right", "label": "Right" }
+                          ],
+                          "default": "left"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "tag-line",
+                      "name": "Tag Line",
+                      "settings": []
+                    },
+                    {
+                      "type": "horizontal-line",
+                      "name": "Horizontal Line",
+                      "settings": [
+                        {
+                          "type": "text",
+                          "id": "margin",
+                          "default": "0",
+                          "label": "Top margin"
+                        }
+                      ]
+                    }
+                  ]
+                }
+{% endschema %}

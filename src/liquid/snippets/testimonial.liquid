@@ -1,17 +1,17 @@
 <div class='d-flex'>
     <div class='flex-shrink-0'>
-        <img src="{{ 'image-profile.png' | asset_img_url: 'master' }}"
-             srcset="{{ 'image-profile@2x.png' | asset_img_url: 'master' }} 2x,
-                  {{ 'image-profile@3x.png' | asset_img_url: 'master' }} 3x"
+        <img src="{{ image | img_url: '64x64' }}"
+             srcset="{{ image | img_url: '64x64', scale: 2, format: 'pjpg' }} 2x,
+                  {{ image | img_url: '64x64', scale: 3, format: 'pjpg' }} 3x"
              alt='Expert'>
     </div>
     <div class='flex-grow-1 ps-2 fs-5' style='margin-top: -4px;'>
         <p>
-            Lorem ipsum dolor, consectetur adipiscing elit, sed do incididunt ut labore Ut enim ad minim veniam, quis nostrud
+            {{ content  }}
         </p>
 
         <p style='margin-top: 4px; letter-spacing: 0px'>
-            <strong>Antonio Giuseppe, Levalo</strong>
+            <strong>{{ author }}</strong>
         </p>
     </div>
 </div>

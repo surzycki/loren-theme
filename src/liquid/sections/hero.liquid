@@ -1,12 +1,15 @@
-{% render 'hero' %}
+{% render 'hero' with {
+    product: all_products[section.settings.product]
+} %}
 
 {% schema %}
                 {
                   "name": "Hero",
                   "settings":[
                     {
-                      "type": "header",
-                      "content": "Hero"
+                      "type": "product",
+                      "id": "product",
+                      "label": "Product"
                     }
                   ],
                   "presets": [

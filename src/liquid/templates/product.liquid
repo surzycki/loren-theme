@@ -18,15 +18,15 @@
                 {{ description[3] }}
             </h2>
 
-                <h3 class='h3'>
-                    <strong>
-                        {{ product.price | money  }}
-                    </strong>
-                </h3>
+            <!-- <h3 class='h3'>
+                 <strong>
+                 {{ product.price | money  }}
+                 </strong>
+                 </h3> -->
                 <div class='mb-4'>
                     <small class='mb-4'>
                         <strong>
-                            10 capsules
+                            Étui de 10 capsules: {{ (product.price | times: 10 | money  }}
                         </strong>
                     </small>
                 </div>
