@@ -35,7 +35,11 @@
                 {{ description[2] }}
             </p>
 
-
+            <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
+            {% render 'react-cart-control' with {
+                variant_id: product.variants.first.id,
+                price: product.price
+            }%}
         </div>
     </div>
 

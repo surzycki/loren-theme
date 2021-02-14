@@ -75,10 +75,9 @@
                     {{ 'general.navigation.contact-us-shortened' | t  }}
                 </a>
 
-                <a class='d-inline-block link-hover' href='#'>
-                    <strong>
-                        {{ 'general.navigation.shopping-cart' | t  }} ({{ cart.item_count }})
-                    </strong>
+                <a class='d-inline-block link-hover fw-bold' href={{ routes.cart_url }}>
+                    {{ 'general.navigation.shopping-cart' | t  }}
+                    (<span id='desktop-cart-count'>{{ cart.item_count }}</span>)
                 </a>
             </div>
 

@@ -35,5 +35,10 @@
       "legal-notice": "Mentions légales",
       "what_we_do": "Voyez ce que nous faisons"
     }
+  },
+  "cart": {
+    "general": {
+      "checkout": "Checkout"
+    }
   }
 }
