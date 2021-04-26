@@ -13,22 +13,22 @@
   }
 }
 
-.featured-products {
-  .col-12:nth-child(1) {
-    .product-card {
-      @include media-breakpoint-up(md) {
-        margin-right: auto;
-        margin-left: inherit;
-      }
-    }
-  }
+// .featured-products {
+//   .col-12:nth-child(1) {
+//     .product-card {
+//       @include media-breakpoint-up(md) {
+//         margin-right: auto;
+//         margin-left: inherit;
+//       }
+//     }
+//   }
 
-  .col-12:nth-child(3) {
-    .product-card {
-      @include media-breakpoint-up(md) {
-        margin-right: inherit;
-        margin-left: auto;
-      }
-    }
-  }
-}
+//   .col-12:nth-child(3) {
+//     .product-card {
+//       @include media-breakpoint-up(md) {
+//         margin-right: inherit;
+//         margin-left: auto;
+//       }
+//     }
+//   }
+// }

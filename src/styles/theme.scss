@@ -8,7 +8,8 @@
 @import "./effects";
 
 @import "./components/fullpage_landing";
-@import "./components/navigation";
+@import "./components/fullpage_landing";
+@import "./components/engagements";
 @import "./components/hero";
 @import "./components/buttons";
 @import "./components/footer";
@@ -46,6 +47,10 @@ dl {
 
 .bg-accent1 {
   background-color: $accent1;
+}
+
+.bg-accent3 {
+  background-color: $accent3;
 }
 
 .text-accent1 {

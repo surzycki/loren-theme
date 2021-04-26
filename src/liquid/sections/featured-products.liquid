@@ -1,11 +1,11 @@
-<section class='container pt-10'>
+<section class='container pt-10 pb-14'>
     <h1 class='h1 mb-12 text-center'>
         <span class='text-accent1'>{{ 'general.featured-products.title.every-hour' | t }}</span>
         <br/>
         <span>{{ 'general.featured-products.title.intensity' | t }}</span>
     </h1>
 
-    <div class='row featured-products'>
+    <div class='row'>
         {% render 'featured-product' for collections[section.settings.collection].products as product  %}
     </div>
 </section>
@@ -24,7 +24,7 @@
                   "presets": [
                     {
                       "name": "Featured Products",
-                      "category": "Products Display"
+                      "category": "Landing Page"
                     }
                   ]
                 }

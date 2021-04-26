@@ -1,10 +1,7 @@
-<hr/>
-
 {% render: 'engagements' with {
-    settings: section.settings
+    settings: section.settings,
+    id: section.id
 } %}
-
-<hr/>
 
 {% schema %}
                 {
@@ -19,7 +16,7 @@
                   "presets": [
                     {
                       "name": "Engagements",
-                      "category": "Information"
+                      "category": "Landing Page"
                     }
                   ]
                 }
