@@ -1,10 +1,12 @@
 @import "./fonts";
 @import "./variables";
-// When Sass is precompiled by its own CLI, it processes @imports by itself, and sometimes thus doesn’t understand ~ notation.
-// We will call node_modules directly.
+// When Sass is precompiled by its own CLI, it processes @imports by itself, and
+// sometimes thus doesn’t understand ~ notation. We will call node_modules directly.
 @import "node_modules/bootstrap/scss/bootstrap";
+
 @import "./typography";
 
+@import "./components/fullpage-landing";
 @import "./components/navigation";
 @import "./components/hero";
 @import "./components/buttons";
@@ -13,14 +15,16 @@
 @import "./components/tag_line";
 
 html {
+  height: 100%;
   font-size: 16px;
 }
 
 body {
+  height: 100%;
   font-family: $primary-font-family;
   line-height: 24px;
   margin: 0;
-  passing: 0;
+  padding: 0;
 }
 
 hr {

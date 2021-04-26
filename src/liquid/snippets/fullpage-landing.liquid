@@ -1,0 +1,26 @@
+{% comment %}
+Requries the following arguments:
+
+- settings: what are settings?
+- id:
+{% endcomment %}
+
+<style>
+  .fullpage-landing--{{ id  }} {
+     background-image: url({{settings.desktop_image | img_url: 'master'}})
+  }
+</style>
+
+<section class="fullpage-landing fullpage-landing--{{ id }}">
+    <div class='container'>
+        {% render 'header' %}
+
+        <h1 class='h1 hero brand'>
+            {{ 'general.hero.title' | t }}
+        </h1>
+
+        <h2 class='h2'>
+            {{ 'general.hero.sub_title' | t }}
+        </h2>
+    </div>
+</section>

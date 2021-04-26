@@ -1,0 +1,30 @@
+{% render 'fullpage-landing' with {
+    settings: section.settings,
+    id: section.id
+}  %}
+
+
+{% schema %}
+                {
+                  "name": "Fullpage",
+                  "class": "d-inline",
+                  "settings":[
+                    {
+                        "type": "header",
+                        "content": "landing"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "desktop_image",
+                        "label": "Image for Desktops",
+                        "info": "1440x896"
+                    }
+                  ],
+                  "presets": [
+                    {
+                        "name": "Fullpage",
+                        "category": "Landing Page"
+                    }
+                  ]
+                }
+{% endschema %}
