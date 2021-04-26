@@ -1,13 +1,16 @@
-<div class='col-12 col-md-4 mb-6 mb-sm-0'>
-    <a href={{ product.url }}>
-        <div class='product-card'>
+{% assign textPosition = "text-start,text-center,text-end" | split: ',' %}
+{% assign positionIndex = forloop.index | minus: 1 %}
+
+<div class='col-md-4 mb-6 {{ textPosition[positionIndex] }}''>
+    <a class='d-inline-block'  href={{ product.url }}>
+        <div class='featured-product'>
             <img src="{{ product.featured_image | img_url: 'master' }}"
                 srcset="{{ product.featured_image | img_url: 'master', scale: 2 }} 2x,
                     {{ product.featured_image | img_url: 'master', scale: 3 }} 3x"
                 alt="{{ product.featured_image.alt }}"
-                class='img-fluid mb-1'/>
+                class='mb-1'/>
 
-            <p class='pe-3 pe-sm-0 px-xl-3 text-start text-sm-center' style='letter-spacing: 0px;'>
+            <p class='text-center px-2'>
                 {% assign description = product.description | split: '<!-- section -->' %}
                 {{ description[1] }}
             </p>

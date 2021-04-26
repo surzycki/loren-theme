@@ -15,12 +15,18 @@ Requries the following arguments:
     <div class='container'>
         {% render 'header' %}
 
-        <h1 class='h1 hero brand ps-1 pt-17'>
-            {{ 'general.hero.title' | t }}
-        </h1>
+        <div class='ps-1 pt-17'>
+            <h1 class='h1 hero brand mb-13'>
+                {{ 'general.hero.title' | t }}
+            </h1>
 
-        <h2 class='h2 ps-1 pt-13' style='width: 560px'  >
-            {{ 'general.hero.sub_title' | t }}
-        </h2>
+            <h2 class='h2 mb-6'>
+                {{ 'general.hero.sub-title' | t }}
+            </h2>
+
+            <button type='button' class='btn btn-outline-secondary text-uppercase'>
+                commandez maintenant
+            </button>
+        </div>
     </div>
 </section>

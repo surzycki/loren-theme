@@ -1,96 +1,44 @@
 .h1 {
   font-family: $secondary-font-family;
-  font-size: 72px;
-  line-height: 80px;
+  font-size: 2.5rem;
+  line-height: 2.625rem;
   font-weight: 700;
-  letter-spacing: 1.2px;
-
-  @include media-breakpoint-up(sm) {
-    font-size: 90px;
-    line-height: 96px;
-  }
+  text-transform: uppercase;
 
   &.hero {
+    font-size: 3.5rem;
+    line-height: 3.5rem;
+    letter-spacing: 1.6px;
   }
 
-  &.branding {
+  &.brand {
+    font-family: $brand-font-family;
+    font-size: 5.625rem;
+    line-height: 6rem;
+    letter-spacing: 1.2px;
+    text-transform: none;
   }
 }
 
 .h2 {
   font-family: $primary-font-family;
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 1.5rem;
+  line-height: 2rem;
   font-weight: 400;
 
   &.hero {
-    font-size: 30px;
-    line-height: 40px;
-  }
-
-  &.hero--subheading {
-    font-size: 24px;
-    line-height: 32px;
-
-    @include media-breakpoint-up(md) {
-      font-size: 30px;
-      line-height: 40px;
-    }
+    font-size: 1.875rem;
+    line-height: 2.5rem;
   }
 }
 
 .h3 {
-  font-size: 20px;
-  line-height: 32px;
-
-  &.hero--list {
-    font-size: 24px;
-
-    @include media-breakpoint-up(md) {
-      font-size: 30px;
-      line-height: 40px;
-    }
-  }
+  font-size: 1.25rem;
+  line-height: 2rem;
 }
 
 p {
   margin: 0;
-}
-
-.link-hover {
-  transition: all 0.1s ease-in-out;
-  position: relative;
-
-  &:before,
-  &:after {
-    content: "";
-    position: absolute;
-    bottom: -1px;
-    width: 0px;
-    height: 2px;
-    transition: all 0.1s ease-in-out;
-    transition-duration: 0.2s;
-    opacity: 0;
-    background-color: $accent1;
-    left: 0;
-  }
-
-  &:hover {
-    text-decoration: none !important;
-    cursor: pointer;
-    &:before,
-    &:after {
-      width: 100%;
-      opacity: 1;
-    }
-  }
-
-  &.current {
-    cursor: default;
-    &:before,
-    &:after {
-      width: 100%;
-      opacity: 1;
-    }
-  }
+  font-size: 1rem;
+  line-height: 1.5rem;
 }

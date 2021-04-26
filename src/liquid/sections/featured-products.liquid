@@ -1,13 +1,12 @@
-<hr class='mb-3 mb-sm-5'/>
-
-<section class='container mb-md-13'>
-    <h1 class='h1 text-start mb-8 mb-sm-12 mb-lg-15'>
-        <span class='text-accent1'>{{ 'general.featured_products.title.every_hour' | t }}</span>
-        <span>{{ 'general.featured_products.title.intensity' | t }}</span>
+<section class='container pt-10'>
+    <h1 class='h1 mb-12 text-center'>
+        <span class='text-accent1'>{{ 'general.featured-products.title.every-hour' | t }}</span>
+        <br/>
+        <span>{{ 'general.featured-products.title.intensity' | t }}</span>
     </h1>
 
     <div class='row featured-products'>
-        {% render 'product-card' for collections[section.settings.collection].products as product  %}
+        {% render 'featured-product' for collections[section.settings.collection].products as product  %}
     </div>
 </section>
 

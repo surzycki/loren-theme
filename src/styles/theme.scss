@@ -5,13 +5,14 @@
 @import "node_modules/bootstrap/scss/bootstrap";
 
 @import "./typography";
+@import "./effects";
 
-@import "./components/fullpage-landing";
+@import "./components/fullpage_landing";
 @import "./components/navigation";
 @import "./components/hero";
 @import "./components/buttons";
 @import "./components/footer";
-@import "./components/product_card";
+@import "./components/featured_products";
 @import "./components/tag_line";
 
 html {
@@ -22,7 +23,7 @@ html {
 body {
   height: 100%;
   font-family: $primary-font-family;
-  line-height: 24px;
+  line-height: 1rem;
   margin: 0;
   padding: 0;
 }
