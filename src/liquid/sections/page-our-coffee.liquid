@@ -16,6 +16,9 @@
     {% when 'footer-bottom' %}
     {%  render 'footer-bottom' %}
 
+    {% when 'carousel-product' %}
+    {%  render 'carousel-product' %}
+
     {% endcase %}
 {% endfor %}
 
@@ -50,6 +53,11 @@
                             "label": "Content of testimonial"
                         }
                       ]
+                    },
+                    {
+                      "type": "carousel-product",
+                      "name": "Product Carousel",
+                      "settings": []
                     },
                     {
                       "type": "notification-bar",
