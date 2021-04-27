@@ -12,6 +12,14 @@
     letter-spacing: 1.6px;
   }
 
+  &.light-hero {
+    font-size: 3.5rem;
+    line-height: 3.5rem;
+    text-transform: none;
+    font-weight: 400;
+    letter-spacing: -1px;
+  }
+
   &.brand {
     font-family: $brand-font-family;
     font-size: 5.625rem;
@@ -41,5 +49,10 @@
 p {
   margin: 0;
   font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+small {
+  font-size: 0.875rem;
   line-height: 1.5rem;
 }

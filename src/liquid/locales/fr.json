@@ -1,7 +1,7 @@
 {
   "general": {
     "notification": {
-      "free-delivery": "Livraison Gratuit"
+      "free-delivery": "Livraison Offert"
     },
     "navigation": {
       "our-coffee": "Nos Cafés",
@@ -40,5 +40,25 @@
     "general": {
       "checkout": "Checkout"
     }
+  },
+  "our-promise": {
+    "hero": {
+      "title": "Notre Promesse",
+      "sub-title": "Une collection d’espresso italiens pour chaque moment de la journée, respectueuse des artisans et de l’environnement.",
+      "content": "Fin du 19ème siècle, nous les italiens avons inventé l’espresso pour adapter la consommation de café aux temps modernes.   Aujourd’hui, nous qui écrivons le prochain chapitre de cette boisson essentielle à tant d’entre nous."
+    }
+  },
+  "our-coffee": {
+    "hero": {
+      "title": "Le Parfait Équilibre",
+      "sub-title": "Tout au long de la journée",
+      "content": "Tous les baristas le savent : afin d’obtenir un espresso à la fois doux et puissant, il faut trouver le bon équilibre entre les graines de café Arabica et Robusta. Nos espressos ont été conçus dans ce soucis d’équilibre, pour vous offrir des moments de cafés à la fois savoureux et parfaitement adaptés à chaque moment de votre journée."
+    }
+  },
+  "promises": {
+    "coffee": "Des graines de café biologiques et issues du commerce équitable et des meilleurs régions productrices de café d’Amérique latine ",
+    "roasted": "Un café torréfié et assemblé dans la région du café italien par excellence, La Vénétie.  Un mélange inédit de traditions artisanales et d’innovations technologiques.",
+    "collection": "Une collection qui va à l’essentiel: trois espressos indispensables, pour vous permettre de déguster un café au goût et à l’intensité idéal, à chaque moment de la journée ",
+    "biodegradable": "Des capsules compostables , un emballage entièrement recyclable, et un système de vente directe,pour préserver la fraîcheur des arômes et l’environnement, notamment grâce à nos capsules compostables."
   }
 }

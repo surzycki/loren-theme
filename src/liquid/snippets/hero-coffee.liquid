@@ -14,5 +14,29 @@
 <section class='hero-coffee hero-coffee--{{ id }}'>
     <div class='container'>
         {% render 'header' %}
+
+        <div class='pt-17 mb-8'>
+            <h1 class='h1 hero'>
+                {{ 'our-coffee.hero.title' | t }}
+            </h1>
+
+            <h2 class='h1 light-hero mb-2'>
+                {{ 'our-coffee.hero.sub-title' | t }}
+            </h2>
+
+            <p class='mb-6'>
+                {{ 'our-coffee.hero.content' | t }}
+            </p>
+
+            <button type='button' class='btn btn-lg btn-outline-secondary text-uppercase'>
+                {{ 'general.button.order-now' | t }}
+            </button>
+        </div>
+
+        {% render 'testimonial',
+             image: settings.testimonial_image,
+             author: settings.testimonial_author,
+             content: settings.testimonial_content
+        %}
     </div>
 </section>
