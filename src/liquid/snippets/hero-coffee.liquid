@@ -1,0 +1,18 @@
+{% comment %}
+    Requires the following arguments:
+
+- settings:
+- id:
+{% endcomment %}
+
+<style>
+    .hero-coffee--{{ id }} {
+        background-image: url({{ settings.desktop_image | img_url: 'master' }});
+    }
+</style>
+
+<section class='hero-coffee hero-coffee--{{ id }}'>
+    <div class='container'>
+        {% render 'header' %}
+    </div>
+</section>

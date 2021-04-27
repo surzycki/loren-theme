@@ -11,17 +11,17 @@
     </a>
     <ul class='nav d-flex align-items-center text-uppercase'>
         <li class='px-5'>
-            <a href='{{ ourCoffeeLink.url }}' class='link-hover'>
+            <a href='{{ ourCoffeeLink.url }}' class='link-hover {% if ourCoffeeLink.current %} current {% endif %}'>
                 {{ 'general.navigation.our-coffee' | t }}
             </a>
         </li>
         <li class='px-5'>
-            <a href='{{ ourPromiseLink.url }}' class='link-hover'>
+            <a href='{{ ourPromiseLink.url }}' class='link-hover {% if ourPromiseLink.current %} current {% endif %}'>
                 {{ 'general.navigation.our-promise' | t }}
             </a>
         </li>
         <li class='px-5'>
-            <a href='{{ contactUsLink.url }}' class='link-hover'>
+            <a href='{{ contactUsLink.url }}' class='link-hover {% if contactUsLink.current %} current {% endif %}'>
                 {{ 'general.navigation.contact-us' | t }}
             </a>
         </li>

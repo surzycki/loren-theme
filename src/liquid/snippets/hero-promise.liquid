@@ -1,0 +1,18 @@
+{% comment %}
+    Requires the following arguments:
+
+- settings:
+- id:
+{% endcomment %}
+
+<style>
+    .hero-promise--{{ id }} {
+        background-image: url({{ settings.desktop_image | img_url: 'master' }});
+    }
+</style>
+
+<section class='hero-promise hero-promise--{{ id }}'>
+    <div class='container'>
+        {% render 'header' %}
+    </div>
+</section>
