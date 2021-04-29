@@ -93,7 +93,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-dom */ \"../../node_modules/react-dom/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ \"../../node_modules/react/index.js\");\n/* harmony import */ var _components_Cart__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/Cart */ \"./components/Cart.js\");\n\n\n\nvar root = document.getElementById(\"react-cart\");\nvar checkoutRoute = root.dataset.checkoutRoute;\nroot && react_dom__WEBPACK_IMPORTED_MODULE_0__.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_components_Cart__WEBPACK_IMPORTED_MODULE_2__.default, {\n  route: checkoutRoute\n}), root);\n\n//# sourceURL=webpack:///./react-cart.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-dom */ \"../../node_modules/react-dom/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ \"../../node_modules/react/index.js\");\n/* harmony import */ var _components_Cart__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/Cart */ \"./components/Cart.js\");\n\n\n // const root = document.getElementById(\"react-cart\");\n// const checkoutRoute = root.dataset.checkoutRoute;\n// root && ReactDOM.render(<Cart route={checkoutRoute} />, root);\n\n//# sourceURL=webpack:///./react-cart.js?");
 
 /***/ }),
 

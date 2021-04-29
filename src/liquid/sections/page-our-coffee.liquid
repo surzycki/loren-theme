@@ -17,7 +17,9 @@
     {%  render 'footer-bottom' %}
 
     {% when 'carousel-product' %}
-    {%  render 'carousel-product' %}
+    {%  render 'carousel-product' with {
+        settings: block.settings
+    }%}
 
     {% endcase %}
 {% endfor %}
@@ -57,7 +59,13 @@
                     {
                       "type": "carousel-product",
                       "name": "Product Carousel",
-                      "settings": []
+                        "settings": [
+                            {
+                                "type": "collection",
+                                "id": "collection",
+                                "label": "Collection"
+                            }
+                        ]
                     },
                     {
                       "type": "notification-bar",

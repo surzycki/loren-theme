@@ -4,10 +4,12 @@
   "description": "Workshop Advanced Gulp Workflow",
   "license": "MIT",
   "dependencies": {
+    "@popperjs/core": "^2.9.2",
     "@shopify/theme-cart": "^4.1.0",
-    "bootstrap": "^5.0.0-beta1",
+    "bootstrap": "^5.0.0-beta3",
     "classnames": "^2.2.6",
     "es6-promise": "^4.2.8",
+    "jquery": "^3.6.0",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",

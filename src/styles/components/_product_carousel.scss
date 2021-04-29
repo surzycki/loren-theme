@@ -1,7 +1,32 @@
 .product-carousel {
-  .nav {
+  .item {
     .active {
       color: $accent1;
     }
+  }
+
+  .menu-item {
+    width: 244px;
+    cursor: pointer;
+
+    &.active {
+      .h1 {
+        font-weight: 700 !important;
+
+        a {
+          color: $accent1 !important;
+        }
+      }
+    }
+  }
+
+  .carousel-item {
+    p {
+      max-width: 504px;
+    }
+  }
+
+  .carousel-control-prev {
+    left: -3rem !important;
   }
 }

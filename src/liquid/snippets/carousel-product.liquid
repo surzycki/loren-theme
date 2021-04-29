@@ -1,27 +1,104 @@
-<section class='cointainer product-carousel'>
-    <ul class='nav justify-content-center'>
-        <li class='nav-item'>
-            <h3 class='h1'>
-                <a class='nav-link active' aria-current='page' href='#'>
-                    Active
-                </a>
-            </h3>
-        </li>
 
-        <li class='nav-item'>
-            <h3 class='h1'>
-                <a class='nav-link' aria-current='page' href='#'>
-                    Not Active
-                </a>
-            </h3>
-        </li>
+<section class='cointainer product-carousel pt-6 mb-19'>
+    <div class='d-flex mb-16 justify-content-center'>
+        {% for product in collections[settings.collection].products %}
+            <div class='menu-item text-center {% cycle 'active', '','' %}' id='menu-item-{{ product.title | handleize }}'>
+                <h3 class='h1 light'>
+                    <a class='nav-link'>
+                        {{ product.title }}
+                    </a>
+                </h3>
+            </div>
+        {% endfor %}
+    </div>
 
-        <li class='nav-item'>
-            <h3 class='h1'>
-                <a class='nav-link' aria-current='page' href='#'>
-                    Not Active
-                </a>
-            </h3>
-        </li>
-    </ul>
+    <div id='carousel-product' class='carousel carousel-dark slide' data-bs-ride='carousel' data-bs-interval=false>
+        <!-- <div class="carousel-indicators">
+             <button type="button" data-bs-target="#carousel-product" data-bs-slide-to="1" aria-label="Slide 2"></button>
+             <button type="button" data-bs-target="#carousel-product" data-bs-slide-to="2" aria-label="Slide 3"></button>
+             </div> -->
+
+        <div class='carousel-inner'>
+        {% for product in collections[settings.collection].products %}
+            {% assign description = product.description | split: '<!-- section -->' %}
+
+            <div class='carousel-item {% cycle 'active', '', '' %}' id='{{ product.title | handleize }}'>
+                <div class='d-block w-100 text-center'>
+                    <div class='d-flex justify-content-center'>
+                        <div class='ps-2 pe-8'>
+                            <a href={{ product.url }}>
+                                <img src="{{ product.featured_image | img_url: 'x336' }}"
+                                     srcset="{{ product.featured_image | img_url: 'x336', scale: 2 }} 2x,
+                                          {{ product.featured_image | img_url: 'x336', scale: 3 }} 3x"
+                                     alt="{{ product.featured_image.alt }}"/>
+                            </a>
+                        </div>
+
+                        <div class='pt-3 ms-4 me-8'>
+                            <h1 class='h1 brand mb-1'>
+                                <a href={{ product.url }}>
+                                    {{ product.title }}
+                                </a>
+                            </h1>
+
+                            <h2 class='h3 mb-2'>
+                                {{ description[3] }}
+                            </h2>
+
+                            <p>
+                                {{ description[2] }}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+         <button class='carousel-control-prev' type='button' data-bs-target='#carousel-product' data-bs-slide='prev'>
+             <span class='carousel-control-prev-icon' aria-hidden='true'></span>
+             <span class='visually-hidden'>Prev</span>
+         </button>
+         <button class='carousel-control-next' type='button' data-bs-target='#carousel-product' data-bs-slide='next'>
+             <span class='carousel-control-next-icon' aria-hidden='true'></span>
+             <span class='visually-hidden'>Next</span>
+         </button>
+        </div>
+    </div>
+
 </section>
+
+
+<script type='text/javascript'>
+    /* Wire up the menu controls with the carousel */
+    var carousel = document.getElementById('carousel-product');
+
+    function changeSlide(event) {
+        var carouselInstance = new window.Carousel(carousel);
+        carouselInstance.to(event.currentTarget.menuIndex)
+    }
+
+    {% for product in collections[settings.collection].products %}
+        {% assign productName = product.title | handleize %}
+        // create listener and index for menuItem to execture changeSlide
+        var menuItem_{{ productName }} = document.getElementById('menu-item-{{ productName }}');
+        menuItem_{{ productName }}.addEventListener("click", changeSlide, true);
+        menuItem_{{ productName }}.menuIndex = {% cycle 0, 1, 2 %}
+
+    {%  endfor %}
+
+    carousel.addEventListener('slid.bs.carousel', function (event) {
+        // remove all active
+        {% for product in collections[settings.collection].products %}
+          {% assign productName = product.title | handleize %}
+          var menuItem_{{ productName }} = document.getElementById('menu-item-{{ productName }}');
+          menuItem_{{ productName }}.classList.remove('active');
+        {%  endfor %}
+       
+        // set menu-item to active
+        var product = event.relatedTarget.id
+        var menuItem = document.getElementById('menu-item-' + product);
+
+        menuItem.classList.add('active');
+    })
+</script>
+
+<hr/>
