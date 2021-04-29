@@ -2,33 +2,35 @@
 {% assign ourPromiseLink = linklists.main-menu.links | where: "title", "Our Promise" | first %}
 {% assign contactUsLink = linklists.main-menu.links | where: "title", "Contact Us" | first %}
 
-<header class='d-flex flex-wrap justify-content-center pt-6 pb-4'>
-    <a class='d-flex align-items-center me-md-auto' href='/'>
-        <img src="{{ 'logo-dark.png' | asset_img_url: 'master' }}"
-        srcset="{{ 'logo-dark@2x.png' | asset_img_url: 'master' }} 2x,
-        {{ 'logo-dark@3x.png' | asset_img_url: 'master' }} 3x"
-        alt='Piu Cafe'>
-    </a>
-    <ul class='nav d-flex align-items-center text-uppercase'>
-        <li class='px-5'>
-            <a href='{{ ourCoffeeLink.url }}' class='link-hover {% if ourCoffeeLink.current %} current {% endif %}'>
-                {{ 'general.navigation.our-coffee' | t }}
-            </a>
-        </li>
-        <li class='px-5'>
-            <a href='{{ ourPromiseLink.url }}' class='link-hover {% if ourPromiseLink.current %} current {% endif %}'>
-                {{ 'general.navigation.our-promise' | t }}
-            </a>
-        </li>
-        <li class='px-5'>
-            <a href='{{ contactUsLink.url }}' class='link-hover {% if contactUsLink.current %} current {% endif %}'>
-                {{ 'general.navigation.contact-us' | t }}
-            </a>
-        </li>
-        <li class='ps-5'>
-            <a href='{{ routes.cart_url }}' class='link-hover'>
-                {{ 'general.navigation.shopping-cart' | t }}&nbsp(0)
-            </a>
-        </li>
-    </ul>
-</header>
+<div class='container'>
+    <header class='d-flex flex-wrap justify-content-center pt-6 pb-4'>
+        <a class='d-flex align-items-center me-md-auto' href='/'>
+            <img src="{{ 'logo-dark.png' | asset_img_url: 'master' }}"
+            srcset="{{ 'logo-dark@2x.png' | asset_img_url: 'master' }} 2x,
+            {{ 'logo-dark@3x.png' | asset_img_url: 'master' }} 3x"
+            alt='Piu Cafe'>
+        </a>
+        <ul class='nav d-flex align-items-center text-uppercase'>
+            <li class='px-5'>
+                <a href='{{ ourCoffeeLink.url }}' class='link-hover {% if ourCoffeeLink.current %} current {% endif %}'>
+                    {{ 'general.navigation.our-coffee' | t }}
+                </a>
+            </li>
+            <li class='px-5'>
+                <a href='{{ ourPromiseLink.url }}' class='link-hover {% if ourPromiseLink.current %} current {% endif %}'>
+                    {{ 'general.navigation.our-promise' | t }}
+                </a>
+            </li>
+            <li class='px-5'>
+                <a href='{{ contactUsLink.url }}' class='link-hover {% if contactUsLink.current %} current {% endif %}'>
+                    {{ 'general.navigation.contact-us' | t }}
+                </a>
+            </li>
+            <li class='ps-5'>
+                <a href='{{ routes.cart_url }}' class='link-hover'>
+                    {{ 'general.navigation.shopping-cart' | t }}&nbsp(0)
+                </a>
+            </li>
+        </ul>
+    </header>
+</div>

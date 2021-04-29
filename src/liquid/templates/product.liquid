@@ -1,49 +1,51 @@
-<section class='container pt-5'>
-    <div class='row'>
-        <div class='col-12 col-lg-7'>
-            <img src="{{ product.featured_image | img_url: 'master' }}"
-                srcset="{{ product.featured_image | img_url: 'master', scale: 2 }} 2x,
-                    {{ product.featured_image | img_url: 'master', scale: 3 }} 3x"
-                alt="{{ product.featured_image.alt }}"
-                 class='img-fluid mb-1'/>
-            {% for image in product.images %}
-                {{ image.preview_image | img_url }}
-            {% endfor %}
-        </div>
+{% section 'product' %}
 
-        <div class='col-12 col-lg-5'>
-            <h1 class='h1 text-center'>
-                {{ product.title }}
-            </h1>
+<!-- <section class='container pt-5'>
+     <div class='row'>
+     <div class='col-12 col-lg-7'>
+     <img src="{{ product.featured_image | img_url: 'master' }}"
+     srcset="{{ product.featured_image | img_url: 'master', scale: 2 }} 2x,
+     {{ product.featured_image | img_url: 'master', scale: 3 }} 3x"
+     alt="{{ product.featured_image.alt }}"
+     class='img-fluid mb-1'/>
+     {% for image in product.images %}
+     {{ image.preview_image | img_url }}
+     {% endfor %}
+     </div>
 
-            <h2 class='h2'>
-                {% assign description = product.description | split: '<!-- section -->' %}
-                {{ description[3] }}
-            </h2>
+     <div class='col-12 col-lg-5'>
+     <h1 class='h1 text-center'>
+     {{ product.title }}
+     </h1>
 
-            <!-- <h3 class='h3'>
-                 <strong>
-                 {{ product.price | money  }}
-                 </strong>
-                 </h3> -->
-                <div class='mb-4'>
-                    <small class='mb-4'>
-                        <strong>
-                            Étui de 10 capsules: {{ (product.price | times: 10 | money  }}
-                        </strong>
-                    </small>
-                </div>
+     <h2 class='h2'>
+     {% assign description = product.description | split: '<!-- section -->' %}
+     {{ description[3] }}
+     </h2>
 
-            <p>
-                {{ description[2] }}
-            </p>
+     <!-- <h3 class='h3'>
+     <strong>
+     {{ product.price | money  }}
+     </strong>
+     </h3> -->
+<div class='mb-4'>
+    <small class='mb-4'>
+        <strong>
+            Étui de 10 capsules: {{ (product.price | times: 10 | money  }}
+        </strong>
+    </small>
+</div>
 
-            <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
-            {% render 'react-cart-control' with {
-                variant_id: product.variants.first.id,
-                price: product.price
-            }%}
-        </div>
-    </div>
+<p>
+    {{ description[2] }}
+</p>
 
-</section>
+<input type="hidden" name="id" value="{{ product.variants.first.id }}" />
+{% render 'react-cart-control' with {
+    variant_id: product.variants.first.id,
+    price: product.price
+}%}
+     </div>
+     </div>
+
+</section> -->
