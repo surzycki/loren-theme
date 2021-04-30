@@ -6,9 +6,14 @@ const root = document.getElementById("react-cart-control");
 
 const variantId = Number(root?.dataset?.variantId);
 const variantPrice = Number(root?.dataset?.variantPrice);
+const addToCart = String(root?.dataset?.addToCart);
 
 root &&
   ReactDOM.render(
-    <CartControl variantId={variantId} variantPrice={variantPrice} />,
+    <CartControl
+      variantId={variantId}
+      variantPrice={variantPrice}
+      addToCart={addToCart}
+    />,
     root
   );

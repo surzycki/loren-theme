@@ -2,7 +2,9 @@
 {% assign ourPromiseLink = linklists.main-menu.links | where: "title", "Our Promise" | first %}
 {% assign contactUsLink = linklists.main-menu.links | where: "title", "Contact Us" | first %}
 
+{% if needsContainer %}
 <div class='container'>
+{% endif  %}
     <header class='d-flex flex-wrap justify-content-center pt-6 pb-4'>
         <a class='d-flex align-items-center me-md-auto' href='/'>
             <img src="{{ 'logo-dark.png' | asset_img_url: 'master' }}"
@@ -33,4 +35,6 @@
             </li>
         </ul>
     </header>
+{% if needsContainer %}
 </div>
+{% endif %}

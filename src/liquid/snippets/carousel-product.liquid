@@ -1,23 +1,13 @@
-
 <section class='cointainer product-carousel pt-6 mb-19'>
-    <div class='d-flex mb-16 justify-content-center'>
-        {% for product in collections[settings.collection].products %}
-            <div class='menu-item text-center {% cycle 'active', '','' %}' id='menu-item-{{ product.title | handleize }}'>
-                <h3 class='h1 light'>
-                    <a class='nav-link'>
-                        {{ product.title }}
-                    </a>
-                </h3>
-            </div>
-        {% endfor %}
-    </div>
+    {% assign firstProduct = collections[settings.collection].products | first %}
+    {% assign productHandle = firstProduct.title | handleize %}
+
+    {% render 'submenu-products',
+      products: collections[settings.collection].products,
+      active: productHandle
+    %}
 
     <div id='carousel-product' class='carousel carousel-dark slide' data-bs-ride='carousel' data-bs-interval=false>
-        <!-- <div class="carousel-indicators">
-             <button type="button" data-bs-target="#carousel-product" data-bs-slide-to="1" aria-label="Slide 2"></button>
-             <button type="button" data-bs-target="#carousel-product" data-bs-slide-to="2" aria-label="Slide 3"></button>
-             </div> -->
-
         <div class='carousel-inner'>
         {% for product in collections[settings.collection].products %}
             {% assign description = product.description | split: '<!-- section -->' %}
@@ -34,7 +24,7 @@
                             </a>
                         </div>
 
-                        <div class='pt-3 ms-4 me-8'>
+                        <div class='pt-1 ms-4 me-8'>
                             <h1 class='h1 brand mb-1'>
                                 <a href={{ product.url }}>
                                     {{ product.title }}
@@ -45,9 +35,13 @@
                                 {{ description[3] }}
                             </h2>
 
-                            <p>
+                            <p class="mb-2">
                                 {{ description[2] }}
                             </p>
+
+                            <a href='{{  product.url }}' class='btn btn-outline-secondary text-uppercase mb-17'>
+                                {{ 'general.button.order-now' | t }}
+                            </a>
                         </div>
                     </div>
                 </div>

@@ -8,7 +8,8 @@ import "unfetch/polyfill";
 import * as cart from "@shopify/theme-cart";
 import classNames from "classnames";
 
-const CartControl = ({ variantId, variantPrice }) => {
+const CartControl = ({ variantId, variantPrice, addToCart }) => {
+  console.log(addToCart);
   const initialQuantity = +localStorage.getItem(variantId) || 10;
   const [quantity, setQuantity] = useState(initialQuantity);
 
@@ -28,37 +29,37 @@ const CartControl = ({ variantId, variantPrice }) => {
 
   const labelClass = (value) => {
     return classNames({
-      "pe-2": true,
-      "fw-bold": value == quantity,
+      "quantity-button": true,
+      active: value == quantity,
     });
   };
 
   return (
     <>
-      <label className={labelClass(10)} onClick={() => setQuantity(10)}>
-        10
-      </label>
-      <label className={labelClass(20)} onClick={() => setQuantity(20)}>
-        20
-      </label>
-      <label className={labelClass(40)} onClick={() => setQuantity(40)}>
-        40
-      </label>
-      <label className={labelClass(60)} onClick={() => setQuantity(60)}>
-        60
-      </label>
-      <label className={labelClass(80)} onClick={() => setQuantity(80)}>
-        80
-      </label>
-      <br />
+      <div className="d-flex justify-content-between px-3 mb-3">
+        <label className={labelClass(10)} onClick={() => setQuantity(10)}>
+          10
+        </label>
+        <label className={labelClass(20)} onClick={() => setQuantity(20)}>
+          20
+        </label>
+        <label className={labelClass(40)} onClick={() => setQuantity(40)}>
+          40
+        </label>
+        <label className={labelClass(60)} onClick={() => setQuantity(60)}>
+          60
+        </label>
+        <label className={labelClass(80)} onClick={() => setQuantity(80)}>
+          80
+        </label>
+      </div>
       <button
-        className="btn btn-primary"
+        className="btn btn-lg btn-dark w-100"
         type="button"
         onClick={handleAddToCart}
       >
-        Add to Cart
+        {addToCart} + {formatPrice(quantity * variantPrice)}
       </button>
-      <div>{formatPrice(quantity * variantPrice)}</div>
     </>
   );
 };
@@ -66,6 +67,7 @@ const CartControl = ({ variantId, variantPrice }) => {
 CartControl.propTypes = {
   variantId: PropTypes.number.isRequired,
   variantPrice: PropTypes.number.isRequired,
+  addToCart: PropTypes.string.isRequired,
 };
 
 export default CartControl;

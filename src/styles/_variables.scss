@@ -20,6 +20,8 @@ $enable-negative-margins: true;
 $white: #fffcf7;
 $black: #222222;
 
+$dark: $black !default;
+
 $body-color: $black;
 $body-bg: $background-light;
 
@@ -94,7 +96,7 @@ $spacers: (
   // 184px
     24: $spacer * 12,
   // 192px
-    25: $spacer * 12.5 // 200px,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+    25: $spacer * 12.5 // 200px,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ) !default;
 
 $font-sizes: (

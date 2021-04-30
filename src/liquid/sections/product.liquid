@@ -20,7 +20,9 @@
     {%  render 'footer-bottom' %}
 
     {% when 'header' %}
-    {%  render 'header' %}
+    {%  render 'header' with {
+        needsContainer: true
+    }%}
 
     {% endcase %}
 {% endfor %}

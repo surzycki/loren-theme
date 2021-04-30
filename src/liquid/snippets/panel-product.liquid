@@ -1,44 +1,102 @@
-<section class='container'>
-   <div class='row mb-22'>
-        {% if settings.position == 'right' %}
-        <div class='col-12 col-md-7 ps-12 order-last'>
-        {% else %}
-        <div class='col-12 col-md-7 pe-12'>
-        {% endif %}
+<section class='container mt-n2 panel-product'>
+    <div class='d-flex mb-6 justify-content-center submenu-products'>
+        {% for p in  collections['featured-products'].products %}
+            <div class='menu-item text-center {% if p.url == product.url %} active {% endif %}'>
+                <h3 class='h1 light'>
+                    <a class='nav-link' href="{{ p.url }}">
+                        {{ p.title }}
+                    </a>
+                </h3>
+            </div>
+        {% endfor %}
+    </div>
 
-            <a href={{ product.url }}>
-            <img src="{{ product.featured_image | img_url: 'master' }}"
-                    srcset="{{ product.featured_image | img_url: 'master', scale: 2 }} 2x,
-                        {{ product.featured_image | img_url: 'master', scale: 3 }} 3x"
-                    alt="{{ product.featured_image.alt }}"
-                    class='img-fluid'/>
-        </a>
+    <div class='row mb-14'>
+        <div class='col-7 pt-6'>
+            <img src="{{ product.featured_image | img_url: '742x' }}"
+                srcset="{{ product.featured_image | img_url: '742x', scale: 2 }} 2x,
+                    {{ product.featured_image | img_url: '742x', scale: 3 }} 3x"
+                alt="{{ product.featured_image.alt }}"
+                 class='mb-10'/>
+            {% for image in product.images %}
+                <div class='d-inline-block border'>
+                    <img src="{{ image.src | img_url: '142x' }}">
+                </div>
+            {% endfor %}
         </div>
-        {% if settings.position == 'right' %}
-        <div class='col-12 col-md-5 text-start order-end'>
-        {% else %}
-        <div class='col-12 col-md-5 text-end'>
-        {% endif %}
 
-            {% assign description = product.description | split: '<!-- section -->' %}
-
-            <h1 class='h1 mb-1'>
-                <a href={{ product.url }}>
+        <div class='col-5 ps-11'>
+            <div class='information pt-4 mb-3 text-center'>
+                <h1 class='h1 brand'>
                     {{ product.title }}
-                </a>
-            </h1>
+                </h1>
 
-            <h2 class='h2 mb-2'>
-                {{ description[3] }}
-            </h2>
+                <h2 class='h3'>
+                    {% assign description = product.description | split: '<!-- section -->' %}
+                    {{ description[3] }}
+                </h2>
 
-            {% if settings.position == 'right' %}
-            <p class='pe-2'>
-            {% else %}
-            <p class='ps-2'>
-            {% endif %}
-                {{ description[2] }}
-            </p>
+                <div class='mb-3'>
+                    <small>
+                        <strong>
+                            {{ 'product.capsules-per-box' | t }} {{ product.price | times: 10 | money  }}
+                        </strong>
+                    </small>
+                </div>
+
+                <p class='px-3 mb-3'>
+                    {{ description[2] }}
+                </p>
+
+                <input type='hidden' name='id' value="{{ product.variants.first.id }}" />
+                {% render 'react-cart-control' with {
+                    variant_id: product.variants.first.id,
+                    price: product.price
+                }%}
+
+            </div>
+
+            <div class='d-flex justify-content-between'>
+                <div class='text-center'>
+                    <div class='icon'>
+                        <img src="{{ 'icon-dark-free-trade.png' | asset_img_url: 'master' }}"
+                             srcset="{{ 'icon-dark-free-trade@2x.png' | asset_img_url: 'master' }} 2x,
+                                  {{ 'icon-dark-free-trade@3x.png' | asset_img_url: 'master' }} 3x"
+                             alt='Free Trade'>
+                    </div>
+                   
+                    <h3 class='h3'>
+                        {{ 'general.values.free-trade' | t }}
+                    </h3>
+                </div>
+
+                <div class='text-center'>
+                    <div class='icon'>
+                        <img src="{{ 'icon-dark-capsule.png' | asset_img_url: 'master' }}"
+                             srcset="{{ 'icon-dark-capsule@2x.png' | asset_img_url: 'master' }} 2x,
+                                  {{ 'icon-dark-capsule@3x.png' | asset_img_url: 'master' }} 3x"
+                             alt='Biodegradable'>
+                    </div>
+                   
+                    <h3 class='h3'>
+                        {{ 'general.values.biodegradable' | t }}
+                    </h3>
+                </div>
+
+                <div class='text-center'>
+                    <div class='icon'>
+                        <img src="{{ 'icon-dark-recycle.png' | asset_img_url: '64x64' }}"
+                             srcset="{{ 'icon-dark-recycle@2x.png' | asset_img_url: '64x64' }} 2x,
+                                  {{ 'icon-dark-recycle@3x.png' | asset_img_url: '64x64' }} 3x"
+                             alt='Recyclable'>
+                    </div>
+                    <h3 class='h3'>
+                        {{ 'general.values.recycle' | t }}
+                    </h3>
+                </div>
+            </div>
         </div>
     </div>
 </section>
+
+<hr/>
