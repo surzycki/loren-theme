@@ -29,8 +29,9 @@
                 </a>
             </li>
             <li class='ps-5'>
-                <a href='{{ routes.cart_url }}' class='link-hover'>
-                    {{ 'general.navigation.shopping-cart' | t }}&nbsp(0)
+                <a href='{{ routes.cart_url }}' id='cart-link' class='link-hover'>
+                    {{ 'general.navigation.shopping-cart' | t }}
+                    (<span id='desktop-cart-count'>{{ cart.item_count }}</span>)
                 </a>
             </li>
         </ul>

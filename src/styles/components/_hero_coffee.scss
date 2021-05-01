@@ -1,14 +1,8 @@
 .hero-coffee {
-  height: 880px; // 840 + 40
+  height: 100%; // 880px; // 840 + 40
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-
-  margin-top: 40px;
-
-  header {
-    margin-top: -40px;
-  }
 
   p {
     max-width: 504px;

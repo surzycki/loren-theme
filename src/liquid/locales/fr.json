@@ -44,7 +44,8 @@
   "cart": {
     "general": {
       "checkout": "Checkout",
-      "add-to-cart": "Ajouter au panier"
+      "add-to-cart": "Ajouter au panier",
+      "thank-you": "Merci, c'est noté"
     }
   },
   "our-promise": {

@@ -1,14 +1,15 @@
 .hero-promise {
-  height: 880px; // 840 + 40
+  height: 100vh;
+  min-height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  //background-attachment: fixed;
 
-  margin-top: 40px;
-
-  header {
-    margin-top: -40px;
-  }
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  width: 100%;
 
   h2.hero {
     max-width: 650px;

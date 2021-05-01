@@ -8,29 +8,47 @@ import "unfetch/polyfill";
 import * as cart from "@shopify/theme-cart";
 import classNames from "classnames";
 
-const CartControl = ({ variantId, variantPrice, addToCart }) => {
-  console.log(addToCart);
+const CartControl = ({ variantId, variantPrice, addToCart, thankYou }) => {
   const initialQuantity = +localStorage.getItem(variantId) || 10;
   const [quantity, setQuantity] = useState(initialQuantity);
+  const [rotating, setRotating] = useState(false);
 
   useEffect(() => localStorage.setItem(variantId, quantity));
 
   const updateCart = () => {
     cart.getState().then((data) => {
       document.getElementById("desktop-cart-count").innerHTML = data.item_count;
+      document.getElementById("cart-link").classList.add("activate-hover");
     });
+
+    setRotating(true);
+
+    const timer = setTimeout(() => {
+      setRotating(false);
+      document.getElementById("cart-link").classList.remove("activate-hover");
+    }, 5000);
+
+    setQuantity(0);
   };
 
   const handleAddToCart = () => {
-    cart.addItem(variantId, { quantity }).then((item) => {
-      updateCart();
-    });
+    updateCart();
+    // cart.addItem(variantId, { quantity }).then((item) => {
+    //   updateCart();
+    // });
   };
 
   const labelClass = (value) => {
     return classNames({
       "quantity-button": true,
       active: value == quantity,
+    });
+  };
+
+  const cubeEffectClass = () => {
+    return classNames({
+      "cube-effect": true,
+      active: rotating,
     });
   };
 
@@ -53,13 +71,15 @@ const CartControl = ({ variantId, variantPrice, addToCart }) => {
           80
         </label>
       </div>
-      <button
-        className="btn btn-lg btn-dark w-100"
-        type="button"
-        onClick={handleAddToCart}
-      >
-        {addToCart} + {formatPrice(quantity * variantPrice)}
-      </button>
+
+      <div className="scene" onClick={handleAddToCart}>
+        <div className={cubeEffectClass()}>
+          <div className="cube-front">
+            {addToCart} + {formatPrice(quantity * variantPrice)}
+          </div>
+          <div className="cube-top">{thankYou}</div>
+        </div>
+      </div>
     </>
   );
 };
@@ -68,6 +88,7 @@ CartControl.propTypes = {
   variantId: PropTypes.number.isRequired,
   variantPrice: PropTypes.number.isRequired,
   addToCart: PropTypes.string.isRequired,
+  thankYou: PropTypes.string.isRequired,
 };
 
 export default CartControl;
