@@ -29,9 +29,7 @@
                 </a>
             </li>
             <li class='ps-5'>
-                <a href='{{ routes.cart_url }}' id='cart-link' class='link-hover'>
-                    {{ 'general.navigation.shopping-cart' | t }}
-                    (<span id='desktop-cart-count'>{{ cart.item_count }}</span>)
+                <a id='react-menu-item-cart' class='link-hover' data-label="{{ 'general.navigation.shopping-cart' | t  }}">
                 </a>
             </li>
         </ul>

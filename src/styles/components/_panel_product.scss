@@ -1,5 +1,4 @@
 .panel-product {
-  height: 100vh;
   .information {
     width: 432px;
     border: 1px solid #838383;
@@ -32,5 +31,6 @@
     font-weight: 700;
     color: $accent1;
     border: 2px solid $accent1;
+    transition: border 1s, color 1s, font-weight 1s;
   }
 }

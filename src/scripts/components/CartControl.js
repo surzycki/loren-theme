@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { formatPrice } from "./Utils";
+import eventBus from "./EventBus";
 
 import PropTypes from "prop-types";
 
@@ -16,26 +17,22 @@ const CartControl = ({ variantId, variantPrice, addToCart, thankYou }) => {
   useEffect(() => localStorage.setItem(variantId, quantity));
 
   const updateCart = () => {
-    cart.getState().then((data) => {
-      document.getElementById("desktop-cart-count").innerHTML = data.item_count;
-      document.getElementById("cart-link").classList.add("activate-hover");
-    });
-
     setRotating(true);
 
     const timer = setTimeout(() => {
       setRotating(false);
-      document.getElementById("cart-link").classList.remove("activate-hover");
-    }, 5000);
+    }, 3000);
 
     setQuantity(0);
+
+    // dispatch event for whoever is listening
+    eventBus.dispatch("itemAdded");
   };
 
   const handleAddToCart = () => {
-    updateCart();
-    // cart.addItem(variantId, { quantity }).then((item) => {
-    //   updateCart();
-    // });
+    cart.addItem(variantId, { quantity }).then((item) => {
+      updateCart();
+    });
   };
 
   const labelClass = (value) => {
@@ -45,12 +42,10 @@ const CartControl = ({ variantId, variantPrice, addToCart, thankYou }) => {
     });
   };
 
-  const cubeEffectClass = () => {
-    return classNames({
-      "cube-effect": true,
-      active: rotating,
-    });
-  };
+  const cubeEffectClass = classNames({
+    "cube-effect": true,
+    active: rotating,
+  });
 
   return (
     <>
@@ -73,7 +68,7 @@ const CartControl = ({ variantId, variantPrice, addToCart, thankYou }) => {
       </div>
 
       <div className="scene" onClick={handleAddToCart}>
-        <div className={cubeEffectClass()}>
+        <div className={cubeEffectClass}>
           <div className="cube-front">
             {addToCart} + {formatPrice(quantity * variantPrice)}
           </div>

@@ -35,12 +35,12 @@
 
         <div class='col-5 ps-11'>
             <!-- certification icons -->
-            <div class='d-flex justify-content-between px-1 mb-1'>
+            <div class='d-flex justify-content-between px-4 mb-1'>
                 <div class='text-center'>
                     <div class='icon'>
-                        <img src="{{ 'icon-dark-free-trade.png' | asset_img_url: 'master' }}"
-                             srcset="{{ 'icon-dark-free-trade@2x.png' | asset_img_url: 'master' }} 2x,
-                                  {{ 'icon-dark-free-trade@3x.png' | asset_img_url: 'master' }} 3x"
+                        <img src="{{ 'icon-dark-free-trade.png' | asset_img_url: '56x56' }}"
+                             srcset="{{ 'icon-dark-free-trade@2x.png' | asset_img_url: '56x56' }} 2x,
+                                  {{ 'icon-dark-free-trade@3x.png' | asset_img_url: '56x56' }} 3x"
                              alt='Free Trade'>
                     </div>
 
@@ -51,9 +51,9 @@
 
                 <div class='text-center'>
                     <div class='icon'>
-                        <img src="{{ 'icon-dark-capsule.png' | asset_img_url: 'master' }}"
-                             srcset="{{ 'icon-dark-capsule@2x.png' | asset_img_url: 'master' }} 2x,
-                                  {{ 'icon-dark-capsule@3x.png' | asset_img_url: 'master' }} 3x"
+                        <img src="{{ 'icon-dark-capsule.png' | asset_img_url: '56x56' }}"
+                             srcset="{{ 'icon-dark-capsule@2x.png' | asset_img_url: '56x56' }} 2x,
+                                  {{ 'icon-dark-capsule@3x.png' | asset_img_url: '56x56' }} 3x"
                              alt='Biodegradable'>
                     </div>
 
@@ -64,9 +64,9 @@
 
                 <div class='text-center'>
                     <div class='icon'>
-                        <img src="{{ 'icon-dark-recycle.png' | asset_img_url: '64x64' }}"
-                             srcset="{{ 'icon-dark-recycle@2x.png' | asset_img_url: '64x64' }} 2x,
-                                  {{ 'icon-dark-recycle@3x.png' | asset_img_url: '64x64' }} 3x"
+                        <img src="{{ 'icon-dark-recycle.png' | asset_img_url: '56x56' }}"
+                             srcset="{{ 'icon-dark-recycle@2x.png' | asset_img_url: '56x56' }} 2x,
+                                  {{ 'icon-dark-recycle@3x.png' | asset_img_url: '56x56' }} 3x"
                              alt='Recyclable'>
                     </div>
                     <p>
@@ -100,13 +100,13 @@
                 </p>
 
                 <input type='hidden' name='id' value="{{ product.variants.first.id }}" />
-                {% render 'react-cart-control' with {
-                    variant_id: product.variants.first.id,
-                    price: product.price,
-                    add_to_cart: 'cart.general.add-to-cart',
-                    thank_you: 'cart.general.thank-you'
-                }%}
 
+                <div id='react-cart-control'
+                     data-variant-id={{ product.variants.first.id }}
+                     data-variant-price={{ product.price }}
+                     data-add-to-cart="{{ 'cart.general.add-to-cart' | t }}"
+                     data-thank-you="{{ 'cart.general.thank-you' | t }}">
+                </div>
             </div>
             <!-- information label -->
 
