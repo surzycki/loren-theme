@@ -50,11 +50,11 @@ const Cart = () => {
     // preventing the body from scrolling when cart open
     const body = document.getElementsByTagName("BODY")[0];
 
-    if (toggle == "closed") {
-      body.classList.remove("no-scroll");
-    } else {
-      body.classList.add("no-scroll");
-    }
+    // if (toggle == "closed") {
+    //   body.classList.remove("no-scroll");
+    // } else {
+    //   body.classList.add("no-scroll");
+    // }
   };
 
   const onRemove = ({ key }) => {
