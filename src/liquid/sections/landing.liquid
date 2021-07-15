@@ -1,4 +1,4 @@
-{% render 'fullpage-landing' with {
+{% render 'landing' with {
     settings: section.settings,
     id: section.id
 }  %}
@@ -6,8 +6,7 @@
 
 {% schema %}
                 {
-                  "name": "Fullpage",
-                  "class": "h-100",
+                  "name": "Landing",
                   "settings":[
                     {
                         "type": "header",
@@ -22,7 +21,7 @@
                   ],
                   "presets": [
                     {
-                        "name": "Fullpage",
+                        "name": "Landing",
                         "category": "Landing Page"
                     }
                   ]

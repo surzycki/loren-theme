@@ -7,7 +7,7 @@
 @import "./typography";
 @import "./effects";
 
-@import "./components/fullpage_landing";
+@import "./components/landing";
 @import "./components/hero_coffee";
 @import "./components/hero_promise";
 @import "./components/engagements";
@@ -18,6 +18,8 @@
 @import "./components/panel_product";
 @import "./components/submenu_products";
 @import "./components/cart";
+
+@import "./debug.scss";
 
 html {
   height: 100%;

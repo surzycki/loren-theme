@@ -1,0 +1,23 @@
+.landing {
+  height: 800px;
+
+  @include media-breakpoint-up(xl) {
+    background-position: 51% 50%;
+  }
+  @include media-breakpoint-only(lg) {
+    background-position: 55% 50%;
+  }
+
+  background-repeat: no-repeat;
+  background-color: #ccc8c0;
+
+  .h2 {
+    @include media-breakpoint-up(xl) {
+      width: 560px;
+    }
+
+    @include media-breakpoint-only(lg) {
+      width: 508px;
+    }
+  }
+}

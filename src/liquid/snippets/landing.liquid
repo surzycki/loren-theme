@@ -6,17 +6,17 @@ Requries the following arguments:
 {% endcomment %}
 
 <style>
-  .fullpage-landing--{{ id  }} {
+  .landing--{{ id  }} {
      background-image: url({{settings.desktop_image | img_url: 'master'}})
   }
 </style>
 
-<section class="fullpage-landing fullpage-landing--{{ id }}">
+<section class="landing landing--{{ id }}">
     <div class='container'>
         {% render 'header' %}
 
-        <div class='ps-1 pt-17'>
-            <h1 class='h1 hero brand mb-13'>
+        <div class='pt-3'>
+            <h1 class='h1 hero brand mb-4'>
                 {{ 'general.hero.title' | t }}
             </h1>
 
