@@ -16,6 +16,8 @@ yarn build:react
 
 ## Using mutagen
 
+currently deploying from the container does not work, this is experimental
+
 https://medium.com/@marickvantuil/speed-up-docker-for-mac-with-mutagen-14c2a2c9cba7
 
 **Setup Sync**
@@ -33,4 +35,7 @@ mutagen sync list
 mutagen sync create \
  --name=loren-theme \
  /Users/stefan/Projects/piu/loren-theme docker://root@loren-theme-dev-1/var/www
+
+
+mutagen sync monitor loren-theme
 ```
