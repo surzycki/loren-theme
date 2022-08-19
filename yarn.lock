@@ -1014,7 +1014,7 @@
 
 "@shopify/themekit@^1.1.9":
   version "1.1.9"
-  resolved "https://registry.npmjs.org/@shopify/themekit/-/themekit-1.1.9.tgz"
+  resolved "https://registry.yarnpkg.com/@shopify/themekit/-/themekit-1.1.9.tgz#9c31b8b06d9c2e0703bec2f2a318fe75f2976024"
   integrity sha512-F9VZ2QI/B/BG/avd1a741vXggSlEXeVd0ADgO618/oqu+xgFX5nZnCT5wqlbGrJBmxRWBPlE7WFfWU9t1y6btQ==
   dependencies:
     bin-wrapper "^4.1.0"

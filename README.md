@@ -8,10 +8,15 @@
 ## Getting Started
 
 ```bash
-# bring up environment
-./start
+# setup envionment
+bin/start
+mutagen project run setup
+```
 
-# start watching directory and build react components
+```bash
+# start working
+bin/start
+
+# start watching directory and build react components (in container)
 yarn build:react
-
 ```

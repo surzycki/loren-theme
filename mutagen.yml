@@ -6,7 +6,7 @@ sync:
       vcs: true
   dev:
     alpha: "."
-    beta: "docker://loren-theme-dev-1/var/www"
+    beta: "docker://loren-theme/var/www"
     ignore:
       paths:
         - ".git"
@@ -17,7 +17,7 @@ sync:
 forward:
   http:
     source: "tcp::80"
-    destination: "docker://loren-theme-dev-1:tcp:dev:80"
+    destination: "docker://loren-theme:tcp:0.0.0.0:80"
 
 # Set up the service and any volumes before creating sessions.
 beforeCreate:
@@ -29,7 +29,7 @@ beforeCreate:
 afterCreate:
   - docker-compose -f docker-compose.yml up --build --detach
   - docker-compose exec dev yarn install
-  - docker-compose exec dev yarn start
+  - docker-compose exec dev yarn start || true
 
 # Tear down all services and remove the code volume after terminating sessions.
 afterTerminate:
@@ -37,4 +37,4 @@ afterTerminate:
 
 # Define common utility commands.
 commands:
-  logs: docker-compose -f docker-compose.yml logs --follow
+  setup: docker-compose -f docker-compose.yml exec dev bin/setup

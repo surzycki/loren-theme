@@ -5,3 +5,4 @@ services:
     build: .
     entrypoint: "tail -f /dev/null"
     hostname: loren-theme
+    container_name: loren-theme
