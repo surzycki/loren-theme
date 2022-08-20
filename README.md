@@ -7,11 +7,20 @@
 
 ## Getting Started
 
+Commands to be run on the host
+
 ```bash
 # setup / start envionment
 bin/start
 ```
 
 ```bash
-mutage project run serve
+# start the server
+mutagen project run serve
 ```
+
+```bash
+# shutdown
+mutagen project terminiate 
+```
+

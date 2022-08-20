@@ -15,6 +15,9 @@ RUN npm install --global yarn
 # Install shopify cli
 RUN gem install shopify-cli
 
+# Install gulp cli
+RUN npm install --global gulp-cli
+
 RUN mkdir -p $APP_HOME
 
 WORKDIR $APP_HOME

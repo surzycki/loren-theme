@@ -27,8 +27,9 @@ beforeCreate:
 # have been established and code pushed to the shared volume.
 # After this is done, we can start up the deployment scripts.
 afterCreate:
-  - docker-compose -f docker-compose.yml up --build --detach
+  - docker-compose exec dev yarn install
   - docker-compose exec dev shopify login --store piu-test.myshopify.com
+  - docker-compose exec dev gulp watch
 
 # Tear down all services and remove the code volume after terminating sessions.
 afterTerminate:
