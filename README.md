@@ -17,6 +17,10 @@ mutagen project run setup
 # start working
 bin/start
 
+# enter into theme directory 
+cd loren-theme 
+shopify theme serve
+
 # start watching directory and build react components (in container)
 yarn build:react
 ```

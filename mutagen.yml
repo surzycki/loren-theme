@@ -16,8 +16,8 @@ sync:
 
 forward:
   http:
-    source: "tcp::80"
-    destination: "docker://loren-theme:tcp:0.0.0.0:80"
+    source: "tcp::9292"
+    destination: "docker://loren-theme:tcp:0.0.0.0:9292"
 
 # Set up the service and any volumes before creating sessions.
 beforeCreate:
@@ -28,7 +28,8 @@ beforeCreate:
 # After this is done, we can start up the deployment scripts.
 afterCreate:
   - docker-compose -f docker-compose.yml up --build --detach
- # - docker-compose exec dev yarn install
+  - docker-compose exec dev shopify login --store piu.cafe
+  - docker-compose exec dev bin/serve
  # - docker-compose exec dev yarn start || true
 
 # Tear down all services and remove the code volume after terminating sessions.

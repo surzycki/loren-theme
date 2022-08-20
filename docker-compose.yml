@@ -8,3 +8,4 @@ services:
     container_name: loren-theme
     ports:
       - 127.0.0.1:3456:3456
+      - 127.0.0.1:9292:9292
