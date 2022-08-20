@@ -11,20 +11,23 @@ Development is connected to the development store [Piu Development](piu-test.mys
 
 All development should be done on the `development` branch as it is connected to the development store
 
-Commands to be run on the host:
+Commands:
  
 ```bash
-# setup / start envionment
+# setup / start envionment (on host)
 bin/start
 ```
 
 ```bash
+# enter container
+docker-compose exec dev bash
+
 # start the server
-mutagen project run serve
+bin/serve
 ```
 
 ```bash
-# shutdown
+# shutdown (on host)
 mutagen project terminiate 
 ```
 
