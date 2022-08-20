@@ -7,8 +7,12 @@
 
 ## Getting Started
 
-Commands to be run on the host
+Development is connected to the development store [Piu Development](piu-test.myshopify.com).
 
+All development should be done on the `development` branch as it is connected to the development store
+
+Commands to be run on the host:
+ 
 ```bash
 # setup / start envionment
 bin/start
