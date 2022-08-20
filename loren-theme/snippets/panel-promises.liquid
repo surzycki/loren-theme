@@ -1,0 +1,49 @@
+{% comment %}
+    Requires the following arguments:
+
+- settings:
+- id:
+{% endcomment %}
+
+<style>
+    .vignette-coffee--{{ id }} {
+        background-image: url({{ settings.coffee_desktop_image | img_url: 'master' }});
+    }
+    .vignette-roasted--{{ id }} {
+        background-image: url({{ settings.roasted_desktop_image | img_url: 'master' }});
+    }
+    .vignette-collection--{{ id }} {
+        background-image: url({{ settings.collection_desktop_image | img_url: 'master' }});
+    }
+    .vignette-biodegradable--{{ id }} {
+        background-image: url({{ settings.biodegradable_desktop_image | img_url: 'master' }});
+    }
+</style>
+
+<section class='panel-promises text-center pt-9'>
+    <div class='vignette vignette-coffee--{{ id }} mb-4 d-flex justify-content-center align-items-center'>
+        <h2 class='h2 hero text-light'>
+            {{ 'promises.coffee' | t }}
+        </h2>
+    </div>
+   
+    <div class='vignette vignette-roasted--{{ id }} mb-4 px-6 pb-14 d-flex justify-content-end align-items-end'>
+        <h2 class='h2 hero text-light'>
+            {{ 'promises.roasted' | t }}
+        </h2>
+    </div>
+
+    <div class='vignette vignette-collection--{{ id }} mb-4 px-8 d-flex align-items-center'>
+        <h2 class='h2 hero text-dark'>
+            {{ 'promises.collection' | t }}
+        </h2>
+    </div>
+
+    <div class='vignette vignette-biodegradable--{{ id }} mb-13 px-6 pt-4 d-flex justify-content-end align-items-center'>
+        <h2 class='h2 hero text-dark'>
+            {{ 'promises.biodegradable' | t }}
+        </h2>
+    </div>
+
+    <hr/>
+</section>

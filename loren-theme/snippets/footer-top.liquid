@@ -1,0 +1,22 @@
+<section class='container text-center mt-16'>
+    <div class='mb-4'>
+        <a href='/'>
+            <img src="{{ 'logo-dark@2x.png' | asset_img_url: '86x' }}"
+                srcset="{{ 'logo-dark@2x.png' | asset_img_url: 'master' }} 2x,
+                    {{ 'logo-dark@3x.png' | asset_img_url: 'master' }} 3x"
+                alt='Piu Cafe'>
+        </a>
+    </div>
+
+    <div class="row justify-content-center mb-6">
+        <div class="col-8 px-2">
+            <h2 class='h2 mx-auto'>
+                {{ 'general.hero.sub-title' | t }}
+            </h2>
+        </div>
+    </div>
+
+    <a href='/products/mattino' class='btn btn-lg btn-outline-secondary text-uppercase mb-17'>
+        {{ 'general.button.order-now' | t }}
+    </a>
+</section>

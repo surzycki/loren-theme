@@ -1,0 +1,65 @@
+<footer class='bg-accent3 text-start text-sm-center'>
+    <div class='container gx-3'>
+        <div class='row mb-4'>
+            <div class='col-sm-6 col-md-4 pt-5 pt-md-12'>
+                <ul class='list-unstyled fs-5'>
+                    {% for link in linklists.footer.links %}
+                        {% assign key = link.title | handleize %}
+                        <li class='mb-4'>
+                            <a href='{{ link.url }}'>
+                                {{ 'general.footer.' | append: key | t }}
+                            </a>
+                        </li>
+                    {%  endfor %}
+                </ul>
+            </div>
+
+            <div class='d-none d-md-block col-md-4 pt-8'>
+                <div class='mb-3 fs-5'>
+                    {{ 'general.footer.what_we_do' | t }}
+                </div>
+                <div>
+                    <a href='https://www.facebook.com/piu.cafe.italien' target='_blank'>
+                        <span class='px-2'>
+                            <img src="{{ 'icon-facebook-lg.png' | asset_img_url: 'master' }}"
+                                srcset="{{ 'icon-facebook-lg@2x.png' | asset_img_url: 'master' }} 2x,
+                                    {{ 'icon-facebook@3x.png' | asset_img_url: 'master' }} 3x"
+                                alt='Facebook'/>
+                        </span>
+                    </a>
+                    <a href='https://www.instagram.com/piu.cafe/' target='_blank'>
+                        <span class='px-2'>
+                            <img src="{{ 'icon-instagram-lg.png' | asset_img_url: 'master' }}"
+                                srcset="{{ 'icon-instagram-lg@2x.png' | asset_img_url: 'master' }} 2x,
+                                    {{ 'icon-instagram-lg@3x.png' | asset_img_url: 'master' }} 3x"
+                                alt='Instagram'/>
+                        </span>
+                    </a>
+                </div>
+            </div>
+
+            <div class='col-sm-6 col-md-4 pt-sm-5 pt-md-12'>
+                <ul class='list-unstyled fs-5'>
+                    {% for link in linklists.main-menu.links %}
+                        {% assign key = link.title | handleize %}
+                        <li class='mb-4'>
+                            <a href='{{ link.url }}'>
+                                {{ 'general.navigation.' | append: key | t }}
+                            </a>
+                        </li>
+                    {%  endfor %}
+                </ul>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='col text-start text-sm-center text-light mb-1'>
+                <div class='fs-5 mb-1'>
+                    Copyright &copy; {{ 'now' | date: '%Y' }} CFC SAS.
+                </div>
+                <div class='fs-6'>
+                    Made with ♡ by Più
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

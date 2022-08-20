@@ -1,0 +1,29 @@
+{% render 'landing' with {
+    settings: section.settings,
+    id: section.id
+}  %}
+
+
+{% schema %}
+                {
+                  "name": "Landing",
+                  "settings":[
+                    {
+                        "type": "header",
+                        "content": "landing"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "desktop_image",
+                        "label": "Image for Desktops",
+                        "info": "Dimensions: 2880x1792"
+                    }
+                  ],
+                  "presets": [
+                    {
+                        "name": "Landing",
+                        "category": "Landing Page"
+                    }
+                  ]
+                }
+{% endschema %}

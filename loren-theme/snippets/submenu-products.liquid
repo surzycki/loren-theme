@@ -1,0 +1,14 @@
+<div class='d-flex mb-16 justify-content-center submenu-products'>
+    {% for product in products %}
+        {% assign product_handle = product.title | handleize %}
+
+        <div class='menu-item text-center {% if product_handle == active %} active {% endif %}'
+             id='menu-item-{{ product_handle }}'>
+            <h3 class='h1 light'>
+                <a class='nav-link'>
+                    {{ product.title }}
+                </a>
+            </h3>
+        </div>
+    {% endfor %}
+</div>
