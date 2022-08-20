@@ -1,5 +1,11 @@
 
 {
-  "sections": {},
-  "order": []
+  "sections": {
+    "image_banner": {
+      "type": "main-image-banner"
+    }
+  },
+  "order": [
+    "image_banner"
+  ]
 }

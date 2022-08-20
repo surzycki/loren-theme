@@ -1,17 +1,10 @@
-{% comment %}
-Requries the following arguments:
-
-- settings: what are settings?
-- id:
-{% endcomment %}
-
 <style>
-  .landing--{{ id  }} {
-     background-image: url({{settings.desktop_image | img_url: 'master'}})
+  .landing--{{ section.id  }} {
+     background-image: url({{section.settings.image | img_url: 'master'}})
   }
 </style>
 
-<section class="landing landing--{{ id }}">
+<section class="landing landing--{{ section.id }}">
     <div class='container'>
         {% render 'header' %}
 
@@ -30,3 +23,18 @@ Requries the following arguments:
         </div>
     </div>
 </section>
+
+{% schema %}
+{
+  "name": "t:sections.image-banner.name",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:sections.image-banner.settings.image.label"
+    }
+  ]
+}
+{% endschema %}
