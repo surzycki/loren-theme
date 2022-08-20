@@ -12,4 +12,3 @@ trap "gracefulShutdown" 2
 
 # Start file sync
 mutagen project start || mutagen project terminate
-docker-compose -f docker-compose.yml logs --follow
