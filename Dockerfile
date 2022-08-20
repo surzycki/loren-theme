@@ -1,5 +1,4 @@
 FROM ruby:3.1.2-buster
-#FROM node:16-stretch-slim
 
 ENV APP_HOME /var/www
 ENV HOSTNAME lorem-theme
@@ -20,3 +19,5 @@ RUN mkdir -p $APP_HOME
 
 WORKDIR $APP_HOME
 
+# Save timestamp of image building
+RUN date -u > BUILD_TIME

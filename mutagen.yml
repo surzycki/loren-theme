@@ -28,8 +28,8 @@ beforeCreate:
 # After this is done, we can start up the deployment scripts.
 afterCreate:
   - docker-compose -f docker-compose.yml up --build --detach
-  - docker-compose exec dev yarn install
-  - docker-compose exec dev yarn start || true
+ # - docker-compose exec dev yarn install
+ # - docker-compose exec dev yarn start || true
 
 # Tear down all services and remove the code volume after terminating sessions.
 afterTerminate:

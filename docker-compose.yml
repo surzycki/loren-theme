@@ -6,3 +6,5 @@ services:
     entrypoint: "tail -f /dev/null"
     hostname: loren-theme
     container_name: loren-theme
+    ports:
+      - 127.0.0.1:3456:3456
