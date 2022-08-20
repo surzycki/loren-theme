@@ -28,8 +28,7 @@ beforeCreate:
 # After this is done, we can start up the deployment scripts.
 afterCreate:
   - docker-compose -f docker-compose.yml up --build --detach
-  - docker-compose exec dev shopify login --store piu.cafe
-  - docker-compose exec dev bin/serve
+  - docker-compose exec dev shopify login --store piu-test.myshopify.com
 
 # Tear down all services and remove the code volume after terminating sessions.
 afterTerminate:
@@ -37,4 +36,4 @@ afterTerminate:
 
 # Define common utility commands.
 commands:
-  setup: docker-compose -f docker-compose.yml exec dev bin/setup
+  serve: docker-compose exec dev bin/serve

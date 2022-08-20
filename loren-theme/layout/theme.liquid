@@ -7,6 +7,22 @@
     <link rel="canonical" href="{{ canonical_url }}">
     <link rel="shortcut icon" href="{{ 'favicon.ico' | asset_url }}">
 
+
+    <title>
+      {{ page_title }}
+      {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
+      {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
+      {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
+    </title>
+
+    {% if page_description %}
+      <meta name="description" content="{{ page_description | escape }}">
+    {% endif %}
+
+    {% render 'meta-tags' %}
+
+    <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
+
     {{ content_for_header }}
 
     {{- 'theme.css' | asset_url | stylesheet_tag -}}
@@ -14,9 +30,13 @@
 
   <body>
     <div id="react-cart"></div>
-    {{ content_for_layout }}
     <script defer type='module' src="{{ 'react-cart-control.bundle.js' | asset_url }}"></script>
     <script defer type='module' src="{{ 'react-cart.bundle.js' | asset_url }}"></script>
-    <script src="{{ 'theme.js' | asset_url }}"></script>
+
+
+    <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
+      {{ content_for_layout }}
+    </main>
+
   </body>
 </html>
