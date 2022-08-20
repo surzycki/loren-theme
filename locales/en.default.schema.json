@@ -1,0 +1,12 @@
+{
+  "sections": {
+    "main-image-banner": {
+      "name": "Main Image Banner",
+      "settings": {
+        "image": {
+          "label": "Main image"
+        }
+      }
+    }
+  }
+}
