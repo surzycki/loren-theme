@@ -1,6 +1,6 @@
 <style>
   .landing--{{ section.id  }} {
-     background-image: url({{section.settings.image | img_url: 'master'}})
+     background-image: url({{section.settings.image-desktop | img_url: 'master'}})
   }
 </style>
 
@@ -30,8 +30,17 @@
   "settings": [
     {
       "type": "image_picker",
-      "id": "image",
-      "label": "t:sections.main-image-banner.settings.image.label"
+      "label": "t:sections.main-image-banner.settings.image.label",
+      "id": "image-desktop",
+      "label": "Image for Desktops",
+      "info": "Dimensions: 2880x1792"
+    },
+    {
+      "type": "image_picker",
+      "label": "t:sections.main-image-banner.settings.image.label",
+      "id": "image-tablet",
+      "label": "Image for Tablets",
+      "info": "Dimensions: 2880x1792"
     }
   ]
 }
