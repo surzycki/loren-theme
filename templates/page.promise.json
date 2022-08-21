@@ -1,4 +1,12 @@
 {
-  "sections": {},
-  "order": []
+  "sections": {
+    "image-banner": {
+      "type": "image-banner-promise",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "image-banner"
+  ]
 }
