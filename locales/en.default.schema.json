@@ -15,6 +15,14 @@
           "label": "Promise image"
         }
       }
+    },
+    "page-image-banner-coffee": {
+      "name": "Coffee Image Banner",
+      "settings": {
+        "image": {
+          "label": "Coffee image"
+        }
+      }
     }
   }
 }
