@@ -1,7 +1,7 @@
 {
   "sections": {
     "image-banner": {
-      "type": "image-banner-promise",
+      "type": "page-image-banner-promise",
       "settings": {
       }
     }

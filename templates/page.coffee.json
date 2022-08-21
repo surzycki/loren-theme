@@ -1,7 +1,7 @@
 {
   "sections": {
     "image-banner": {
-      "type": "image-banner-coffee",
+      "type": "page-image-banner-coffee",
       "settings": {
       }
     }
