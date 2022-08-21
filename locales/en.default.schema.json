@@ -7,6 +7,14 @@
           "label": "Main image"
         }
       }
+    },
+    "page-image-banner-promise": {
+      "name": "Promise Image Banner",
+      "settings": {
+        "image": {
+          "label": "Promise image"
+        }
+      }
     }
   }
 }
