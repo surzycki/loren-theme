@@ -21886,6 +21886,11 @@ menu-drawer .drawer.slide {
   }
 }
 
+header {
+  position: fixed;
+  width: 100%;
+}
+
 body::before {
   content: "xs";
   position: fixed;

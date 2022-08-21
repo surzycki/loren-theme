@@ -4,7 +4,7 @@
   assign contactUsLink = linklists.main-menu.links | where: "title", "Contact Us" | first
 -%}
 
-<header class='container'>
+<div class='container'>
     <menu-drawer class='d-block d-md-none'>
         <div class="hamburger-icon" id="icon">
             <div class="icon-1" id="a"></div>
@@ -66,7 +66,7 @@
             </li>
         </ul>
     </nav>
-</header>
+</div>
 
 <script>
  var icon = document.getElementById("icon");
@@ -84,3 +84,11 @@
      drawer.classList.toggle('slide');
 });
 </script>
+
+{% schema %}
+  {
+    "name": "Header",
+    "tag": "header",
+    "settings": []
+}
+{% endschema %}
