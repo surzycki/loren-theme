@@ -31,22 +31,22 @@
         <nav id="nav-drawer" class="pe-auto">
             <ul class='text-uppercase'>
                 <li>
-                    <a href='{{ routes.root_url }}' class='{% if routes.root_url.current %} current {% endif %}'>
+                    <a href='{{ routes.root_url }}' class='{% if page.url == blank %} link-hover current {% endif %}'>
                         {{ 'general.navigation.home' | t }}
                     </a>
                 </li>
                 <li>
-                    <a href='{{ ourCoffeeLink.url }}' class='{% if ourCoffeeLink.current %} current {% endif %}'>
+                    <a href='{{ ourCoffeeLink.url }}' class='{% if ourCoffeeLink.current %} link-hover current {% endif %}'>
                         {{ 'general.navigation.our-coffee' | t }}
                     </a>
                 </li>
                 <li>
-                    <a href='{{ ourPromiseLink.url }}' class='{% if ourPromiseLink.current %} current {% endif %}'>
+                    <a href='{{ ourPromiseLink.url }}' class='{% if ourPromiseLink.current %} link-hover current {% endif %}'>
                         {{ 'general.navigation.our-promise' | t }}
                     </a>
                 </li>
                 <li>
-                    <a href='{{ contactUsLink.url }}' class='{% if contactUsLink.current %} current {% endif %}'>
+                    <a href='{{ contactUsLink.url }}' class='{% if contactUsLink.current %} link-hover current {% endif %}'>
                         {{ 'general.navigation.contact-us' | t }}
                     </a>
                 </li>
