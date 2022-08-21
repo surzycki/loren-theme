@@ -21748,6 +21748,24 @@ small, .small {
     opacity: 1;
   }
 }
+@media (min-width: 768px) {
+  header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+}
+header #nav-mobile-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+header #nav-mobile-bar .nav-item {
+  width: 4.5rem;
+}
+
 menu-drawer {
   width: 100%;
   height: 100%;
@@ -21759,7 +21777,7 @@ menu-drawer .icon-1, menu-drawer .icon-2, menu-drawer .icon-3 {
   position: absolute;
   left: 25%;
   top: 50%;
-  width: 32px;
+  width: 28px;
   height: 3px;
   background-color: #333333;
   transition: all 400ms cubic-bezier(0.84, 0.06, 0.52, 1.8);
@@ -21776,17 +21794,11 @@ menu-drawer .hamburger-icon {
   position: absolute;
   height: 60px;
   width: 60px;
-  top: 10%;
-  left: 3%;
+  top: 1.4rem;
+  left: 0;
   z-index: 1000;
   cursor: pointer;
-  border-radius: 50%;
   transition: all 0.2s ease-in-out;
-  background: rgba(255, 255, 255, 0.2);
-}
-menu-drawer .hamburger-icon:hover {
-  transform: scale(1.2);
-  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
 }
 menu-drawer .icon-1.a {
   transform: rotate(40deg);
@@ -21801,7 +21813,7 @@ menu-drawer .clear {
   clear: both;
 }
 menu-drawer nav {
-  background: #0288D1;
+  background: #fffcf7;
   position: absolute;
   top: 0;
   left: 0;
@@ -21815,14 +21827,14 @@ menu-drawer nav {
 menu-drawer nav ul {
   margin: 0;
   position: absolute;
-  top: 25%;
-  left: 7%;
+  top: 22%;
+  left: 20%;
 }
 menu-drawer nav ul li {
   white-space: nowrap;
   list-style: none;
   font-size: 1.5rem;
-  line-height: 3.5rem;
+  line-height: 2.4;
 }
 menu-drawer nav.show {
   width: 75%;
@@ -21832,7 +21844,7 @@ menu-drawer .drawer {
   position: absolute;
   top: 0;
   left: 0;
-  background: #64B5F6;
+  background: #fffcf7;
   height: 100%;
   width: 0%;
   transition: all 500ms cubic-bezier(0.62, 0.04, 0.3, 1.8);
@@ -21841,22 +21853,8 @@ menu-drawer .drawer {
   opacity: 1;
 }
 menu-drawer .drawer.slide {
-  width: 50%;
-  opacity: 1;
-}
-
-.content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
   width: 100%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-.content h1, .content .h1 {
-  font-size: 70px;
-  animation: shotup 600ms ease-in-out;
-  animation-delay: 300ms;
+  opacity: 1;
 }
 
 .main-image-banner {
@@ -21884,11 +21882,6 @@ menu-drawer .drawer.slide {
   .main-image-banner .h2 {
     width: 508px;
   }
-}
-
-header {
-  position: fixed;
-  width: 100%;
 }
 
 body::before {

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="21px" height="24px" viewBox="0 0 21 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Shopping Cart</title>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Mobile---Header" transform="translate(-400.000000, -35.000000)" fill="#000000" fill-rule="nonzero">
+            <g id="Mobile-Header" transform="translate(16.000000, 24.000000)">
+                <g id="Shopping-Cart" transform="translate(384.000000, 11.000000)">
+                    <path d="M10.5,1.5 C12.5710678,1.5 14.25,3.17893219 14.25,5.25 L14.25,6 L6.75,6 L6.75,5.25 C6.75,3.17893219 8.42893219,1.5 10.5,1.5 Z M15.75,6 L15.75,5.25 C15.75,2.35050506 13.3994949,0 10.5,0 C7.60050506,0 5.25,2.35050506 5.25,5.25 L5.25,6 L0,6 L0,21 C0,22.6568542 1.34314575,24 3,24 L18,24 C19.6568542,24 21,22.6568542 21,21 L21,6 L15.75,6 Z M1.5,7.5 L19.5,7.5 L19.5,21 C19.5,21.8284271 18.8284271,22.5 18,22.5 L3,22.5 C2.17157288,22.5 1.5,21.8284271 1.5,21 L1.5,7.5 Z" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
