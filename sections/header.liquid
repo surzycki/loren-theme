@@ -1,9 +1,43 @@
-{% assign ourCoffeeLink = linklists.main-menu.links | where: "title", "Our Coffee" | first %}
-{% assign ourPromiseLink = linklists.main-menu.links | where: "title", "Our Promise" | first %}
-{% assign contactUsLink = linklists.main-menu.links | where: "title", "Contact Us" | first %}
+{%- liquid
+  assign ourCoffeeLink = linklists.main-menu.links | where: "title", "Our Coffee" | first
+  assign ourPromiseLink = linklists.main-menu.links | where: "title", "Our Promise" | first
+  assign contactUsLink = linklists.main-menu.links | where: "title", "Contact Us" | first
+-%}
 
-<div class='container'>
-    <header class='d-flex flex-wrap justify-content-center pt-6 pb-4'>
+<header class='container'>
+    <menu-drawer class='d-block d-md-none'>
+        <div class="hamburger-icon" id="icon">
+            <div class="icon-1" id="a"></div>
+            <div class="icon-2" id="b"></div>
+            <div class="icon-3" id="c"></div>
+            <div class="clear"></div>
+        </div>
+
+        <nav id="drawer-nav">
+            <ul class='text-uppercase'>
+                <li>HOme</li>
+                <li>
+                    <a href='{{ ourCoffeeLink.url }}' class='{% if ourCoffeeLink.current %} current {% endif %}'>
+                        {{ 'general.navigation.our-coffee' | t }}
+                    </a>
+                </li>
+                <li>
+                    <a href='{{ ourPromiseLink.url }}' class='{% if ourPromiseLink.current %} current {% endif %}'>
+                        {{ 'general.navigation.our-promise' | t }}
+                    </a>
+                </li>
+                <li>
+                    <a href='{{ contactUsLink.url }}' class='{% if contactUsLink.current %} current {% endif %}'>
+                        {{ 'general.navigation.contact-us' | t }}
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="drawer" id="drawer"></div>
+    </menu-drawer>
+
+    <nav class='d-none d-md-flex flex-wrap justify-content-center pt-6 pb-4'>
         <a class='d-flex align-items-center me-md-auto' href='/'>
             <img src="{{ 'logo-dark.png' | asset_img_url: 'master' }}"
             srcset="{{ 'logo-dark@2x.png' | asset_img_url: 'master' }} 2x,
@@ -31,5 +65,22 @@
                 </a>
             </li>
         </ul>
-    </header>
-</div>
+    </nav>
+</header>
+
+<script>
+ var icon = document.getElementById("icon");
+ var icon1 = document.getElementById("a");
+ var icon2 = document.getElementById("b");
+ var icon3 = document.getElementById("c");
+ var drawer = document.getElementById('drawer');
+ var drawerNav = document.getElementById("drawer-nav");
+
+ icon.addEventListener('click', function() {
+     icon1.classList.toggle('a');
+     icon2.classList.toggle('c');
+     icon3.classList.toggle('b');
+     drawerNav.classList.toggle('show');
+     drawer.classList.toggle('slide');
+});
+</script>

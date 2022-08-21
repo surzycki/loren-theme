@@ -1,11 +1,11 @@
 @import "./fonts";
 @import "./variables";
-// When Sass is precompiled by its own CLI, it processes @imports by itself, and
-// sometimes thus doesn’t understand ~ notation. We will call node_modules directly.
 @import "node_modules/bootstrap/scss/bootstrap";
 
 @import "./typography";
 @import "./effects";
+
+@import "./components/menu-drawer";
 
 @import "./debug.scss";
 
