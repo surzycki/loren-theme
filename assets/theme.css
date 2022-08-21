@@ -21859,6 +21859,33 @@ menu-drawer .drawer.slide {
   animation-delay: 300ms;
 }
 
+.main-image-banner {
+  height: 800px;
+  background-repeat: no-repeat;
+  background-color: #ccc8c0;
+  background-size: 2800px 800px;
+}
+@media (min-width: 1200px) {
+  .main-image-banner {
+    background-position: 51% 50%;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .main-image-banner {
+    background-position: 55% 50%;
+  }
+}
+@media (min-width: 1200px) {
+  .main-image-banner .h2 {
+    width: 546px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .main-image-banner .h2 {
+    width: 508px;
+  }
+}
+
 body::before {
   content: "xs";
   position: fixed;
