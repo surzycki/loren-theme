@@ -21861,8 +21861,8 @@ menu-drawer .drawer.slide {
   background-color: #ccc8c0;
   background-repeat: no-repeat;
   height: 736px;
-  background-size: 2156px;
-  background-position: 50% 50%;
+  background-size: 1600px;
+  background-position: 65% 50%;
 }
 @media (min-width: 768px) and (max-width: 991.98px) {
   .main-image-banner {
