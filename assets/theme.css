@@ -21598,28 +21598,9 @@ textarea.form-control-lg {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-.h1.hero {
-  font-size: 3.5rem;
-  line-height: 3.5rem;
-  letter-spacing: 1.6px;
-}
-.h1.light-hero {
-  font-size: 3.5rem;
-  line-height: 3.5rem;
-  text-transform: none;
-  font-weight: 400;
-  letter-spacing: -1px;
-}
 .h1.light {
   font-weight: 400;
   letter-spacing: 1px;
-}
-.h1.brand {
-  font-family: "Rainer", serif;
-  font-size: 5.625rem;
-  line-height: 6rem;
-  letter-spacing: 1.2px;
-  text-transform: none;
 }
 
 .h2 {
@@ -21627,10 +21608,6 @@ textarea.form-control-lg {
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 400;
-}
-.h2.hero {
-  font-size: 1.875rem;
-  line-height: 2.5rem;
 }
 
 .h3 {
@@ -21861,17 +21838,17 @@ menu-drawer .drawer.slide {
   background-color: #ccc8c0;
   background-repeat: no-repeat;
   height: 736px;
-  background-size: 1600px;
-  background-position: 65% 50%;
+  background-size: 1680px;
+  background-position: 65% 45%;
 }
-@media (min-width: 768px) and (max-width: 991.98px) {
+@media (min-width: 768px) {
   .main-image-banner {
     height: 616px;
     background-position: 50% 50%;
     background-size: 2156px 616px;
   }
 }
-@media (min-width: 992px) and (max-width: 1199.98px) {
+@media (min-width: 992px) {
   .main-image-banner {
     height: 800px;
     background-position: 55% 50%;
@@ -21884,6 +21861,23 @@ menu-drawer .drawer.slide {
     background-position: 48% 65%;
     background-size: 2800px 800px;
   }
+}
+.main-image-banner .h1 {
+  font-family: "Rainer", serif;
+  letter-spacing: 1.2px;
+  text-transform: none;
+  font-size: 4.5rem;
+  line-height: 6rem;
+}
+@media (min-width: 1200px) {
+  .main-image-banner .h1 {
+    font-size: 5.625rem;
+    line-height: 6rem;
+  }
+}
+.main-image-banner .h2 {
+  font-size: 1.375rem;
+  line-height: 2rem;
 }
 @media (min-width: 992px) and (max-width: 1199.98px) {
   .main-image-banner .h2 {

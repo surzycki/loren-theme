@@ -6,32 +6,32 @@
   text-transform: uppercase;
   letter-spacing: 1px;
 
-  &.hero {
-    font-size: 3.5rem;
-    line-height: 3.5rem;
-    letter-spacing: 1.6px;
-  }
+  // &.hero {
+  //   font-size: 3.5rem;
+  //   line-height: 3.5rem;
+  //   letter-spacing: 1.6px;
+  // }
 
-  &.light-hero {
-    font-size: 3.5rem;
-    line-height: 3.5rem;
-    text-transform: none;
-    font-weight: 400;
-    letter-spacing: -1px;
-  }
+  // &.light-hero {
+  //   font-size: 3.5rem;
+  //   line-height: 3.5rem;
+  //   text-transform: none;
+  //   font-weight: 400;
+  //   letter-spacing: -1px;
+  // }
 
   &.light {
     font-weight: 400;
     letter-spacing: 1px;
   }
 
-  &.brand {
-    font-family: $brand-font-family;
-    font-size: 5.625rem;
-    line-height: 6rem;
-    letter-spacing: 1.2px;
-    text-transform: none;
-  }
+  // &.brand {
+  //   font-family: $brand-font-family;
+  //   font-size: 5.625rem;
+  //   line-height: 6rem;
+  //   letter-spacing: 1.2px;
+  //   text-transform: none;
+  // }
 }
 
 .h2 {
@@ -40,10 +40,10 @@
   line-height: 2rem;
   font-weight: 400;
 
-  &.hero {
-    font-size: 1.875rem;
-    line-height: 2.5rem;
-  }
+  // &.hero {
+  //   font-size: 1.875rem;
+  //   line-height: 2.5rem;
+  // }
 }
 
 .h3 {
