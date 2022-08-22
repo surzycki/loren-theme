@@ -2,9 +2,9 @@
   background-color: #ccc8c0;
   background-repeat: no-repeat;
 
-  height: 736px;
-  background-size: 1680px;
-  background-position: 65% 45%;
+  height: 712px;
+  background-size: 1600px;
+  background-position: 65% 38%;
 
   @include media-breakpoint-up(md) {
     height: 616px;
@@ -51,3 +51,4 @@
     }
   }
 }
+

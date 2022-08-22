@@ -25,20 +25,24 @@ $dark: $black !default;
 $body-color: $black;
 $body-bg: $background-light;
 
+$primary: #F05022;
 $secondary: $black !default;
 
 $btn-line-height: 1rem !default;
 $btn-font-size: 1rem !default;
-$btn-font-weight: 700 !default;
+$btn-font-weight: 300 !default;
 $btn-border-width: 2px !default;
+
 $btn-padding-y: 1rem !default;
-$btn-padding-x: 2.5rem !default;
+$btn-padding-x: 2.7rem !default;
+$btn-padding-y-lg: 1rem !default;
+$btn-padding-x-lg: 2.7rem !default;
+
 $btn-border-radius: 0px !default;
 $btn-border-radius-sm: 0px !default;
 $btn-border-radius-lg: 0px !default;
 
-$btn-padding-y-lg: 1.25rem !default;
-$btn-padding-x-lg: 2.5rem !default;
+
 
 $link-color: $black;
 $link-decoration: none;
