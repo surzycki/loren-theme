@@ -1,12 +1,12 @@
 {
   "sections": {
-    "page-coffee": {
+    "page": {
       "type": "page-coffee",
       "settings": {
       }
     }
   },
   "order": [
-    "page-coffee"
+    "page"
   ]
 }

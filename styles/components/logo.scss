@@ -1,0 +1,11 @@
+.logo{
+    svg {
+        display: inline-block;
+        width: 76px;
+        height: 56px;
+    }
+    &.logo-lg svg {
+        width: 108px;
+        height: 80px;
+    }
+}

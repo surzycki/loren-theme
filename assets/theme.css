@@ -21884,6 +21884,16 @@ menu-drawer .drawer.slide {
   }
 }
 
+.logo svg {
+  display: inline-block;
+  width: 76px;
+  height: 56px;
+}
+.logo.logo-lg svg {
+  width: 108px;
+  height: 80px;
+}
+
 body::before {
   content: "xs";
   position: fixed;

@@ -8,7 +8,7 @@
     <nav id="nav-mobile-bar" class="d-md-none nav justify-content-between pt-3" >
         <div class="nav-item"></div>
         <div class="nav-item">
-            <a href='{{ routes.root_url }}'>
+            <a class="logo" ref='{{ routes.root_url }}'>
                 {% render 'logo' %}
             </a>
         </div>
@@ -58,11 +58,8 @@
 
 <div id="nav-desktop" class='container'>
     <nav class='d-none d-md-flex flex-wrap justify-content-center pt-6 pb-4'>
-        <a class='d-flex align-items-center me-md-auto' href='/'>
-            <img src="{{ 'logo-dark.png' | asset_img_url: 'master' }}"
-            srcset="{{ 'logo-dark@2x.png' | asset_img_url: 'master' }} 2x,
-            {{ 'logo-dark@3x.png' | asset_img_url: 'master' }} 3x"
-            alt='Piu Cafe'>
+        <a class='logo logo-lg d-flex align-items-center me-md-auto' href='{{ routes.root_url  }}'>
+            {% render 'logo' %}
         </a>
         <ul class='nav d-flex align-items-center text-uppercase'>
             <li class='px-5'>
