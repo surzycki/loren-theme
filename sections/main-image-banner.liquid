@@ -2,9 +2,34 @@
   .main-image-banner--{{ section.id  }} {
      background-image: url({{section.settings.image-desktop | img_url: 'master'}})
   }
+
+  .main-image-banner-mobile--{{ section.id  }} {
+     background-image: url({{section.settings.image-mobile | img_url: 'master'}})
+  }
+
+
+
 </style>
 
-<div class="main-image-banner main-image-banner--{{ section.id }}">
+<div id="main-image-banner-desktop" class="d-none d-md-block main-image-banner main-image-banner--{{ section.id }}">
+    <div class='container'>
+        <div class='pt-24'>
+            <h1 class='h1 hero brand mb-8'>
+                {{ 'general.hero.title' | t }}
+            </h1>
+
+            <h2 class='h2 mb-6'>
+                {{ 'general.hero.sub-title' | t }}
+            </h2>
+
+            <a href='/products/mattino' class='btn btn-outline-secondary text-uppercase'>
+                {{ 'general.button.order-now' | t }}
+            </a>
+        </div>
+    </div>
+</div>
+
+<div id="main-image-bannder-mobile" class="d-md-none main-image-banner main-image-banner-mobile--{{ section.id }}">
     <div class='container'>
         <div class='pt-24'>
             <h1 class='h1 hero brand mb-8'>
@@ -37,17 +62,10 @@
       },
       {
         "type": "image_picker",
-        "label": "t:sections.main-image-banne.settings.image.label",
-        "id": "image-tablet",
-        "label": "Image for Tablets",
-        "info": "Dimensions: 2880x1792"
-      },
-      {
-        "type": "image_picker",
         "label": "t:sections.main-image-banner.settings.image.label",
         "id": "image-mobile",
         "label": "Image for Mobile",
-        "info": "Dimensions: 2880x1792"
+        "info": "Dimensions: 2800x1600"
       }
     ],
     "presets": [

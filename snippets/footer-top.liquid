@@ -1,10 +1,7 @@
 <section class='container text-center mt-16'>
     <div class='mb-4'>
-        <a href='/'>
-            <img src="{{ 'logo-dark@2x.png' | asset_img_url: '86x' }}"
-                srcset="{{ 'logo-dark@2x.png' | asset_img_url: 'master' }} 2x,
-                    {{ 'logo-dark@3x.png' | asset_img_url: 'master' }} 3x"
-                alt='Piu Cafe'>
+        <a class='logo logo-md' href='{{ routes.root_url  }}'>
+            {% render 'logo' %}
         </a>
     </div>
 

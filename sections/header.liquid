@@ -4,8 +4,8 @@
   assign contactUsLink = linklists.main-menu.links | where: "title", "Contact Us" | first
 -%}
 
-<div id="nav-mobile">
-    <nav id="nav-mobile-bar" class="d-md-none nav justify-content-between pt-3" >
+<div class="d-md-none" id="nav-mobile">
+    <nav id="nav-mobile-bar" class="nav justify-content-between pt-3" >
         <div class="nav-item"></div>
         <div class="nav-item">
             <a class="logo" ref='{{ routes.root_url }}'>
@@ -20,7 +20,7 @@
         </div>
     </nav>
 
-    <menu-drawer class="d-block d-md-none pe-none">
+    <menu-drawer class="d-block pe-none">
         <div class="hamburger-icon pe-auto" id="icon">
             <div class="icon-1" id="a"></div>
             <div class="icon-2" id="b"></div>
@@ -56,28 +56,28 @@
     </menu-drawer>
 </div>
 
-<div id="nav-desktop" class='container'>
-    <nav class='d-none d-md-flex flex-wrap justify-content-center pt-6 pb-4'>
-        <a class='logo logo-lg d-flex align-items-center me-md-auto' href='{{ routes.root_url  }}'>
+<div id="nav-desktop" class='container d-none d-md-block'>
+    <nav class='d-md-flex flex-wrap justify-content-center pt-6 pb-4'>
+        <a class='logo d-flex align-items-center me-md-auto' href='{{ routes.root_url  }}'>
             {% render 'logo' %}
         </a>
         <ul class='nav d-flex align-items-center text-uppercase'>
-            <li class='px-5'>
+            <li class='px-md-3 px-lg-5'>
                 <a href='{{ ourCoffeeLink.url }}' class='link-hover {% if ourCoffeeLink.current %} current {% endif %}'>
                     {{ 'general.navigation.our-coffee' | t }}
                 </a>
             </li>
-            <li class='px-5'>
+            <li class='px-md-3 px-lg-5'>
                 <a href='{{ ourPromiseLink.url }}' class='link-hover {% if ourPromiseLink.current %} current {% endif %}'>
                     {{ 'general.navigation.our-promise' | t }}
                 </a>
             </li>
-            <li class='px-5'>
+            <li class='px-md-3 px-lg-5'>
                 <a href='{{ contactUsLink.url }}' class='link-hover {% if contactUsLink.current %} current {% endif %}'>
                     {{ 'general.navigation.contact-us' | t }}
                 </a>
             </li>
-            <li class='ps-5'>
+            <li class='ps-md-3 ps-lg-5'>
                 <a id='react-menu-item-cart' class='link-hover' data-label="{{ 'general.navigation.shopping-cart' | t  }}">
                 </a>
             </li>
