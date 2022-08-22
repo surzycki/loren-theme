@@ -1,12 +1,12 @@
 {
   "sections": {
-    "page": {
+    "page-promise": {
       "type": "page-promise",
       "settings": {
       }
     }
   },
   "order": [
-    "page"
+    "page-promise"
   ]
 }
