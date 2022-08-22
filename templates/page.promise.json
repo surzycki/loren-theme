@@ -1,12 +1,12 @@
 {
   "sections": {
-    "image-banner": {
-      "type": "page-image-banner-promise",
+    "page": {
+      "type": "page-promise",
       "settings": {
       }
     }
   },
   "order": [
-    "image-banner"
+    "page"
   ]
 }
