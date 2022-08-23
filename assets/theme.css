@@ -21890,6 +21890,11 @@ menu-drawer .drawer.slide {
 }
 @media (min-width: 768px) {
   .main-image-banner .h2 {
+    width: 416px;
+  }
+}
+@media (min-width: 992px) {
+  .main-image-banner .h2 {
     width: 430px;
   }
 }

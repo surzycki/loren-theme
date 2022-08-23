@@ -50,6 +50,10 @@
     line-height: 2rem;
 
     @include media-breakpoint-up(md) {
+      width: 416px;
+    }
+
+    @include media-breakpoint-up(lg) {
       width: 430px;
     }
 
