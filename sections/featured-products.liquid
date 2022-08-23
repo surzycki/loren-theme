@@ -1,4 +1,4 @@
-<section class='container pt-10 pb-14'>
+<div class='container pt-10 pb-14'>
     <h1 class='h1 mb-12 text-center'>
         <span class='text-accent1'>{{ 'general.featured-products.title.every-hour' | t }}</span>
         <br/>
@@ -8,24 +8,25 @@
     <div class='row'>
         {% render 'featured-product' for collections[section.settings.collection].products as product  %}
     </div>
-</section>
+</div>
 
 
 {% schema %}
-                {
-                  "name": "Featured Products",
-                  "settings":[
-                    {
-                      "type": "collection",
-                      "id": "collection",
-                      "label": "Collection"
-                    }
-                  ],
-                  "presets": [
-                    {
-                      "name": "Featured Products",
-                      "category": "Landing Page"
-                    }
-                  ]
-                }
+  {
+    "name": "Featured Products",
+    "tag": "section",
+    "settings":[
+      {
+        "type": "collection",
+        "id": "collection",
+        "label": "Collection"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Featured Products",
+        "category": "Main"
+      }
+    ]
+  }
 {% endschema %}

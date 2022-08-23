@@ -11,8 +11,12 @@
 
     &.btn-lg {
         --bs-btn-padding-y: 1.25rem;
-        @include media-breakpoint-only(md) {
+        @include media-breakpoint-up(md) {
             --bs-btn-padding-y: 1rem;
+        }
+
+        @include media-breakpoint-up(xl) {
+            --bs-btn-padding-y: 1.25rem;
         }
     }
 }

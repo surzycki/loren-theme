@@ -21844,15 +21844,13 @@ menu-drawer .drawer.slide {
 @media (min-width: 768px) {
   .main-image-banner {
     height: 616px;
-    background-position: 50% 50%;
+    background-position: 52% 50%;
     background-size: 2156px 616px;
   }
 }
 @media (min-width: 992px) {
   .main-image-banner {
-    height: 800px;
-    background-position: 55% 50%;
-    background-size: 2800px 800px;
+    background-position: 48% 50%;
   }
 }
 @media (min-width: 1200px) {
@@ -21885,7 +21883,7 @@ menu-drawer .drawer.slide {
   font-size: 1.375rem;
   line-height: 2rem;
 }
-@media (min-width: 768px) and (max-width: 991.98px) {
+@media (min-width: 768px) {
   .main-image-banner .h2 {
     width: 430px;
   }
@@ -21937,9 +21935,14 @@ menu-drawer .drawer.slide {
 .btn-cta.btn-lg, .btn-group-lg > .btn-cta.btn {
   --bs-btn-padding-y: 1.25rem;
 }
-@media (min-width: 768px) and (max-width: 991.98px) {
+@media (min-width: 768px) {
   .btn-cta.btn-lg, .btn-group-lg > .btn-cta.btn {
     --bs-btn-padding-y: 1rem;
+  }
+}
+@media (min-width: 1200px) {
+  .btn-cta.btn-lg, .btn-group-lg > .btn-cta.btn {
+    --bs-btn-padding-y: 1.25rem;
   }
 }
 
