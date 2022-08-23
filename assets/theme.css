@@ -21841,6 +21841,11 @@ menu-drawer .drawer.slide {
   background-size: 1640px;
   background-position: 65% 34%;
 }
+@media (min-width: 576px) {
+  .main-image-banner {
+    background-position: 70% 64%;
+  }
+}
 @media (min-width: 768px) {
   .main-image-banner {
     height: 616px;
@@ -21856,7 +21861,7 @@ menu-drawer .drawer.slide {
 @media (min-width: 1200px) {
   .main-image-banner {
     height: 800px;
-    background-position: 48% 65%;
+    background-position: 50% 65%;
     background-size: 2800px 800px;
   }
 }

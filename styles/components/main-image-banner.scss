@@ -6,6 +6,10 @@
   background-size: 1640px;
   background-position: 65% 34%;
 
+  @include media-breakpoint-up(sm) {
+    background-position: 70% 64%;
+  }
+
   @include media-breakpoint-up(md) {
     height: 616px;
     background-position: 52% 50%;
@@ -18,7 +22,7 @@
 
   @include media-breakpoint-up(xl) {
     height: 800px;
-    background-position: 48% 65%;
+    background-position: 50% 65%;
     background-size: 2800px 800px;
   }
 
