@@ -3,8 +3,8 @@
   background-repeat: no-repeat;
 
   height: 712px;
-  background-size: 1600px;
-  background-position: 65% 38%;
+  background-size: 1640px;
+  background-position: 65% 34%;
 
   @include media-breakpoint-up(md) {
     height: 616px;
@@ -32,6 +32,11 @@
     font-size: 4.5rem;
     line-height: 6rem;
 
+    @include media-breakpoint-up(md) {
+      font-size: 5rem;
+      line-height: 6rem;
+    }
+
     @include media-breakpoint-up(xl) {
       font-size: 5.625rem;
       line-height: 6rem;
@@ -42,11 +47,13 @@
     font-size: 1.375rem;
     line-height: 2rem;
 
-    @include media-breakpoint-only(lg) {
-      width: 508px;
+    @include media-breakpoint-only(md) {
+      width: 430px;
     }
 
     @include media-breakpoint-up(xl) {
+      font-size: 1.5rem;
+      line-height: 2rem;
       width: 546px;
     }
   }

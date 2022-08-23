@@ -2,3 +2,17 @@
     color: $white !important;
     line-height: 1.25rem !important;
 }
+
+.btn-cta {
+    @extend .btn-primary;
+    --bs-btn-padding-x: 3.2rem;
+    --bs-btn-font-size: 1.25rem;
+    --bs-btn-line-height: 1.25rem;
+
+    &.btn-lg {
+        --bs-btn-padding-y: 1.25rem;
+        @include media-breakpoint-only(md) {
+            --bs-btn-padding-y: 1rem;
+        }
+    }
+}
