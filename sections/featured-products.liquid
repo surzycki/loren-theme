@@ -6,7 +6,7 @@
     </h1>
 
     <div class='row'>
-      {% for product in collections[settings.collection].products  %}
+      {% for product in collections[section.settings.collection].products  %}
         {% assign textPosition = "text-start,text-center,text-end" | split: ',' %}
         {% assign positionIndex = forloop.index | minus: 1 %}
 
