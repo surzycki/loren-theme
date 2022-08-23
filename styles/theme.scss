@@ -10,6 +10,7 @@
 @import "./components/main-image-banner";
 @import "./components/logo";
 @import "./components/buttons";
+@import "./components/featured-products";
 
 @import "./debug.scss";
 
@@ -44,10 +45,6 @@ dl {
 
 .bg-accent1 {
   background-color: $accent1;
-}
-
-.bg-accent3 {
-  background-color: $accent3;
 }
 
 .text-accent1 {

@@ -21956,6 +21956,17 @@ menu-drawer .drawer.slide {
   }
 }
 
+#featured-products .h1 {
+  font-size: 2.25rem;
+  line-height: 3.125rem;
+}
+#featured-products .accent {
+  background-color: #222222;
+  color: #fffcf7;
+  padding: 0.3rem 0.6rem;
+  white-space: nowrap;
+}
+
 body::before {
   content: "xs";
   position: fixed;
@@ -22021,10 +22032,6 @@ dl {
 
 .bg-accent1 {
   background-color: #ce3613;
-}
-
-.bg-accent3 {
-  background-color: #222222;
 }
 
 .text-accent1 {

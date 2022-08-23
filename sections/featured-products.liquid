@@ -1,12 +1,32 @@
-<div class='container pt-10 pb-14'>
+<div id="featured-products" class='container g-0 g-sm-4 pt-7 pb-14'>
     <h1 class='h1 mb-12 text-center'>
-        <span class='text-accent1'>{{ 'general.featured-products.title.every-hour' | t }}</span>
+        <span>{{ 'general.featured-products.title.every-hour' | t }}</span>
         <br/>
-        <span>{{ 'general.featured-products.title.intensity' | t }}</span>
+        <span class="accent">{{ 'general.featured-products.title.intensity' | t }}</span>
     </h1>
 
     <div class='row'>
-        {% render 'featured-product' for collections[section.settings.collection].products as product  %}
+      {% for product in collections[settings.collection].products  %}
+        {% assign textPosition = "text-start,text-center,text-end" | split: ',' %}
+        {% assign positionIndex = forloop.index | minus: 1 %}
+
+        <div class='col-md-4 {{ textPosition[positionIndex] }}''>
+            <a class='d-inline-block'  href={{ product.url }}>
+                <div class='featured-product'>
+                    <img src="{{ product.featured_image | img_url: 'x190' }}"
+                        srcset="{{ product.featured_image | img_url: 'x190', scale: 2 }} 2x,
+                            {{ product.featured_image | img_url: 'x190', scale: 3 }} 3x"
+                        alt="{{ product.featured_image.alt }}"
+                        class='mb-1'/>
+
+                    <p class='text-center px-2'>
+                        {% assign description = product.description | split: '<!-- section -->' %}
+                        {{ description[1] }}
+                    </p>
+                </div>
+            </a>
+        </div>
+      {% endfor %}
     </div>
 </div>
 
