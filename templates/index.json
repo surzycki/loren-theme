@@ -9,13 +9,13 @@
     },
     "16612821478300e31c": {
       "type": "featured-products",
+      "disabled": true,
       "settings": {
         "collection": "featured-products"
       }
     },
     "1661367455a1391dbe": {
       "type": "competitive-advantages",
-      "disabled": true,
       "settings": {
         "image-desktop": "shopify:\/\/shop_images\/background-coffee.png"
       }
