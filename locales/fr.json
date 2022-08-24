@@ -32,7 +32,8 @@
       "recycle": "Un packaging entièrement recyclable."
     },
     "button": {
-      "order-now": "Commandez Maintenant"
+      "order-now": "Commandez Maintenant",
+      "order": "Commandez"
     },
     "footer": {
       "terms-of-service": "Conditions générales",
