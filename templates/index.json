@@ -12,10 +12,16 @@
       "settings": {
         "collection": "featured-products"
       }
+    },
+    "1661367455a1391dbe": {
+      "type": "competitive-advantages",
+      "settings": {
+      }
     }
   },
   "order": [
     "1661090984338c6e56",
-    "16612821478300e31c"
+    "16612821478300e31c",
+    "1661367455a1391dbe"
   ]
 }
