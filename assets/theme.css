@@ -21997,6 +21997,13 @@ menu-drawer .drawer.slide {
   }
 }
 
+.advantages {
+  height: 776px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 body::before {
   content: "xs";
   position: fixed;
