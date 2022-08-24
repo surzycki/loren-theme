@@ -16,6 +16,7 @@
     },
     "1661367455a1391dbe": {
       "type": "competitive-advantages",
+      "disabled": true,
       "settings": {
         "image-desktop": "shopify:\/\/shop_images\/background-coffee.png"
       }
