@@ -9,7 +9,6 @@
     },
     "16612821478300e31c": {
       "type": "featured-products",
-      "disabled": true,
       "settings": {
         "collection": "featured-products"
       }
