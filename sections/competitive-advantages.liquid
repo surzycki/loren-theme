@@ -1,0 +1,67 @@
+{% assign advantages = 'capsule,free-trade,recycle' | split: ',' %}
+
+<style>
+    .engagements--{{ id }} {
+        background-image: url({{ section.settings.desktop_image | img_url: 'master' }});
+
+    }
+</style>
+
+<div class='engagements engagements--{{ id }}'>
+    <div class='container pt-13 gx-0'>
+
+        <h1 class='h1 text-center text-light mb-17'>
+            {{ 'general.engagements.title' | t }}
+        </h1>
+
+        <div class='row'>
+            {% for advantage in advantages %}
+                {% assign image = 'icon-' | append: advantage %}
+
+                <div class='col-md-4 text-center'>
+                    <img src="{{ image | append: '.png' | asset_img_url: 'master' }}"
+                         srcset="{{ image | append: '@2x.png' | asset_img_url: 'master' }} 2x,
+                              {{ image | append: '@3x.png' | asset_img_url: 'master' }} 3x"
+                         alt='{{ key }}'
+                         class='mb-4'/>
+                    <h2 class='h2 hero text-light'>
+                        {{ 'general.engagements.' | append: advantage | t }}
+
+                    </h2>
+                </div>
+            {% endfor %}
+
+        </div>
+
+    <!-- <div class='row'>
+         <div class='col-6'>
+
+         <div class='pb-24'></div>
+         </div>
+         <div class='d-none d-md-block col-12 col-md-6' id='engagement-image'>
+         </div>
+         </div> -->
+    </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Competitive Advantages",
+    "tag": "section",
+    "class": "section",
+    "settings":[
+      {
+        "type": "image_picker",
+        "id": "image-desktop",
+          "label": "Image for Desktops",
+          "info": "Dimensions: 1440x776"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Competitive Advantages",
+        "category": "Main"
+      }
+    ]
+  }
+{% endschema %}
