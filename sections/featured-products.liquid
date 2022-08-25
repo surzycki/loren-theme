@@ -20,7 +20,7 @@
                alt="{{ product.featured_image.alt }}"
                class='product-image'/>
 
-          <p class='mt-n1 px-3 px-md-2 px-lg-3 mb-2 mb-xl-3'>
+          <p class='mt-n1 px-3 px-sm-18 px-md-2 px-lg-3 mb-2 mb-xl-3'>
             {% assign description = product.description | split: '<!-- section -->' %}
             {{ description[1] }}
           </p>

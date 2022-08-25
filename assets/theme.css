@@ -22016,6 +22016,18 @@ menu-drawer .drawer.slide {
 .advantages svg polygon {
   fill: #fffcf7;
 }
+@media (min-width: 768px) {
+  .advantages .h2 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+@media (min-width: 992px) {
+  .advantages .h2 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
 @media (min-width: 1200px) {
   .advantages .h2 {
     font-size: 1.875rem;
@@ -22023,6 +22035,10 @@ menu-drawer .drawer.slide {
   }
 }
 
+#recall .h2 {
+  font-size: 1.375rem;
+  line-height: 2rem;
+}
 body::before {
   content: "xs";
   position: fixed;

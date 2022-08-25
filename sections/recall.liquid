@@ -1,4 +1,4 @@
-<section class='container text-center mt-16'>
+<div id='recall' class='container text-center mt-13'>
     <div class='mb-4'>
         <a class='logo logo-md' href='{{ routes.root_url  }}'>
             {% render 'logo' %}
@@ -6,7 +6,7 @@
     </div>
 
     <div class="row justify-content-center mb-6">
-        <div class="col-8 px-2">
+        <div class="col">
             <h2 class='h2 mx-auto'>
                 {{ 'general.hero.sub-title' | t }}
             </h2>
@@ -16,4 +16,19 @@
     <a href='/products/mattino' class='btn btn-lg btn-outline-secondary text-uppercase mb-17'>
         {{ 'general.button.order-now' | t }}
     </a>
-</section>
+</div>
+
+{% schema %}
+  {
+    "name": "Recall",
+    "tag": "section",
+    "settings":[
+    ],
+    "presets": [
+      {
+        "name": "Recall",
+        "category": "Main"
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,11 @@
+#recall {
+    .h2 {
+        font-size: 1.375rem;
+        line-height: 2rem;
+
+        @include media-breakpoint-up(md) {
+
+        }
+
+    }
+}
