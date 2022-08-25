@@ -1,68 +1,63 @@
-<footer class='bg-black text-start text-sm-center'>
-    <div class='container gx-3'>
-        <div class='row mb-4'>
-            <div class='col-sm-6 col-md-4 pt-5 pt-md-12'>
-                <ul class='list-unstyled fs-5'>
-                    {% for link in linklists.footer.links %}
-                        {% assign key = link.title | handleize %}
-                        <li class='mb-4'>
-                            <a href='{{ link.url }}'>
-                                {{ 'general.footer.' | append: key | t }}
-                            </a>
-                        </li>
-                    {%  endfor %}
-                </ul>
-            </div>
-
-            <div class='d-none d-md-block col-md-4 pt-8'>
-                <div class='mb-3 fs-5'>
+<div class='bg-black text-center'>
+    <div class='container text-light pt-2 pt-md-6'>
+        <div class='row mb-7'>
+            <div class='col-12 col-md-4 order-md-2 mb-6'>
+                <p class='small mb-3'>
                     {{ 'general.footer.what-we-do' | t }}
-                </div>
+                </p>
                 <div>
                     <a href='https://www.facebook.com/piu.cafe.italien' target='_blank'>
-                        <span class='px-2'>
-                            <img src="{{ 'icon-facebook-lg.png' | asset_img_url: 'master' }}"
-                                srcset="{{ 'icon-facebook-lg@2x.png' | asset_img_url: 'master' }} 2x,
-                                    {{ 'icon-facebook@3x.png' | asset_img_url: 'master' }} 3x"
-                                alt='Facebook'/>
+                        <span class='px-1'>
+                           {% render 'icon-facebook' %}
                         </span>
                     </a>
                     <a href='https://www.instagram.com/piu.cafe/' target='_blank'>
-                        <span class='px-2'>
-                            <img src="{{ 'icon-instagram-lg.png' | asset_img_url: 'master' }}"
-                                srcset="{{ 'icon-instagram-lg@2x.png' | asset_img_url: 'master' }} 2x,
-                                    {{ 'icon-instagram-lg@3x.png' | asset_img_url: 'master' }} 3x"
-                                alt='Instagram'/>
+                        <span class='px-1'>
+                            {% render 'icon-instagram' %}
                         </span>
                     </a>
                 </div>
             </div>
 
-            <div class='col-sm-6 col-md-4 pt-sm-5 pt-md-12'>
+            <div class='col-12 col-md-4 order-md-3 pt-md-4'>
                 <ul class='list-unstyled fs-5'>
                     {% for link in linklists.main-menu.links %}
                         {% assign key = link.title | handleize %}
-                        <li class='mb-4'>
-                            <a href='{{ link.url }}'>
+                        <li class='mb-2'>
+                            <a href='{{ link.url }}' class='small'>
                                 {{ 'general.navigation.' | append: key | t }}
                             </a>
                         </li>
                     {%  endfor %}
                 </ul>
             </div>
+
+            <div class='col-12 col-md-4 order-md-1 pt-md-4'>
+                <ul class='list-unstyled'>
+                    {% for link in linklists.footer.links %}
+                        {% assign key = link.title | handleize %}
+                        <li class='mb-2'>
+                            <a href='{{ link.url }}' class='small'>
+                                {{ 'general.footer.' | append: key | t }}
+                            </a>
+                        </li>
+                    {%  endfor %}
+                </ul>
+            </div>
         </div>
+
         <div class='row'>
-            <div class='col text-start text-sm-center text-light mb-1'>
-                <div class='fs-5 mb-1'>
+            <div class='col'>
+                <div class='small mb-1'>
                     Copyright &copy; {{ 'now' | date: '%Y' }} CFC SAS.
                 </div>
-                <div class='fs-6'>
+                <div class='x-small mb-1'>
                     Made with ♡ by Più
                 </div>
             </div>
         </div>
     </div>
-</footer>
+</div>
 {% schema %}
   {
     "name": "Footer",

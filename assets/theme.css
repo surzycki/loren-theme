@@ -21621,9 +21621,14 @@ p {
   line-height: 1.5rem;
 }
 
-small, .small {
-  font-size: 0.875rem;
-  line-height: 1.5rem;
+.small {
+  font-size: 0.875rem !important;
+  line-height: 1.5rem !important;
+}
+
+.x-small {
+  font-size: 0.75rem !important;
+  line-height: 1.5rem !important;
 }
 
 .link-hover {
@@ -21939,7 +21944,7 @@ menu-drawer .drawer.slide {
 
 .btn-secondary.btn-lg, .btn-group-lg > .btn-secondary.btn, .btn-outline-secondary.btn-lg, .btn-group-lg > .btn-outline-secondary.btn {
   --bs-btn-padding-y: 1.2rem;
-  --bs-btn-padding-x: 3.2rem;
+  width: 342px;
 }
 
 .btn-cta {
@@ -22055,6 +22060,15 @@ menu-drawer .drawer.slide {
     font-size: 1.5rem;
     width: 744px;
   }
+}
+
+footer ul a {
+  color: #fffcf7;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+footer ul a:hover {
+  color: #fffcf7;
 }
 
 body::before {

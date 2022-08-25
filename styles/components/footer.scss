@@ -1,3 +1,12 @@
 footer {
-
+    ul {
+        a {
+            color: $white;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+            &:hover {
+                color: $white;
+            }
+        }
+    }
 }
