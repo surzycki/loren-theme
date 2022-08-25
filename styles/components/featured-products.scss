@@ -20,7 +20,6 @@
    .accent {
        background-color: $black;
        color: $white;
-       padding: 0.3rem 0.6rem;
        white-space: nowrap;
 
        @include media-breakpoint-up(md) {

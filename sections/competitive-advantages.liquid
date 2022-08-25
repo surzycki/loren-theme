@@ -17,17 +17,12 @@
         <div class='row'>
             {% for advantage in advantages %}
                 {% assign image = 'icon-' | append: advantage %}
-
                 <div class='col-md-4 text-center'>
-                    <img src="{{ image | append: '.png' | asset_img_url: 'master' }}"
-                         srcset="{{ image | append: '@2x.png' | asset_img_url: 'master' }} 2x,
-                              {{ image | append: '@3x.png' | asset_img_url: 'master' }} 3x"
-                         alt='{{ key }}'
-                         class='mb-4'/>
-                    <h2 class='h2 hero text-light'>
-                        {{ 'general.engagements.' | append: advantage | t }}
+                  {% render image %}
+                  <h2 class='h2 hero text-light'>
+                    {{ 'general.engagements.' | append: advantage | t }}
 
-                    </h2>
+                  </h2>
                 </div>
             {% endfor %}
 
