@@ -3,6 +3,13 @@
     line-height: 1.25rem !important;
 }
 
+.btn-secondary, .btn-outline-secondary {
+    &.btn-lg {
+        --bs-btn-padding-y: 1.2rem;
+        --bs-btn-padding-x: 3.2rem;
+    }
+}
+
 .btn-cta {
     @extend .btn-primary;
     --bs-btn-padding-x: 3.2rem;

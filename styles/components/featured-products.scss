@@ -15,6 +15,11 @@
            font-size: 0.875rem;
            height: 40px;
        }
+
+       @include media-breakpoint-up(xl) {
+           font-size: 1.125rem;
+           height: 40px;
+       }
    }
 
    .accent {

@@ -21937,6 +21937,11 @@ menu-drawer .drawer.slide {
   line-height: 1.25rem !important;
 }
 
+.btn-secondary.btn-lg, .btn-group-lg > .btn-secondary.btn, .btn-outline-secondary.btn-lg, .btn-group-lg > .btn-outline-secondary.btn {
+  --bs-btn-padding-y: 1.2rem;
+  --bs-btn-padding-x: 3.2rem;
+}
+
 .btn-cta {
   --bs-btn-padding-x: 3.2rem;
   --bs-btn-font-size: 1.25rem;
@@ -21972,6 +21977,12 @@ menu-drawer .drawer.slide {
 @media (min-width: 768px) {
   #featured-products p {
     font-size: 0.875rem;
+    height: 40px;
+  }
+}
+@media (min-width: 1200px) {
+  #featured-products p {
+    font-size: 1.125rem;
     height: 40px;
   }
 }
@@ -22039,6 +22050,13 @@ menu-drawer .drawer.slide {
   font-size: 1.375rem;
   line-height: 2rem;
 }
+@media (min-width: 768px) {
+  #recall .h2 {
+    font-size: 1.5rem;
+    width: 744px;
+  }
+}
+
 body::before {
   content: "xs";
   position: fixed;
