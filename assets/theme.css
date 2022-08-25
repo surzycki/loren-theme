@@ -21957,7 +21957,7 @@ menu-drawer .drawer.slide {
 }
 
 #featured-products .h1 {
-  font-size: 2.25rem;
+  font-size: 2.125rem;
   line-height: 3.125rem;
 }
 @media (min-width: 768px) {
@@ -21979,6 +21979,7 @@ menu-drawer .drawer.slide {
   background-color: #222222;
   color: #fffcf7;
   white-space: nowrap;
+  padding: 0.4rem 0.4rem;
 }
 @media (min-width: 768px) {
   #featured-products .accent {
@@ -22001,6 +22002,25 @@ menu-drawer .drawer.slide {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+@media (min-width: 768px) {
+  .advantages {
+    height: 520px;
+  }
+}
+@media (min-width: 1200px) {
+  .advantages {
+    height: 776px;
+  }
+}
+.advantages svg polygon {
+  fill: #fffcf7;
+}
+@media (min-width: 1200px) {
+  .advantages .h2 {
+    font-size: 1.875rem;
+    line-height: 2.5rem;
+  }
 }
 
 body::before {

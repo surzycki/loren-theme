@@ -7,41 +7,32 @@
 </style>
 
 <div class='advantages advantages--{{ id }}'>
-    <div class='container pt-8'>
-
-        <h1 class='h1 text-center text-light mb-17'>
+    <div class='container pt-8 pt-md-9 pt-xl-12'>
+        <h1 class='h1 text-center text-light mb-6 mb-md-9 mb-xl-16'>
             {{ 'general.engagements.title' | t }}
         </h1>
 
         <div class='row'>
           {% for advantage in advantages %}
-             <div class='col-md-4 text-center'>
-               {% case advantage %}
-                 {% when 'capsule' %}
-                   {% render 'icon-capsule' %}
-                 {% when 'fair-trade' %}
-                   {% render 'icon-fair-trade' %}
-                 {% when 'recycle' %}
-                   {% render 'icon-recycle' %}
-                 {% else %}
-                   Nothing yet
-                {% endcase %}
-
-                <h2 class='h2 hero text-light'>
+             <div class='col-md-4 mb-4 text-center'>
+                <div class='mb-3 mb-xl-5'>
+                     {% case advantage %}
+                     {% when 'capsule' %}
+                        {% render 'icon-capsule' %}
+                     {% when 'fair-trade' %}
+                        {% render 'icon-fair-trade' %}
+                     {% when 'recycle' %}
+                        {% render 'icon-recycle' %}
+                     {% else %}
+                        Nothing yet
+                     {% endcase %}
+                </div>
+                <h2 class='h2 text-light px-md-1'>
                   {{ 'general.engagements.' | append: advantage | t }}
                 </h2>
              </div>
           {% endfor %}
         </div>
-
-    <!-- <div class='row'>
-         <div class='col-6'>
-
-         <div class='pb-24'></div>
-         </div>
-         <div class='d-none d-md-block col-12 col-md-6' id='engagement-image'>
-         </div>
-         </div> -->
     </div>
 </div>
 

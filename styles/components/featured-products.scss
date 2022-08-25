@@ -1,6 +1,6 @@
 #featured-products {
    .h1 {
-       font-size: 2.25rem;
+       font-size: 2.125rem;
        line-height: 3.125rem;
 
        @include media-breakpoint-up(md) {
@@ -21,6 +21,7 @@
        background-color: $black;
        color: $white;
        white-space: nowrap;
+       padding: 0.4rem 0.4rem;
 
        @include media-breakpoint-up(md) {
            padding: 0.3rem 1rem;

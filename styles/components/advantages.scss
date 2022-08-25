@@ -3,4 +3,24 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
+
+  @include media-breakpoint-up(md) {
+    height: 520px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    height: 776px;
+  }
+
+  svg polygon {
+    fill: $white;
+  }
+
+  .h2 {
+    @include media-breakpoint-up(xl) {
+      font-size: 1.875rem;
+      line-height: 2.5rem;
+    }
+  }
 }
