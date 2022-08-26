@@ -1,12 +1,12 @@
 {
   "sections": {
-    "product": {
+    "1661534845b787ab6d": {
       "type": "image-banner-product",
       "settings": {
       }
     }
   },
   "order": [
-    "image-banner-product"
+    "1661534845b787ab6d"
   ]
 }
