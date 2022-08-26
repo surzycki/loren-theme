@@ -1,5 +1,13 @@
 {
   "sections": {
+    "product": {
+      "name": "Product Image",
+      "settings": {
+        "image": {
+          "label": "Product Imagee"
+        }
+      }
+    },
     "image-banner-main": {
       "name": "Main Image Banner",
       "settings": {

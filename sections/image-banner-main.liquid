@@ -1,12 +1,28 @@
 <style>
-  .image-banner-main--{{ section.id  }} {
-     background-image: url({{section.settings.image-desktop | img_url: 'master'}})
-  }
-
   .image-banner-main-mobile--{{ section.id  }} {
      background-image: url({{section.settings.image-mobile | img_url: 'master'}})
   }
+
+  .image-banner-main--{{ section.id  }} {
+     background-image: url({{section.settings.image-desktop | img_url: 'master'}})
+  }
 </style>
+
+<div id="image-banner-main-mobile" class="d-md-none image-banner-main image-banner-main-mobile--{{ section.id }}">
+    <div class='pt-12 text-center'>
+      <h1 class='h1 mb-2'>
+        {{ 'general.hero.title' | t }}
+      </h1>
+
+      <h2 class='h2 mb-24'>
+        {{ 'general.hero.sub-title' | t }}
+      </h2>
+
+      <a href='/products/mattino' class='mt-11 btn btn-cta btn-lg text-uppercase'>
+        {{ 'general.button.order-now' | t }}
+       </a>
+    </div>
+</div>
 
 <div id="image-banner-main-desktop" class="d-none d-md-block image-banner-main image-banner-main--{{ section.id }}">
     <div class='container ps-md-3'>
@@ -23,22 +39,6 @@
                 {{ 'general.button.order-now' | t }}
             </a>
         </div>
-    </div>
-</div>
-
-<div id="image-banner-main-mobile" class="d-md-none image-banner-main image-banner-main-mobile--{{ section.id }}">
-    <div class='pt-12 text-center'>
-      <h1 class='h1 mb-2'>
-        {{ 'general.hero.title' | t }}
-      </h1>
-
-      <h2 class='h2 mb-24'>
-        {{ 'general.hero.sub-title' | t }}
-      </h2>
-
-      <a href='/products/mattino' class='mt-11 btn btn-cta btn-lg text-uppercase'>
-        {{ 'general.button.order-now' | t }}
-       </a>
     </div>
 </div>
 
