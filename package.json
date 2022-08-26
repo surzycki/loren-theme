@@ -5,6 +5,8 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
+  },
+  "devDependencies": {
     "bootstrap": "^5.2.0",
     "gulp": "^4.0.2",
     "gulp-sass": "^5.1.0",

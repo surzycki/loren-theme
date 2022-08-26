@@ -21916,7 +21916,7 @@ menu-drawer .drawer.slide {
   background-repeat: no-repeat;
   height: 735px;
   background-size: 1200px;
-  background-position: 40% 105%;
+  background-position: 40% 78%;
 }
 @media (min-width: 576px) {
   .image-banner-product {
@@ -21960,6 +21960,11 @@ menu-drawer .drawer.slide {
     font-size: 5.625rem;
     line-height: 6rem;
   }
+}
+.image-banner-product p {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: #858585;
 }
 
 .logo svg {

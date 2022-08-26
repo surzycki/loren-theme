@@ -4,7 +4,7 @@
 
   height: 735px;
   background-size: 1200px;
-  background-position: 40% 105%;
+  background-position: 40% 78%;
 
   @include media-breakpoint-up(sm) {
     background-position: 70% 64%;
@@ -42,5 +42,19 @@
       font-size: 5.625rem;
       line-height: 6rem;
     }
+  }
+
+  .h2 {
+
+  }
+
+  .h3 {
+
+  }
+
+  p {
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+      color: $grey;
   }
 }

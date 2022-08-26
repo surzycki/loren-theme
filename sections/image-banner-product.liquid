@@ -5,17 +5,31 @@
 </style>
 
 <div id="image-banner-product-mobile" class="d-md-none image-banner-product image-banner-product-mobile--{{ section.id }}">
-    <div class='pt-10 text-center'>
-      <h1 class='h1 mb-2'>
+    <div class='pt-11 text-center'>
+      <h1 class='h1'>
           {{ product.title  }}
       </h1>
 
+      <h3 class="h3">
+          {{ product.metafields.descriptions.blend.value }}
+      </h3>
+
+      <p>
+          {{ 'product.capsules-per-box' | t }} {{ product.price | money  }}
+      </p>
+
+      <div id='react-cart-control'
+           data-variant-id={{ product.variants.first.id }}
+           data-variant-price={{ product.price }}
+           data-add-to-cart="{{ 'cart.general.add-to-cart' | t }}"
+           data-thank-you="{{ 'cart.general.thank-you' | t }}">
+      </div>
     </div>
 </div>
 
 <div id="product-mobile-description" class="d-md-none">
     <h2 class='h2 mb-24'>
-        descriptiton
+        {{ product.description }}
     </h2>
 </div>
 
