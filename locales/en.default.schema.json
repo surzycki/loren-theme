@@ -1,7 +1,7 @@
 {
   "sections": {
-    "product": {
-      "name": "Product Image",
+    "image-banner-product": {
+      "name": "Product Image Banner",
       "settings": {
         "image": {
           "label": "Product Imagee"

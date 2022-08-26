@@ -1,12 +1,12 @@
 {
   "sections": {
     "product": {
-      "type": "product",
+      "type": "image-banner-product",
       "settings": {
       }
     }
   },
   "order": [
-    "product"
+    "image-banner-product"
   ]
 }

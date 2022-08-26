@@ -1,24 +1,23 @@
 <style>
   .image-product-mobile--{{ section.id  }} {
-     background-image: url({{ product.images[1] }})
+     background-image: url({{ product.images[1] | img_url: 'master'}})
   }
 </style>
 
-
 <div id="product-mobile" class="d-md-none image-product image-product-mobile--{{ section.id }}">
-  Hello
+  Hello Product
 </div>
 
 {% schema %}
   {
-    "name": "t:sections.product.name",
+    "name": "t:sections.image-banner-product.name",
     "tag": "section",
     "class": "section",
     "settings": [
     ],
     "presets": [
       {
-        "name": "t:sections.product.name",
+        "name": "t:sections.image-banner-product.name",
         "category": "Product"
       }
   ]
