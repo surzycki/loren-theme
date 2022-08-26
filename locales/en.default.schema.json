@@ -1,6 +1,6 @@
 {
   "sections": {
-    "main-image-banner": {
+    "image-banner-main": {
       "name": "Main Image Banner",
       "settings": {
         "image": {
@@ -8,7 +8,7 @@
         }
       }
     },
-    "page-image-banner-promise": {
+    "image-banner-promise": {
       "name": "Promise Image Banner",
       "settings": {
         "image": {
@@ -16,7 +16,7 @@
         }
       }
     },
-    "page-image-banner-coffee": {
+    "image-banner-coffee": {
       "name": "Coffee Image Banner",
       "settings": {
         "image": {

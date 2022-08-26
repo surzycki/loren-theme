@@ -1,7 +1,7 @@
 {
   "sections": {
     "1661090984338c6e56": {
-      "type": "main-image-banner",
+      "type": "image-banner-main",
       "settings": {
         "image-desktop": "shopify:\/\/shop_images\/landing-background-2.jpg",
         "image-mobile": "shopify:\/\/shop_images\/mobile.jpg"

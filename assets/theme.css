@@ -21839,7 +21839,7 @@ menu-drawer .drawer.slide {
   opacity: 1;
 }
 
-.main-image-banner {
+.image-banner-main {
   background-color: #ccc8c0;
   background-repeat: no-repeat;
   height: 712px;
@@ -21847,30 +21847,30 @@ menu-drawer .drawer.slide {
   background-position: 65% 34%;
 }
 @media (min-width: 576px) {
-  .main-image-banner {
+  .image-banner-main {
     background-position: 70% 64%;
   }
 }
 @media (min-width: 768px) {
-  .main-image-banner {
+  .image-banner-main {
     height: 616px;
     background-position: 52% 50%;
     background-size: 2156px 616px;
   }
 }
 @media (min-width: 992px) {
-  .main-image-banner {
+  .image-banner-main {
     background-position: 48% 50%;
   }
 }
 @media (min-width: 1200px) {
-  .main-image-banner {
+  .image-banner-main {
     height: 800px;
     background-position: 50% 65%;
     background-size: 2800px 800px;
   }
 }
-.main-image-banner .h1 {
+.image-banner-main .h1 {
   font-family: "Rainer", serif;
   letter-spacing: 1.2px;
   text-transform: none;
@@ -21878,33 +21878,33 @@ menu-drawer .drawer.slide {
   line-height: 6rem;
 }
 @media (min-width: 768px) {
-  .main-image-banner .h1 {
+  .image-banner-main .h1 {
     font-size: 5rem;
     line-height: 6rem;
   }
 }
 @media (min-width: 1200px) {
-  .main-image-banner .h1 {
+  .image-banner-main .h1 {
     font-size: 5.625rem;
     line-height: 6rem;
   }
 }
-.main-image-banner .h2 {
+.image-banner-main .h2 {
   font-size: 1.375rem;
   line-height: 2rem;
 }
 @media (min-width: 768px) {
-  .main-image-banner .h2 {
+  .image-banner-main .h2 {
     width: 416px;
   }
 }
 @media (min-width: 992px) {
-  .main-image-banner .h2 {
+  .image-banner-main .h2 {
     width: 430px;
   }
 }
 @media (min-width: 1200px) {
-  .main-image-banner .h2 {
+  .image-banner-main .h2 {
     font-size: 1.5rem;
     line-height: 2rem;
     width: 546px;
