@@ -1,6 +1,10 @@
 .btn-primary {
     color: $white !important;
     line-height: 1.25rem !important;
+
+    &:hover {
+        background-color: #ce3613;
+    }
 }
 
 .btn-secondary, .btn-outline-secondary {
