@@ -1,0 +1,46 @@
+.image-banner-product {
+  background-color: #ccc8c0;
+  background-repeat: no-repeat;
+
+  height: 735px;
+  background-size: 1200px;
+  background-position: 40% 105%;
+
+  @include media-breakpoint-up(sm) {
+    background-position: 70% 64%;
+  }
+
+  @include media-breakpoint-up(md) {
+    height: 616px;
+    background-position: 52% 50%;
+    background-size: 2156px 616px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    background-position: 48% 50%;
+  }
+
+  @include media-breakpoint-up(xl) {
+    height: 800px;
+    background-position: 50% 65%;
+    background-size: 2800px 800px;
+  }
+
+  .h1 {
+    font-family: $brand-font-family;
+    letter-spacing: 2px;
+    text-transform: none;
+    font-size: 5.625rem;
+    line-height: 6rem;
+
+    @include media-breakpoint-up(md) {
+      font-size: 5rem;
+      line-height: 6rem;
+    }
+
+    @include media-breakpoint-up(xl) {
+      font-size: 5.625rem;
+      line-height: 6rem;
+    }
+  }
+}

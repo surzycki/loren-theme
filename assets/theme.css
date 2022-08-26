@@ -21911,6 +21911,57 @@ menu-drawer .drawer.slide {
   }
 }
 
+.image-banner-product {
+  background-color: #ccc8c0;
+  background-repeat: no-repeat;
+  height: 735px;
+  background-size: 1200px;
+  background-position: 40% 105%;
+}
+@media (min-width: 576px) {
+  .image-banner-product {
+    background-position: 70% 64%;
+  }
+}
+@media (min-width: 768px) {
+  .image-banner-product {
+    height: 616px;
+    background-position: 52% 50%;
+    background-size: 2156px 616px;
+  }
+}
+@media (min-width: 992px) {
+  .image-banner-product {
+    background-position: 48% 50%;
+  }
+}
+@media (min-width: 1200px) {
+  .image-banner-product {
+    height: 800px;
+    background-position: 50% 65%;
+    background-size: 2800px 800px;
+  }
+}
+.image-banner-product .h1 {
+  font-family: "Rainer", serif;
+  letter-spacing: 2px;
+  text-transform: none;
+  font-size: 5.625rem;
+  line-height: 6rem;
+}
+@media (min-width: 768px) {
+  .image-banner-product .h1 {
+    font-size: 5rem;
+    line-height: 6rem;
+  }
+}
+@media (min-width: 1200px) {
+  .image-banner-product .h1 {
+    font-size: 5.625rem;
+    line-height: 6rem;
+  }
+}
+
 .logo svg {
   display: inline-block;
   width: 76px;
