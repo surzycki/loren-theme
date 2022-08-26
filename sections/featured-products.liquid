@@ -7,11 +7,6 @@
 
   <div class='row'>
     {% for product in collections[section.settings.collection].products  %}
-      {%- liquid
-      assign textPosition = "text-start,text-center,text-end" | split: ','
-      assign positionIndex = forloop.index | minus: 1
-      %}
-
       <div class='col mb-7 text-center'>
         <a class='d-block' href={{ product.url }}>
           <img src="{{ product.featured_image | img_url: 'x190' }}"
@@ -21,8 +16,7 @@
                class='product-image'/>
 
           <p class='mt-n1 px-3 px-sm-18 px-md-2 px-lg-3 mb-2 mb-xl-3'>
-            {% assign description = product.description | split: '<!-- section -->' %}
-            {{ description[1] }}
+            {{ product.metafields.descriptions.brief.value }}
           </p>
         </a>
 
