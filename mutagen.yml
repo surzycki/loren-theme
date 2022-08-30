@@ -29,7 +29,7 @@ beforeCreate:
 afterCreate:
   - docker-compose exec dev yarn install
   - docker-compose exec dev shopify login --store piu-test.myshopify.com
-  - docker-compose exec dev gulp watch
+  - docker-compose exec dev yarn start
 
 # Tear down all services and remove the code volume after terminating sessions.
 afterTerminate:

@@ -21663,50 +21663,6 @@ p {
   opacity: 1;
 }
 
-.scene {
-  padding: 0 0.5rem;
-  perspective: 800px;
-  height: 60px;
-  width: 100%;
-  cursor: pointer;
-}
-
-.cube-effect {
-  height: 60px;
-  width: 100%;
-  transform-origin: 50% 50%;
-  transform-style: preserve-3d;
-  transition: 0.4s all;
-  position: relative;
-}
-.cube-effect.active {
-  transform: rotateX(-90deg);
-}
-
-.cube-front {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  padding-top: 1.5rem;
-  background: #222222;
-  font-size: 1.25rem;
-  text-align: center;
-  transform: rotateX(0deg) translate3d(0px, 0px, 30px);
-  color: #fffcf7;
-}
-
-.cube-top {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  padding-top: 1.5rem;
-  transform: rotateX(90deg) translate3d(0px, 0px, 30px);
-  background: #222222;
-  text-align: center;
-  color: #fffcf7;
-  font-size: 1.25rem;
-}
-
 @keyframes slideIn {
   0% {
     width: 0%;
@@ -21746,6 +21702,9 @@ header #nav-mobile-bar {
 }
 header #nav-mobile-bar .nav-item {
   width: 4.5rem;
+}
+header #nav-drawer {
+  visibility: hidden;
 }
 
 menu-drawer {
@@ -21819,6 +21778,7 @@ menu-drawer nav ul li {
   line-height: 2.4;
 }
 menu-drawer nav.show {
+  visibility: visible !important;
   width: 75%;
   opacity: 1;
 }
@@ -21914,35 +21874,11 @@ menu-drawer .drawer.slide {
 .image-banner-product {
   background-color: #ccc8c0;
   background-repeat: no-repeat;
-  height: 735px;
-  background-size: 1200px;
-  background-position: 40% 78%;
+  height: 704px;
+  background-size: 1248px;
+  background-position: 40% 40%;
 }
-@media (min-width: 576px) {
-  .image-banner-product {
-    background-position: 70% 64%;
-  }
-}
-@media (min-width: 768px) {
-  .image-banner-product {
-    height: 616px;
-    background-position: 52% 50%;
-    background-size: 2156px 616px;
-  }
-}
-@media (min-width: 992px) {
-  .image-banner-product {
-    background-position: 48% 50%;
-  }
-}
-@media (min-width: 1200px) {
-  .image-banner-product {
-    height: 800px;
-    background-position: 50% 65%;
-    background-size: 2800px 800px;
-  }
-}
-.image-banner-product .h1 {
+#image-banner-product-mobile .h1 {
   font-family: "Rainer", serif;
   letter-spacing: 2px;
   text-transform: none;
@@ -21950,21 +21886,28 @@ menu-drawer .drawer.slide {
   line-height: 6rem;
 }
 @media (min-width: 768px) {
-  .image-banner-product .h1 {
+  #image-banner-product-mobile .h1 {
     font-size: 5rem;
     line-height: 6rem;
   }
 }
 @media (min-width: 1200px) {
-  .image-banner-product .h1 {
+  #image-banner-product-mobile .h1 {
     font-size: 5.625rem;
     line-height: 6rem;
   }
 }
-.image-banner-product p {
+#image-banner-product-mobile .h2, #image-banner-product-mobile .h3 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+#image-banner-product-mobile p {
   font-size: 0.875rem;
   line-height: 1.25rem;
   color: #858585;
+}
+#image-banner-product-mobile svg {
+  height: 48px;
 }
 
 .logo svg {
@@ -22023,6 +21966,51 @@ menu-drawer .drawer.slide {
   .btn-cta.btn-lg, .btn-group-lg > .btn-cta.btn {
     --bs-btn-padding-y: 1.25rem;
   }
+}
+
+.scene {
+  padding: 0 0.5rem;
+  perspective: 800px;
+  height: 64px;
+  width: 354px;
+  cursor: pointer;
+}
+
+.cube-effect {
+  height: 64px;
+  width: 100%;
+  transform-origin: 50% 50%;
+  transform-style: preserve-3d;
+  transition: 0.4s all;
+  position: relative;
+}
+.cube-effect.active {
+  transform: rotateX(-90deg);
+}
+
+.cube-front {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  padding-top: 1.5rem;
+  background: #F05022;
+  font-size: 1.25rem;
+  text-align: center;
+  transform: rotateX(0deg) translate3d(0px, 0px, 30px);
+  color: #fffcf7;
+  font-weight: 700;
+}
+
+.cube-top {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding-top: 1.5rem;
+  transform: rotateX(90deg) translate3d(0px, 0px, 30px);
+  background: #ce3613;
+  text-align: center;
+  color: #fffcf7;
+  font-size: 1.25rem;
 }
 
 #featured-products .h1 {
@@ -22127,6 +22115,18 @@ footer ul a {
   text-underline-offset: 2px;
 }
 footer ul a:hover {
+  color: #fffcf7;
+}
+
+#add-to-cart .btn-quantity {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  width: 3rem;
+  height: 3rem;
+  padding-top: 0.625rem;
+}
+#add-to-cart .btn-quantity.active {
+  background-color: #222222;
   color: #fffcf7;
 }
 

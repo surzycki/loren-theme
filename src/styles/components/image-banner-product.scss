@@ -1,0 +1,56 @@
+.image-banner-product {
+  background-color: #ccc8c0;
+  background-repeat: no-repeat;
+
+  height: 704px;
+  background-size: 1248px;
+  background-position: 40% 40%;
+
+  @include media-breakpoint-up(sm) {
+  }
+
+  @include media-breakpoint-up(md) {
+  }
+
+  @include media-breakpoint-up(lg) {
+  }
+
+  @include media-breakpoint-up(xl) {
+  }
+
+}
+
+#image-banner-product-mobile {
+    .h1 {
+      font-family: $brand-font-family;
+      letter-spacing: 2px;
+      text-transform: none;
+      font-size: 5.625rem;
+      line-height: 6rem;
+
+      @include media-breakpoint-up(md) {
+        font-size: 5rem;
+        line-height: 6rem;
+      }
+
+      @include media-breakpoint-up(xl) {
+        font-size: 5.625rem;
+        line-height: 6rem;
+      }
+    }
+
+    .h2, .h3 {
+      font-size: 1rem;
+      line-height: 1.5rem;
+    }
+
+    p {
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        color: $grey;
+    }
+
+    svg {
+      height: 48px;
+    }
+}
