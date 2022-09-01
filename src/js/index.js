@@ -1,8 +1,10 @@
 import ReactDOM from "react-dom/client";
 import React from "react";
-import AddToCart from "./AddToCart";
-import IconCart from "./IconCart";
+import AddToCart from "Components/AddToCart";
+import MenuItemCart from "Components/MenuItemCart";
+import IconCart from "Components/IconCart";
 
+// Button and controls to add to cart
 const containerAddToCart = document.getElementById('add-to-cart');
 
 if (containerAddToCart) {
@@ -23,6 +25,17 @@ if (containerAddToCart) {
   );
 }
 
+// Desktop menu item for cart
+const containerMenuItemCart = document.getElementById('menu-item-cart');
+
+if(containerMenuItemCart) {
+  const menuLabel = String(containerMenuItemCart?.dataset?.label)
+
+  const menuItemCart = ReactDOM.createRoot(containerMenuItemCart);
+  menuItemCart.render(<MenuItemCart label={menuLabel}/>);
+}
+
+// mobile menu item icon for cart
 const containerIconCart = document.getElementById('icon-cart');
 
 if(containerIconCart) {

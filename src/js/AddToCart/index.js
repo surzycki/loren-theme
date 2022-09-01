@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { formatPrice } from "../utils";
-import eventBus from "../EventBus";
+import eventBus from "Components/EventBus";
 
 import PropTypes from "prop-types";
 

@@ -13,7 +13,7 @@ RUN apt-get update && apt-get install -y nodejs
 RUN npm install --global yarn
 
 # Install shopify cli
-RUN gem install shopify-cli
+RUN gem install shopify-cli -v 2.24.0
 
 # Install gulp cli
 RUN npm install --global gulp-cli

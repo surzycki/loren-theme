@@ -3,6 +3,12 @@ const WatchExternalFilesPlugin = require('webpack-watch-files-plugin').default;
 
 
 module.exports = {
+  resolve: {
+    alias: {
+      Svg: path.resolve(__dirname, './src/svg'),
+      Components: path.resolve(__dirname, './src/js')
+    }
+  },
   entry: [
    './src/js/index.js',
    './src/styles/theme.scss',
@@ -47,6 +53,10 @@ module.exports = {
         use: [
           'sass-loader'
         ]
+      },
+      {
+        test: /\.svg$/,
+        use: ['@svgr/webpack'],
       }
     ]
   }

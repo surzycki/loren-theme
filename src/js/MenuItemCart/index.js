@@ -1,14 +1,12 @@
 import React, { useEffect, useState } from "react";
 import eventBus from "Components/EventBus";
-import IconCartEmpty from "Svg/icon-cart-empty.svg";
-import IconCartFull from "Svg/icon-cart-full.svg";
 
 import PropTypes from "prop-types";
 
 import * as cart from "@shopify/theme-cart";
 import classNames from "classnames";
 
-const IconCart = () => {
+const MenuItemCart = ({ label }) => {
   useEffect(() => {
     eventBus.on("itemAdded", () => getCartData());
 
@@ -29,12 +27,19 @@ const IconCart = () => {
     });
   };
 
+  const labelClass = classNames({
+    "fw-bold": productCount > 0,
+  });
+
   return (
-    <span onClick={handleClick}>
-      { productCount > 0 && <IconCartFull/> }
-      { productCount === 0 && <IconCartEmpty/> }
+    <span className={labelClass} onClick={handleClick}>
+      {label} ({productCount})
     </span>
   );
 };
 
-export default IconCart;
+MenuItemCart.propTypes = {
+  label: PropTypes.string.isRequired,
+};
+
+export default MenuItemCart;

@@ -14,9 +14,7 @@
         </div>
 
         <div class="nav-item pt-2 pe-2 text-end">
-            <a href='{{ routes.cart_url }}'>
-                {% render 'icon-cart' %}
-            </a>
+            <a href='{{ routes.cart_url }}' id='icon-cart'></a>
         </div>
     </nav>
 
@@ -78,7 +76,7 @@
                 </a>
             </li>
             <li class='ps-md-3 ps-lg-5'>
-                <a id='react-menu-item-cart' class='link-hover' data-label="{{ 'general.navigation.shopping-cart' | t  }}">
+                <a href='{{ routes.cart_url }}' id='menu-item-cart' class='link-hover' data-label="{{ 'general.navigation.shopping-cart' | t  }}">
                 </a>
             </li>
         </ul>
