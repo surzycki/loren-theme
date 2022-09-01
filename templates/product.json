@@ -4,9 +4,16 @@
       "type": "image-banner-product",
       "settings": {
       }
+    },
+    "1662041982b484308c": {
+      "type": "featured-products",
+      "settings": {
+        "collection": "featured-products"
+      }
     }
   },
   "order": [
-    "image-banner-product"
+    "image-banner-product",
+    "1662041982b484308c"
   ]
 }
