@@ -6,7 +6,7 @@
   width: 100%;
   cursor: pointer;
 
-  @include media-breakpoint-up(md) {
+  @include media-breakpoint-only(md) {
     height: 48px;
   }
 
@@ -18,7 +18,7 @@
     transition: 0.4s all;
     position: relative;
 
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-only(md) {
       height: 48px;
     }
 
@@ -39,7 +39,7 @@
     color: $white;
     font-weight: 700;
 
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-only(md) {
       font-size: 1rem;
       padding-top: 1rem;
       transform: rotateX(0deg) translate3d(0px, 0px, 24px);
@@ -57,7 +57,7 @@
     color: $white;
     font-size: 1.25rem;
 
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-only(md) {
       font-size: 1rem;
       padding-top: 1rem;
       transform: rotateX(90deg) translate3d(0px, 0px, 24px);

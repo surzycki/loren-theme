@@ -34,18 +34,23 @@
 
 
 <div id="image-banner-product-desktop" class="d-none d-md-block image-banner-product image-banner-product-desktop--{{ section.id }}">
-    <div class="container pt-15 ps-10 text-left">
+    <div class="container pt-15 ps-10 pt-xl-22 ps-xl-22">
         <div class="row justify-content-end">
-            <div class='col-md-6 pe-md-1'>
-                <h1 class='h1'>{{ product.title }}</h1>
-                <h3 class="h3">{{ product.metafields.descriptions.blend.value }}</h3>
-                <p class="mb-2">{{ 'product.capsules-per-box' | t }} {{ product.price | money  }}</p>
-                <h2 class="h2 mb-4">{{ product.description }}</h2>
-                <div id="add-to-cart-desktop" class=""></div>
+            <div class='col-md-6 col-xl-5'>
+                <div id="information-desktop">
+                    <h1 class='h1'>{{ product.title }}</h1>
+                    <h3 class="h3">{{ product.metafields.descriptions.blend.value }}</h3>
+                    <p class="mb-2">{{ 'product.capsules-per-box' | t }} {{ product.price | money  }}</p>
+                    <h2 class="h2 mb-3">{{ product.description }}</h2>
+                    <div id="add-to-cart-desktop" class="mb-4"></div>
+
+                    {% render 'product-icons' %}
+                </div>
             </div>
         </div>
     </div>
 </div>
+
 
 {% schema %}
   {
