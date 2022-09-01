@@ -10,6 +10,9 @@
   }
 
   @include media-breakpoint-up(md) {
+    height: 680px;
+    background-size: 1400px;
+    background-position: 80%  36%;
   }
 
   @include media-breakpoint-up(lg) {

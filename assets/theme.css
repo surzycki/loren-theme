@@ -21878,6 +21878,13 @@ menu-drawer .drawer.slide {
   background-size: 1248px;
   background-position: 40% 40%;
 }
+@media (min-width: 768px) {
+  .image-banner-product {
+    height: 680px;
+    background-size: 1400px;
+    background-position: 80% 36%;
+  }
+}
 #image-banner-product-mobile .h1 {
   font-family: "Rainer", serif;
   letter-spacing: 2px;

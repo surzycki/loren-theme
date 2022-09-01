@@ -2,6 +2,10 @@
   .image-banner-product-mobile--{{ section.id  }} {
      background-image: url({{ product.images[1] | img_url: 'master'}})
   }
+
+ .image-banner-product-desktop--{{ section.id  }} {
+     background-image: url({{ product.images[2] | img_url: 'master'}})
+  }
 </style>
 
 <div id="image-banner-product-mobile" >
@@ -54,6 +58,30 @@
       </div>
     </div>
   </div>
+</div>
+
+
+<div id="image-banner-product-desktop" class="d-none d-md-block image-banner-product image-banner-product-desktop--{{ section.id }}">
+    <div class='pt-11 mb-19 text-center'>
+      <h1 class='h1'>
+          {{ product.title  }}
+      </h1>
+
+      <h3 class="h3">
+          {{ product.metafields.descriptions.blend.value }}
+      </h3>
+
+      <p>
+          {{ 'product.capsules-per-box' | t }} {{ product.price | money  }}
+      </p>
+    </div>
+
+    <div id="add-to-cart" class="text-center pt-20"
+          data-variant-id={{ product.variants.first.id }}
+          data-variant-price={{ product.price }}
+          data-add-to-cart="{{ 'cart.general.add-to-cart' | t }}"
+          data-thank-you="{{ 'cart.general.thank-you' | t }}">
+    </div>
 </div>
 
 {% schema %}
