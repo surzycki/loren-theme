@@ -8,79 +8,42 @@
   }
 </style>
 
-<div id="image-banner-product-mobile" >
-  <div class="d-md-none image-banner-product image-banner-product-mobile--{{ section.id }}">
-      <div class='pt-11 mb-19 text-center'>
-        <h1 class='h1'>
-            {{ product.title  }}
-        </h1>
+<span id="add-to-cart-text" class="d-none"
+    data-variant-id={{ product.variants.first.id }}
+    data-variant-price={{ product.price }}
+    data-add-to-cart="{{ 'cart.general.add-to-cart' | t }}"
+    data-thank-you="{{ 'cart.general.thank-you' | t }}">
+</span>
 
-        <h3 class="h3">
-            {{ product.metafields.descriptions.blend.value }}
-        </h3>
+<div id="image-banner-product-mobile">
+    <div class="d-md-none image-banner-product image-banner-product-mobile--{{ section.id }}">
+        <div class='pt-11 mb-19 text-center'>
+           <h1 class='h1'>{{ product.title  }}</h1>
+           <h3 class="h3">{{ product.metafields.descriptions.blend.value }}</h3>
+           <p>{{ 'product.capsules-per-box' | t }} {{ product.price | money  }}</p>
+        </div>
 
-        <p>
-            {{ 'product.capsules-per-box' | t }} {{ product.price | money  }}
-        </p>
-      </div>
-
-      <div id="add-to-cart" class="text-center pt-20"
-            data-variant-id={{ product.variants.first.id }}
-            data-variant-price={{ product.price }}
-            data-add-to-cart="{{ 'cart.general.add-to-cart' | t }}"
-            data-thank-you="{{ 'cart.general.thank-you' | t }}">
-      </div>
-  </div>
-
-  <div class="d-md-none pt-4 px-2">
-    <h2 class='h2 text-center mb-4'>
-        {{ product.description }}
-    </h2>
-
-    <div class="row text-center mb-3">
-      <div class="col-4">
-        {% render 'icon-fair-trade' %}
-        <h3 class="h3 pt-1">
-          {{ 'general.values.fair-trade' | t }}
-        </h3>
-      </div>
-      <div class="col-4">
-        {% render 'icon-capsule' %}
-        <h3 class="h3 pt-1">
-          {{ 'general.values.biodegradable' | t }}
-        </h3>
-      </div>
-      <div class="col-4">
-        {% render 'icon-recycle'  %}
-        <h3 class="h3 pt-1">
-          {{ 'general.values.recycle' | t }}
-        </h3>
-      </div>
+        <div id="add-to-cart-mobile" class="mx-auto pt-18"></div>
     </div>
-  </div>
+
+    <div class="d-md-none pt-4 px-2">
+        <h2 class='h2 text-center mb-4'>{{ product.description }}</h2>
+        {% render 'product-icons' %}
+    </div>
 </div>
 
 
 <div id="image-banner-product-desktop" class="d-none d-md-block image-banner-product image-banner-product-desktop--{{ section.id }}">
-    <div class='pt-11 mb-19 text-center'>
-      <h1 class='h1'>
-          {{ product.title  }}
-      </h1>
-
-      <h3 class="h3">
-          {{ product.metafields.descriptions.blend.value }}
-      </h3>
-
-      <p>
-          {{ 'product.capsules-per-box' | t }} {{ product.price | money  }}
-      </p>
-    </div>
-
-    <div id="add-to-cart" class="text-center pt-20"
-          data-variant-id={{ product.variants.first.id }}
-          data-variant-price={{ product.price }}
-          data-add-to-cart="{{ 'cart.general.add-to-cart' | t }}"
-          data-thank-you="{{ 'cart.general.thank-you' | t }}">
+    <div class="container pt-15 ps-10 text-left">
+        <div class="row justify-content-end">
+            <div class='col-md-6 pe-md-1'>
+                <h1 class='h1'>{{ product.title }}</h1>
+                <h3 class="h3">{{ product.metafields.descriptions.blend.value }}</h3>
+                <p class="mb-2">{{ 'product.capsules-per-box' | t }} {{ product.price | money  }}</p>
+                <h2 class="h2 mb-4">{{ product.description }}</h2>
+                <div id="add-to-cart-desktop" class=""></div>
+            </div>
+        </div>
     </div>
 </div>
 

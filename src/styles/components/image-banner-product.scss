@@ -23,7 +23,7 @@
 
 }
 
-#image-banner-product-mobile {
+#image-banner-product-mobile, #image-banner-product-desktop {
     .h1 {
       font-family: $brand-font-family;
       letter-spacing: 2px;
@@ -33,7 +33,7 @@
 
       @include media-breakpoint-up(md) {
         font-size: 5rem;
-        line-height: 6rem;
+        line-height: 5.375rem;
       }
 
       @include media-breakpoint-up(xl) {
@@ -42,9 +42,24 @@
       }
     }
 
-    .h2, .h3 {
+    .h2 {
       font-size: 1rem;
       line-height: 1.5rem;
+
+      @include media-breakpoint-up(md) {
+        font-size: 1rem;
+        width: 388px;
+      }
+    }
+
+    .h3 {
+      font-size: 1rem;
+      line-height: 1.5rem;
+
+      @include media-breakpoint-up(md) {
+        font-size: 1.25rem;
+        line-height: 2rem;
+      }
     }
 
     p {

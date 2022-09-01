@@ -1,13 +1,7 @@
-#add-to-cart {
-    .btn-quantity {
-        font-size: 1.5rem;
-        line-height: 2rem;
-        width: 3rem;
-        height: 3rem;
-        padding-top: 0.625rem;
-        &.active {
-            background-color: $black;
-            color: $white;
-        }
-    }
+#add-to-cart-mobile {
+    width: 326px;
+}
+
+#add-to-cart-desktop {
+    width: 370px;
 }

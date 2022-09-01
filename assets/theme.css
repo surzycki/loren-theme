@@ -21885,7 +21885,7 @@ menu-drawer .drawer.slide {
     background-position: 80% 36%;
   }
 }
-#image-banner-product-mobile .h1 {
+#image-banner-product-mobile .h1, #image-banner-product-desktop .h1 {
   font-family: "Rainer", serif;
   letter-spacing: 2px;
   text-transform: none;
@@ -21893,27 +21893,43 @@ menu-drawer .drawer.slide {
   line-height: 6rem;
 }
 @media (min-width: 768px) {
-  #image-banner-product-mobile .h1 {
+  #image-banner-product-mobile .h1, #image-banner-product-desktop .h1 {
     font-size: 5rem;
-    line-height: 6rem;
+    line-height: 5.375rem;
   }
 }
 @media (min-width: 1200px) {
-  #image-banner-product-mobile .h1 {
+  #image-banner-product-mobile .h1, #image-banner-product-desktop .h1 {
     font-size: 5.625rem;
     line-height: 6rem;
   }
 }
-#image-banner-product-mobile .h2, #image-banner-product-mobile .h3 {
+#image-banner-product-mobile .h2, #image-banner-product-desktop .h2 {
   font-size: 1rem;
   line-height: 1.5rem;
 }
-#image-banner-product-mobile p {
+@media (min-width: 768px) {
+  #image-banner-product-mobile .h2, #image-banner-product-desktop .h2 {
+    font-size: 1rem;
+    width: 388px;
+  }
+}
+#image-banner-product-mobile .h3, #image-banner-product-desktop .h3 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+@media (min-width: 768px) {
+  #image-banner-product-mobile .h3, #image-banner-product-desktop .h3 {
+    font-size: 1.25rem;
+    line-height: 2rem;
+  }
+}
+#image-banner-product-mobile p, #image-banner-product-desktop p {
   font-size: 0.875rem;
   line-height: 1.25rem;
   color: #858585;
 }
-#image-banner-product-mobile svg {
+#image-banner-product-mobile svg, #image-banner-product-desktop svg {
   height: 48px;
 }
 
@@ -21975,15 +21991,32 @@ menu-drawer .drawer.slide {
   }
 }
 
-.scene {
-  padding: 0 0.5rem;
-  perspective: 800px;
-  height: 64px;
-  width: 354px;
-  cursor: pointer;
+.btn-quantity {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  width: 3rem;
+  height: 3rem;
+  padding-top: 0.625rem;
+  text-align: center;
+}
+.btn-quantity.active {
+  background-color: #222222;
+  color: #fffcf7;
 }
 
-.cube-effect {
+.btn-3d {
+  padding: 0 0;
+  perspective: 800px;
+  height: 64px;
+  width: 100%;
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .btn-3d {
+    height: 48px;
+  }
+}
+.btn-3d .cube-effect {
   height: 64px;
   width: 100%;
   transform-origin: 50% 50%;
@@ -21991,11 +22024,15 @@ menu-drawer .drawer.slide {
   transition: 0.4s all;
   position: relative;
 }
-.cube-effect.active {
+@media (min-width: 768px) {
+  .btn-3d .cube-effect {
+    height: 48px;
+  }
+}
+.btn-3d .cube-effect.active {
   transform: rotateX(-90deg);
 }
-
-.cube-front {
+.btn-3d .cube-front {
   position: absolute;
   height: 100%;
   width: 100%;
@@ -22007,17 +22044,30 @@ menu-drawer .drawer.slide {
   color: #fffcf7;
   font-weight: 700;
 }
-
-.cube-top {
+@media (min-width: 768px) {
+  .btn-3d .cube-front {
+    font-size: 1rem;
+    padding-top: 1rem;
+    transform: rotateX(0deg) translate3d(0px, 0px, 24px);
+  }
+}
+.btn-3d .cube-top {
   position: absolute;
   width: 100%;
   height: 100%;
   padding-top: 1.5rem;
-  transform: rotateX(90deg) translate3d(0px, 0px, 30px);
+  transform: rotateX(90deg) translate3d(0px, 0px, 32px);
   background: #ce3613;
   text-align: center;
   color: #fffcf7;
   font-size: 1.25rem;
+}
+@media (min-width: 768px) {
+  .btn-3d .cube-top {
+    font-size: 1rem;
+    padding-top: 1rem;
+    transform: rotateX(90deg) translate3d(0px, 0px, 24px);
+  }
 }
 
 #featured-products .h1 {
@@ -22125,16 +22175,12 @@ footer ul a:hover {
   color: #fffcf7;
 }
 
-#add-to-cart .btn-quantity {
-  font-size: 1.5rem;
-  line-height: 2rem;
-  width: 3rem;
-  height: 3rem;
-  padding-top: 0.625rem;
+#add-to-cart-mobile {
+  width: 326px;
 }
-#add-to-cart .btn-quantity.active {
-  background-color: #222222;
-  color: #fffcf7;
+
+#add-to-cart-desktop {
+  width: 370px;
 }
 
 body::before {

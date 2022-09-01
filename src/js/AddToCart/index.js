@@ -49,7 +49,7 @@ const AddToCart = ({ variantId, variantPrice, addToCart, thankYou }) => {
 
   return (
     <>
-      <div className="d-flex justify-content-between px-3 mb-2">
+      <div className="d-flex justify-content-between mb-2">
         <label className={labelClass(10)} onClick={() => setQuantity(10)}>
           10
         </label>
@@ -67,7 +67,7 @@ const AddToCart = ({ variantId, variantPrice, addToCart, thankYou }) => {
         </label>
       </div>
 
-      <div className="scene m-auto" onClick={handleAddToCart}>
+      <div className="btn-3d" onClick={handleAddToCart}>
         <div className={cubeEffectClass}>
           <div className="cube-front">
             {addToCart} + {formatPrice(quantity * variantPrice)}
