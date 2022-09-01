@@ -21888,7 +21888,7 @@ menu-drawer .drawer.slide {
 @media (min-width: 1200px) {
   .image-banner-product {
     height: 896px;
-    background-size: 2800px 896px;
+    background-size: 2100px;
     background-position: 80% 66%;
   }
 }
