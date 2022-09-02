@@ -11,35 +11,11 @@
         "collection": "featured-products"
       }
     },
-    "1662119239bfff6a4c": {
+    "1662131347035c3730": {
       "type": "image-with-text",
       "settings": {
         "image": "shopify:\/\/shop_images\/background-coffee-beans.png",
-        "image-text": "Des graines de café biologiques et issues du commerce équitable et des meilleurs régions productrices de café d’Amérique latine",
-        "position": "center"
-      }
-    },
-    "16621249977a3254a9": {
-      "type": "image-with-text",
-      "settings": {
-        "image": "shopify:\/\/shop_images\/background-grinder.png",
-        "image-text": "Un café torréfié et assemblé dans la région du café italien par excellence, La Vénétie.  Un mélange inédit de traditions artisanales et d’innovations technologiques.",
-        "position": "center"
-      }
-    },
-    "1662125242f4f199c9": {
-      "type": "image-with-text",
-      "settings": {
-        "image": "shopify:\/\/shop_images\/background-coffee-II.png",
-        "image-text": "Une collection qui va à l’essentiel: trois espressos indispensables, pour vous permettre de déguster un café au goût et à l’intensité idéal, à chaque moment de la journée ",
-        "position": "center"
-      }
-    },
-    "1662125666da898e21": {
-      "type": "image-with-text",
-      "settings": {
-        "image": "shopify:\/\/shop_images\/background-piu-capsules.png",
-        "image-text": "Un emballage entièrement recyclable, et un système de vente directe, pour préserver la fraîcheur des arômes et l’environnement, grâce à nos capsules compostables.",
+        "image-text": "Des graines de café biologiques et issues du commerce équitable et des meilleurs régions productrices de café d’Amérique latine ",
         "position": "center"
       }
     }
@@ -47,9 +23,6 @@
   "order": [
     "image-banner-product",
     "1662041982b484308c",
-    "1662119239bfff6a4c",
-    "16621249977a3254a9",
-    "1662125242f4f199c9",
-    "1662125666da898e21"
+    "1662131347035c3730"
   ]
 }
