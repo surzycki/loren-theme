@@ -10,10 +10,18 @@
       "settings": {
         "collection": "featured-products"
       }
+    },
+    "1662132061d15a531b": {
+      "type": "image-with-text",
+      "settings": {
+        "image-text": "",
+        "position": "left"
+      }
     }
   },
   "order": [
     "image-banner-product",
-    "1662041982b484308c"
+    "1662041982b484308c",
+    "1662132061d15a531b"
   ]
 }
