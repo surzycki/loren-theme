@@ -22200,8 +22200,6 @@ footer ul a:hover {
   height: 448px;
   background-color: #fffcf7;
   background-repeat: no-repeat;
-  background-size: 676px;
-  background-position: 50% 50%;
 }
 @media (min-width: 768px) {
   .image-with-text-background {

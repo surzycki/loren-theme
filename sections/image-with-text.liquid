@@ -1,24 +1,6 @@
-<style>
-  .image-with-text-background--{{ section.id  }} {
-     background-image: url({{ section.settings.image | img_url: 'master'}})
-  }
-</style>
-
-<div id="image-with-text-mobile" class="d-md-none">
-    <div class="image-with-text-background image-with-text-background--{{section.id}}">
-    </div>
-
-    <div class="text-center pt-2 px-2 mb-6">
-        <h2 class="h2">
-           {{ section.settings.image-text }}
-        </h2>
-    </div>
-</div>
-
 {%- liquid
   if section.settings.position == "left"
     assign positionClass = "position-absolute top-50 start-0 translate-middle-y ps-md-3"
-    assign positionStyle = "background-size: 960px; background-position: 40% 40%;"
   elsif section.settings.position == "center"
     assign positionClass = "position-absolute top-50 start-50 translate-middle text-center"
   elsif section.settings.position == "right"
@@ -31,6 +13,33 @@
     assign themeClass = "text-dark text-no-shadow"
   endif
 %}
+
+<style>
+  .image-with-text-background--{{ section.id  }} {
+      background-image: url({{ section.settings.image | img_url: 'master'}})
+      background-size: {{ section.settings.mobile-background-size }}px
+      background-position: 50% 50%
+
+      @media (min-width: 768px) {
+          .image-with-text-background--{{ section.id }} {
+              background-size: {{ sections.settings.desktop-background-size }}px
+              background-position: 50% 50%
+          }
+      }
+</style>
+
+
+<div id="image-with-text-mobile" class="d-md-none">
+    <div class="image-with-text-background image-with-text-background--{{section.id}}">
+    </div>
+
+    <div class="text-center pt-2 px-2 mb-6">
+        <h2 class="h2">
+           {{ section.settings.image-text }}
+        </h2>
+    </div>
+</div>
+
 
 
 <div id="image-with-text-desktop" class="d-none d-md-block mb-4">

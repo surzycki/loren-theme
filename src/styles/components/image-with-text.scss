@@ -3,10 +3,6 @@
     background-color: $white;
     background-repeat: no-repeat;
 
-    background-size: 676px;
-    background-position: 50% 50%;
-
-
     @include media-breakpoint-up(md) {
         height: 460px;
         background-size: 960px;
