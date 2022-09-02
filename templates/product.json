@@ -19,7 +19,8 @@
         "position": "center",
         "theme": "dark",
         "mobile-background-size": 688,
-        "desktop-background-size": 960
+        "desktop-background-size": 960,
+        "desktop-background-position": "50% 50%"
       }
     },
     "16621323561617aa89": {
@@ -30,7 +31,8 @@
         "position": "center",
         "theme": "dark",
         "mobile-background-size": 680,
-        "desktop-background-size": 960
+        "desktop-background-size": 960,
+        "desktop-background-position": "50% 50%"
       }
     },
     "16621323809a236675": {
@@ -41,7 +43,8 @@
         "position": "left",
         "theme": "light",
         "mobile-background-size": 1200,
-        "desktop-background-size": 960
+        "desktop-background-size": 1696,
+        "desktop-background-position": "6% 50%"
       }
     }
   },
