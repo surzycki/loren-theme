@@ -22206,7 +22206,7 @@ footer ul a:hover {
 @media (min-width: 768px) {
   .image-with-text-background {
     height: 460px;
-    background-size: 1200px;
+    background-size: 960px;
   }
 }
 
@@ -22293,4 +22293,8 @@ dl {
 
 .text-accent1 {
   color: #ce3613 !important;
+}
+
+.text-no-shadow {
+  text-shadow: none !important;
 }
