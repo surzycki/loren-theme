@@ -36,7 +36,8 @@ body {
 hr {
   margin: 0;
   opacity: 1;
-  background-color: #dedede;
+  background-color: $light-grey;
+  color: $light-grey;
 }
 
 ul,
