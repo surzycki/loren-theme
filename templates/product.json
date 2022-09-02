@@ -10,10 +10,20 @@
       "settings": {
         "collection": "featured-products"
       }
+    },
+    "16621323142f946a1a": {
+      "type": "image-with-text",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/background-coffee-beans.png",
+        "image-text": "Des graines de café biologiques et issues du commerce équitable et des meilleurs régions productrices de café d’Amérique latine .",
+        "position": "center",
+        "theme": "dark"
+      }
     }
   },
   "order": [
     "image-banner-product",
-    "1662041982b484308c"
+    "1662041982b484308c",
+    "16621323142f946a1a"
   ]
 }
