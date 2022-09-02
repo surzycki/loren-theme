@@ -5,6 +5,12 @@
 
     @include media-breakpoint-up(md) {
         height: 460px;
+        max-width: 960px;
+    }
+
+    @include media-breakpoint-up(xl) {
+        height: 576px;
+        max-width: 1200px;
     }
 }
 

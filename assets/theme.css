@@ -22204,6 +22204,13 @@ footer ul a:hover {
 @media (min-width: 768px) {
   .image-with-text-background {
     height: 460px;
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .image-with-text-background {
+    height: 576px;
+    max-width: 1200px;
   }
 }
 
