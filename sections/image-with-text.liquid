@@ -16,14 +16,14 @@
 
 <style>
   .image-with-text-background--{{ section.id  }} {
-      background-image: url({{ section.settings.image | img_url: 'master'}})
-      background-size: {{ section.settings.mobile-background-size }}px
-      background-position: 50% 50%
+      background-image: url({{ section.settings.image | img_url: 'master'}});
+      background-size: {{ section.settings.mobile-background-size }}px;
+      background-position: 50% 50%;
 
       @media (min-width: 768px) {
           .image-with-text-background--{{ section.id }} {
-              background-size: {{ section.settings.desktop-background-size }}px
-              background-position: 50% 50%
+              background-size: {{ section.settings.desktop-background-size }}px;
+              background-position: 50% 50%;
           }
       }
 </style>
