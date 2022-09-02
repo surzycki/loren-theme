@@ -25,7 +25,7 @@
   @media(min-width: 768px) {
       .image-with-text-background--{{ section.id }} {
           background-size: {{ section.settings.desktop-background-size }}px;
-          background-position: {{ section.settings.desktop-background-position }};
+          background-position: {{ section.settings.desktop-background-position-x }} {{ section.settings.desktop-background-position-y }}; ;
       }
   }
 </style>
