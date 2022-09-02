@@ -31,6 +31,13 @@
         "image": "shopify:\/\/shop_images\/background-coffee-II.png",
         "image-text": "Une collection qui va à l’essentiel: trois espressos indispensables, pour vous permettre de déguster un café au goût et à l’intensité idéal, à chaque moment de la journée "
       }
+    },
+    "1662125666da898e21": {
+      "type": "image-with-text",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/background-capsules-ii.png",
+        "image-text": "Un emballage entièrement recyclable, et un système de vente directe, pour préserver la fraîcheur des arômes et l’environnement, grâce à nos capsules compostables."
+      }
     }
   },
   "order": [
@@ -38,6 +45,7 @@
     "1662041982b484308c",
     "1662119239bfff6a4c",
     "16621249977a3254a9",
-    "1662125242f4f199c9"
+    "1662125242f4f199c9",
+    "1662125666da898e21"
   ]
 }
