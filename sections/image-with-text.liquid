@@ -1,4 +1,9 @@
-Hello
+<style>
+  .image-background--{{ section.id  }} {
+     background-image: url({{ section.settings.image | img_url: 'master'}})
+  }
+</style>
+
 
 
 {% schema %}
