@@ -58,8 +58,8 @@
         "position": "right",
         "theme": "light",
         "mobile-background-size": 1200,
-        "desktop-background-size": 2032,
-        "desktop-background-position-x": 73,
+        "desktop-background-size": 1792,
+        "desktop-background-position-x": 82,
         "desktop-background-position-y": 50
       }
     },
