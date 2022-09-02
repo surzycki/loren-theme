@@ -6,6 +6,11 @@
     background-size: 676px;
     background-position: 50% 50%;
 
+
+    @include media-breakpoint-up(md) {
+        height: 460px;
+        background-size: 1200px;
+    }
 }
 
 #image-with-text-mobile {
@@ -13,4 +18,14 @@
        font-size: 1.25rem;
        line-height: 1.75rem;
    }
+}
+
+#image-with-text-desktop {
+    .h2 {
+        font-size: 1.875rem;
+        line-height: 2.5rem;
+        color: $white;
+        width: 656px;
+        text-shadow: 1px 1px 1px rgba(0,0,0,0.50);
+    }
 }

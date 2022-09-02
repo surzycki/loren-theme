@@ -4,12 +4,20 @@
   }
 </style>
 
-<div id="image-with-text-mobile" class="d-mb-none">
+<div id="image-with-text-mobile" class="d-md-none">
     <div class="image-with-text-background image-with-text-background--{{section.id}}">
     </div>
 
     <div class="text-center pt-2 px-2 mb-6">
         <h2 class="h2">
+           {{ section.settings.image-text }}
+        </h2>
+    </div>
+</div>
+
+<div id="image-with-text-desktop" class="d-none d-md-block mb-4">
+    <div class="image-with-text-background image-with-text-background--{{section.id}} position-relative">
+        <h2 class="h2 position-absolute top-50 start-50 translate-middle text-center">
            {{ section.settings.image-text }}
         </h2>
     </div>
