@@ -28,12 +28,22 @@
         "position": "center",
         "theme": "dark"
       }
+    },
+    "16621323809a236675": {
+      "type": "image-with-text",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/background-coffee-II.png",
+        "image-text": "Une collection qui va à l’essentiel: trois espressos indispensables, pour vous permettre de déguster un café au goût et à l’intensité idéal, à chaque moment de la journée ",
+        "position": "left",
+        "theme": "light"
+      }
     }
   },
   "order": [
     "image-banner-product",
     "1662041982b484308c",
     "16621323142f946a1a",
-    "16621323561617aa89"
+    "16621323561617aa89",
+    "16621323809a236675"
   ]
 }
