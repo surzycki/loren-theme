@@ -22204,7 +22204,6 @@ footer ul a:hover {
 @media (min-width: 768px) {
   .image-with-text-background {
     height: 460px;
-    background-size: 960px;
   }
 }
 
@@ -22219,6 +22218,11 @@ footer ul a:hover {
   color: #fffcf7;
   width: 656px;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+@media (min-width: 768px) {
+  #image-with-text-desktop .h2.left {
+    width: 528px;
+  }
 }
 
 body::before {
