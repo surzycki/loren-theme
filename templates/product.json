@@ -49,6 +49,23 @@
         "desktop-background-position-x": 9,
         "desktop-background-position-y": 50
       }
+    },
+    "166214830225cc8749": {
+      "type": "image-with-text",
+      "settings": {
+        "image-text": "Des capsules compostables , un emballage entièrement recyclable, et un système de vente directe,pour préserver la fraîcheur des arômes et l’environnement, notamment grâce à nos capsules compostables.",
+        "position": "right",
+        "theme": "light",
+        "mobile-background-size": 680,
+        "desktop-background-size": 960,
+        "desktop-background-position-x": 50,
+        "desktop-background-position-y": 50
+      }
+    },
+    "1662148310656020c7": {
+      "type": "recall",
+      "settings": {
+      }
     }
   },
   "order": [
@@ -56,6 +73,8 @@
     "1662041982b484308c",
     "16621323142f946a1a",
     "16621323561617aa89",
-    "16621323809a236675"
+    "16621323809a236675",
+    "166214830225cc8749",
+    "1662148310656020c7"
   ]
 }
