@@ -20,12 +20,14 @@
       background-size: {{ section.settings.mobile-background-size }}px;
       background-position: 50% 50%;
 
-      @media (min-width: 768px) {
-          .image-with-text-background--{{ section.id }} {
-              background-size: {{ section.settings.desktop-background-size }}px;
-              background-position: 50% 50%;
-          }
+    }
+
+  @media(min-width: 768px) {
+      .image-with-text-background--{{ section.id }} {
+          background-size: {{ section.settings.desktop-background-size }}px;
+          background-position: {{ section.settings.desktop-background-position }};
       }
+  }
 </style>
 
 
@@ -108,7 +110,7 @@
         "id": "mobile-background-size",
         "label": "The 'zoom' for the mobile background image",
         "default": 680,
-        "min": 600,
+        "min": 680,
         "max": 1200,
         "unit": "px",
         "step": 8
@@ -118,10 +120,16 @@
         "id": "desktop-background-size",
         "label": "The 'zoom' for the desktop background image",
         "default": 960,
-        "min": 600,
-        "max": 1400,
+        "min": 960,
+        "max": 2208,
         "unit": "px",
-        "step": 8
+        "step": 16
+      },
+      {
+        "type": "text",
+        "id": "desktop-background-position",
+        "label": "The postition for the desktop background image",
+        "default": "50% 50%"
       }
     ],
     "presets": [
