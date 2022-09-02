@@ -22196,6 +22196,19 @@ footer ul a:hover {
   width: 326px;
 }
 
+.image-with-text-background {
+  height: 448px;
+  background-color: #ccc8c0;
+  background-repeat: no-repeat;
+  background-size: 676px;
+  background-position: 50% 50%;
+}
+
+#image-with-text-mobile .h2 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
 body::before {
   content: "xs";
   position: fixed;

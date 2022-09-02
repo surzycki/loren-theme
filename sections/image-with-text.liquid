@@ -1,10 +1,19 @@
 <style>
-  .image-background--{{ section.id  }} {
+  .image-with-text-background--{{ section.id  }} {
      background-image: url({{ section.settings.image | img_url: 'master'}})
   }
 </style>
 
+<div id="image-with-text-mobile" class="d-mb-none">
+    <div class="image-with-text-background image-with-text-background--{{section.id}}">
+    </div>
 
+    <div class="text-center pt-2 px-2 mb-6">
+        <h2 class="h2">
+           {{ section.settings.image-text }}
+        </h2>
+    </div>
+</div>
 
 {% schema %}
   {

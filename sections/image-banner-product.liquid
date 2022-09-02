@@ -15,8 +15,8 @@
     data-thank-you="{{ 'cart.general.thank-you' | t }}">
 </span>
 
-<div id="image-banner-product-mobile">
-    <div class="d-md-none image-banner-product image-banner-product-mobile--{{ section.id }}">
+<div id="image-banner-product-mobile" class="d-md-none">
+    <div class="image-banner-product image-banner-product-mobile--{{ section.id }}">
         <div class='pt-11 mb-19 text-center'>
            <h1 class='h1'>{{ product.title  }}</h1>
            <h3 class="h3">{{ product.metafields.descriptions.blend.value }}</h3>
@@ -26,7 +26,7 @@
         <div id="add-to-cart-mobile" class="mx-auto pt-18"></div>
     </div>
 
-    <div class="d-md-none pt-4 px-2">
+    <div class="pt-4 px-2">
         <h2 class='h2 text-center mb-4'>{{ product.description }}</h2>
         {% render 'product-icons' %}
     </div>
