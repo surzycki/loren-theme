@@ -4,9 +4,17 @@
       "type": "page-coffee",
       "settings": {
       }
+    },
+    "1662190967420bd91b": {
+      "type": "image-banner-coffee",
+      "settings": {
+        "image-desktop": "shopify:\/\/shop_images\/background-our-coffee.png",
+        "image-mobile": "shopify:\/\/shop_images\/background-our-coffee.png"
+      }
     }
   },
   "order": [
-    "page"
+    "page",
+    "1662190967420bd91b"
   ]
 }
