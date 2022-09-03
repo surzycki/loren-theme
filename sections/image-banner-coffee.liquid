@@ -8,18 +8,25 @@
   }
 </style>
 
-<div id="image-banner-coffee-mobile" class="d-md-none">
+<div id="image-banner-coffee-mobile" class="d-md-none text-center">
     <div class="image-banner-coffee image-banner-coffee-mobile--{{ section.id }}">
-        <div class='pt-11 mb-19 text-center'>
-           <h1 class='h1'>A</h1>
-           <h3 class="h3">B</h3>
-           <p>C</p>
+        <div class='pt-12 text-center'>
+           <h1 class='h1'>
+             {{ 'our-coffee.hero.title' | t }}
+           </h1>
+           <h2 class="h2 mb-1">
+             {{ 'our-coffee.hero.sub-title' | t }}
+           </h2>
+           <p class="px-1">
+             {{ 'our-coffee.hero.content' | t }}
+           </p>
         </div>
-
     </div>
 
-    <div class="pt-4 px-2">
-        <h2 class='h2 text-center mb-4'>x</h2>
+    <div class="pt-3 pb-4">
+      <a href='/products/mattino' class='btn btn-cta btn-lg text-uppercase'>
+        {{ 'general.button.order-now' | t }}
+       </a>
     </div>
 </div>
 {% schema %}
