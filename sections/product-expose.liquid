@@ -3,13 +3,19 @@
 %}
 
 
-<div class="product-expose container text-center mb-6">
-    <h1 class="h1 mb-1">{{ product.title  }}</h1>
-    <h3 class="h3 mb-2">{{ product.metafields.descriptions.blend.value }}</h3>
-    <h2 class="h2 text-center mb-4">{{ product.description }}</h2>
+<div class="product-expose container text-center mb-6 pt-md-10">
+    <div class="row">
+        <div class="col-12 col-md-6 text-md-end position-relative">
+            <h1 class="h1 mb-1 mb-md-1">{{ product.title  }}</h1>
+            <h2 class="h2 mb-2 mb-md-1">{{ product.metafields.descriptions.blend.value }}</h2>
+            <div class="description">
+                <p class="mb-4">{{ product.description }}</p>
+            </div>
+        </div>
 
-    <div>
-        {% render 'product-front', product: product %}
+       <div class="col-12 col-md-6 pt-md-2 text-md-end">
+           {% render 'product-front', product: product %}
+       </div>
     </div>
 </div>
 
