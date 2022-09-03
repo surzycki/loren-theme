@@ -1,4 +1,34 @@
-Hello world promise
+<style>
+  .image-banner-promise-mobile--{{ section.id  }} {
+     background-image: url({{section.settings.image-mobile | img_url: 'master'}})
+  }
+
+ .image-banner-promise-desktop--{{ section.id  }} {
+     background-image: url({{section.settings.image-desktop | img_url: 'master'}})
+  }
+</style>
+
+<div id="image-banner-promise-mobile" class="d-md-none text-center">
+    <div class="image-banner-promise image-banner-promise-mobile--{{ section.id }}">
+        <div class='pt-12 text-center'>
+           <h1 class='h1'>
+             {{ 'our-promise.hero.title' | t }}
+           </h1>
+           <h2 class="h2 mb-1">
+             {{ 'our-promise.hero.sub-title' | t }}
+           </h2>
+           <p class="px-1">
+             {{ 'our-promise.hero.content' | t }}
+           </p>
+        </div>
+    </div>
+
+    <div class="pt-3 pb-4">
+      <a href='/products/mattino' class='btn btn-cta btn-lg text-uppercase'>
+        {{ 'general.button.order-now' | t }}
+       </a>
+    </div>
+</div>
 
 {% schema %}
   {
@@ -11,13 +41,6 @@ Hello world promise
         "label": "t:sections.image-banner-promise.settings.image.label",
         "id": "image-desktop",
         "label": "Image for Desktops",
-        "info": "Dimensions: 2880x1792"
-      },
-      {
-        "type": "image_picker",
-        "label": "t:sections.image-banner-promise.settings.image.label",
-        "id": "image-tablet",
-        "label": "Image for Tablets",
         "info": "Dimensions: 2880x1792"
       },
       {
