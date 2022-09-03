@@ -4,9 +4,16 @@
       "type": "page-promise",
       "settings": {
       }
+    },
+    "16622194792fcfcc97": {
+      "type": "image-banner-promise",
+      "settings": {
+        "image-mobile": "shopify:\/\/shop_images\/background-promise-loren.jpg"
+      }
     }
   },
   "order": [
-    "page"
+    "page",
+    "16622194792fcfcc97"
   ]
 }
