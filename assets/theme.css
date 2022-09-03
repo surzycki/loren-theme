@@ -22352,17 +22352,42 @@ footer ul a:hover {
   height: 448px;
   background-color: #fffcf7;
   background-repeat: no-repeat;
+  background-size: 688px;
+  background-position: 50% 50%;
+}
+.image-with-text-background.left, .image-with-text-background.right {
+  background-size: 1200px;
 }
 @media (min-width: 768px) {
   .image-with-text-background {
     height: 460px;
     max-width: 960px;
+    background-size: 960px;
+  }
+  .image-with-text-background.left, .image-with-text-background.right {
+    background-size: 1600px;
+  }
+  .image-with-text-background.left {
+    background-position: 4% 50%;
+  }
+  .image-with-text-background.right {
+    background-position: calc(100% + 48px) 50%;
   }
 }
 @media (min-width: 1200px) {
   .image-with-text-background {
     height: 576px;
     max-width: 1200px;
+    background-size: 1200px;
+  }
+  .image-with-text-background.left, .image-with-text-background.right {
+    background-size: 2200px;
+  }
+  .image-with-text-background.left {
+    background-position: 10% 50%;
+  }
+  .image-with-text-background.right {
+    background-position: 80% 50%;
   }
 }
 
@@ -22371,17 +22396,22 @@ footer ul a:hover {
   line-height: 1.75rem;
 }
 
+@media (min-width: 768px) {
+  #image-with-text-desktop .left .h2, #image-with-text-desktop .right .h2 {
+    width: 528px;
+  }
+}
+@media (min-width: 1200px) {
+  #image-with-text-desktop .left .h2, #image-with-text-desktop .right .h2 {
+    width: 656px;
+  }
+}
 #image-with-text-desktop .h2 {
   font-size: 1.875rem;
   line-height: 2.5rem;
   color: #fffcf7;
   width: 656px;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
-}
-@media (min-width: 768px) {
-  #image-with-text-desktop .h2.left, #image-with-text-desktop .h2.right {
-    width: 528px;
-  }
 }
 
 .product-expose .h1 {

@@ -17,11 +17,7 @@
         "image": "shopify:\/\/shop_images\/background-coffee-beans.png",
         "image-text": "Des graines de café biologiques et issues du commerce équitable et des meilleurs régions productrices de café d’Amérique latine .",
         "position": "center",
-        "theme": "dark",
-        "mobile-background-size": 688,
-        "desktop-background-size": 1200,
-        "desktop-background-position-x": 50,
-        "desktop-background-position-y": 50
+        "theme": "dark"
       }
     },
     "16621323561617aa89": {
@@ -30,11 +26,7 @@
         "image": "shopify:\/\/shop_images\/background-grinder.png",
         "image-text": "Un café torréfié et assemblé dans la région du café italien par excellence, La Vénétie.  Un mélange inédit de traditions artisanales et d’innovations technologiques.",
         "position": "center",
-        "theme": "dark",
-        "mobile-background-size": 680,
-        "desktop-background-size": 1200,
-        "desktop-background-position-x": 50,
-        "desktop-background-position-y": 50
+        "theme": "dark"
       }
     },
     "16621323809a236675": {
@@ -43,11 +35,7 @@
         "image": "shopify:\/\/shop_images\/background-coffee-cup_020674f7-21a8-491d-bd07-4aa099cb109e.png",
         "image-text": "Une collection qui va à l’essentiel: trois espressos indispensables, pour vous permettre de déguster un café au goût et à l’intensité idéal, à chaque moment de la journée ",
         "position": "left",
-        "theme": "light",
-        "mobile-background-size": 1200,
-        "desktop-background-size": 1696,
-        "desktop-background-position-x": 9,
-        "desktop-background-position-y": 50
+        "theme": "light"
       }
     },
     "166214830225cc8749": {
@@ -56,11 +44,7 @@
         "image": "shopify:\/\/shop_images\/background-piu-capsules.png",
         "image-text": "Des capsules compostables , un emballage entièrement recyclable, et un système de vente directe,pour préserver la fraîcheur des arômes et l’environnement, notamment grâce à nos capsules compostables.",
         "position": "right",
-        "theme": "light",
-        "mobile-background-size": 1200,
-        "desktop-background-size": 1792,
-        "desktop-background-position-x": 82,
-        "desktop-background-position-y": 50
+        "theme": "light"
       }
     },
     "1662148310656020c7": {
