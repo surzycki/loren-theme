@@ -14,7 +14,7 @@
            <h1 class='h1'>
              {{ 'our-promise.hero.title' | t }}
            </h1>
-           <h2 class="h2 mb-1">
+           <h2 class="h2 px-1 mb-2">
              {{ 'our-promise.hero.sub-title' | t }}
            </h2>
            <p class="px-1">
@@ -28,6 +28,31 @@
         {{ 'general.button.order-now' | t }}
        </a>
     </div>
+</div>
+
+
+<div id="image-banner-promise-desktop" class="d-none d-md-block image-banner-promise image-banner-promise-desktop--{{ section.id }}">
+  <div class="container pt-10 pt-xl-14 ps-3">
+    <div class="row justify-content-start pt-12">
+      <div class="col-md-8">
+          <h1 class='h1 mb-2'>
+            {{ 'our-promise.hero.title' | t }}
+          </h1>
+
+          <h2 class="h2 mb-3">
+            {{ 'our-promise.hero.sub-title' | t }}
+          </h2>
+
+          <p class="mb-6">
+            {{ 'our-promise.hero.content' | t }}
+          </p>
+
+          <a href='/products/mattino' class='btn btn-cta btn-lg text-uppercase'>
+              {{ 'general.button.order-now' | t }}
+          </a>
+      </div>
+    </div>
+  </div>
 </div>
 
 {% schema %}

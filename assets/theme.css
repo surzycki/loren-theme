@@ -22025,20 +22025,20 @@ menu-drawer .drawer.slide {
   background-repeat: no-repeat;
   height: 712px;
   background-size: 550px;
-  background-position: 86% 0%;
+  background-position: 50% 100%;
 }
 @media (min-width: 768px) {
   .image-banner-promise {
     height: 680px;
-    background-size: 1200px;
-    background-position: 78% 6%;
+    background-size: 1700px;
+    background-position: 15% 100%;
   }
 }
 @media (min-width: 1200px) {
   .image-banner-promise {
     height: 896px;
-    background-size: 1700px;
-    background-position: 80% 28%;
+    background-size: 2300px;
+    background-position: 0% 100%;
   }
 }
 .image-banner-promise .h1 {
@@ -22049,8 +22049,8 @@ menu-drawer .drawer.slide {
 }
 @media (min-width: 768px) {
   .image-banner-promise .h1 {
-    font-size: 3.375rem;
-    line-height: 3.375rem;
+    font-size: 3rem;
+    line-height: 3rem;
     letter-spacing: 2px;
   }
 }
@@ -22062,26 +22062,35 @@ menu-drawer .drawer.slide {
   }
 }
 .image-banner-promise .h2 {
-  font-family: "Fengardo Neue", sans-serif;
-  font-size: 1.75rem;
+  font-size: 1.5rem;
+  line-height: 1.875rem;
 }
 @media (min-width: 768px) {
   .image-banner-promise .h2 {
-    font-size: 3.125rem;
-    line-height: 3.375rem;
+    font-size: 1.75rem;
+    line-height: 2.375rem;
   }
 }
 @media (min-width: 1200px) {
   .image-banner-promise .h2 {
-    font-size: 3.25rem;
-    line-height: 3.5rem;
+    font-size: 1.875rem;
+    line-height: 2.5rem;
   }
+}
+.image-banner-promise p {
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 @media (min-width: 768px) {
   .image-banner-promise p {
-    font-size: 1rem;
-    line-height: 1.5rem;
-    width: 490px;
+    font-size: 1.25rem;
+    line-height: 2rem;
+    width: 580px;
+  }
+}
+@media (min-width: 1200px) {
+  .image-banner-promise p {
+    width: 680px;
   }
 }
 @media (min-width: 1200px) {
