@@ -11,7 +11,7 @@
         <a class='d-block' href={{ product.url }}>
           <img src="{{ product.featured_image | img_url: 'x190' }}"
                srcset="{{ product.featured_image | img_url: 'x190', scale: 2 }} 2x,
-                    {{ product.featured_image | img_url: 'x190', scale: 3 }} 3x"
+                    {{ product.featured_image | img_url: 'x380', scale: 3 }} 3x"
                alt="{{ product.featured_image.alt }}"
                class='product-image'/>
 
