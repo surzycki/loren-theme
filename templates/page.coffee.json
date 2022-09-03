@@ -17,11 +17,25 @@
       "settings": {
         "product": "mattino"
       }
+    },
+    "1662204921fce6b3e3": {
+      "type": "product-expose",
+      "settings": {
+        "product": "aperitivo"
+      }
+    },
+    "166220494633773b6e": {
+      "type": "product-expose",
+      "settings": {
+        "product": "digestivo"
+      }
     }
   },
   "order": [
     "page",
     "1662190967420bd91b",
-    "16622015535b80ad8b"
+    "16622015535b80ad8b",
+    "1662204921fce6b3e3",
+    "166220494633773b6e"
   ]
 }
