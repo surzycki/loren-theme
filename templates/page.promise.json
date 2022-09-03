@@ -33,9 +33,10 @@
     "1662234897b4131b90": {
       "type": "image-with-text",
       "settings": {
-        "image-text": "",
-        "position": "center",
-        "theme": "dark"
+        "image": "shopify:\/\/shop_images\/background-coffee-cup_020674f7-21a8-491d-bd07-4aa099cb109e.png",
+        "image-text": "Une collection qui va à l’essentiel: trois espressos indispensables, pour vous permettre de déguster un café au goût et à l’intensité idéal, à chaque moment de la journée.",
+        "position": "left",
+        "theme": "light"
       }
     },
     "1662234900afb2d82b": {
