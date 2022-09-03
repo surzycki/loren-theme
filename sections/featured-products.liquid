@@ -9,10 +9,7 @@
     {% for product in collections[section.settings.collection].products  %}
       <div class='col mb-7 text-center'>
         <a class='d-block' href={{ product.url }}>
-          <img src="{{ product.featured_image | img_url: 'x190' }}"
-               srcset="{{ product.featured_image | img_url: 'x190', scale: 2 }} 2x"
-               alt="{{ product.featured_image.alt }}"
-               class='product-image'/>
+          {% render 'product-front', product: product %}
 
           <p class='mt-n1 px-3 px-sm-18 px-md-2 px-lg-3 mb-2 mb-xl-3'>
             {{ product.metafields.descriptions.brief.value }}

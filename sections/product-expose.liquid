@@ -1,5 +1,17 @@
-Product Expose
+{%- liquid
+  assign product = section.settings.product
+%}
 
+
+<div class="product-expose container text-center mb-6">
+    <h1 class="h1 mb-1">{{ product.title  }}</h1>
+    <h3 class="h3 mb-2">{{ product.metafields.descriptions.blend.value }}</h3>
+    <h2 class="h2 text-center mb-4">{{ product.description }}</h2>
+
+    <div>
+        {% render 'product-front', product: product %}
+    </div>
+</div>
 
 {% schema %}
   {

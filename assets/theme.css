@@ -22305,6 +22305,45 @@ footer ul a:hover {
   }
 }
 
+.product-expose .h1 {
+  font-family: "Rainer", serif;
+  letter-spacing: 2px;
+  text-transform: none;
+  font-size: 5.375rem;
+  line-height: 5.375rem;
+}
+@media (min-width: 768px) {
+  .product-expose .h1 {
+    font-size: 5rem;
+    line-height: 5.375rem;
+  }
+}
+@media (min-width: 1200px) {
+  .product-expose .h1 {
+    font-size: 5.625rem;
+    line-height: 6rem;
+  }
+}
+.product-expose .h2 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.product-expose .h3 {
+  font-size: 1.25rem;
+  line-height: 2rem;
+}
+@media (min-width: 1200px) {
+  .product-expose .h3 {
+    font-size: 1.25rem;
+    line-height: 2rem;
+  }
+}
+.product-expose p {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  color: #858585;
+}
+
 body::before {
   content: "xs";
   position: fixed;
