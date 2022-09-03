@@ -21,6 +21,31 @@
         "theme": "dark"
       }
     },
+    "166223489358f3984c": {
+      "type": "image-with-text",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/background-grinder.png",
+        "image-text": "Un café torréfié et assemblé dans la région du café italien par excellence, La Vénétie.  Un mélange inédit de traditions artisanales et d’innovations technologiques.",
+        "position": "center",
+        "theme": "dark"
+      }
+    },
+    "1662234897b4131b90": {
+      "type": "image-with-text",
+      "settings": {
+        "image-text": "",
+        "position": "center",
+        "theme": "dark"
+      }
+    },
+    "1662234900afb2d82b": {
+      "type": "image-with-text",
+      "settings": {
+        "image-text": "",
+        "position": "center",
+        "theme": "dark"
+      }
+    },
     "16622300136e6140e1": {
       "type": "recall",
       "settings": {
@@ -31,6 +56,9 @@
     "page",
     "16622194792fcfcc97",
     "166222996799561727",
+    "166223489358f3984c",
+    "1662234897b4131b90",
+    "1662234900afb2d82b",
     "16622300136e6140e1"
   ]
 }
