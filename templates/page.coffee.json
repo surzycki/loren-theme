@@ -9,7 +9,7 @@
       "type": "image-banner-coffee",
       "settings": {
         "image-desktop": "shopify:\/\/shop_images\/background-our-coffee.png",
-        "image-mobile": "shopify:\/\/shop_images\/background-our-coffee.png"
+        "image-mobile": "shopify:\/\/shop_images\/background-our-coffee-mobile.jpg"
       }
     }
   },
