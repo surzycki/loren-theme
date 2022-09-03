@@ -11,10 +11,17 @@
         "image-desktop": "shopify:\/\/shop_images\/background-our-coffee.png",
         "image-mobile": "shopify:\/\/shop_images\/background-our-coffee-mobile.jpg"
       }
+    },
+    "16622015535b80ad8b": {
+      "type": "product-expose",
+      "settings": {
+        "product": "mattino"
+      }
     }
   },
   "order": [
     "page",
-    "1662190967420bd91b"
+    "1662190967420bd91b",
+    "16622015535b80ad8b"
   ]
 }
