@@ -21960,27 +21960,64 @@ menu-drawer .drawer.slide {
 @media (min-width: 768px) {
   .image-banner-coffee {
     height: 680px;
-    background-size: 1400px;
-    background-position: 80% 36%;
+    background-size: 1200px;
+    background-position: 78% 6%;
   }
 }
 @media (min-width: 1200px) {
   .image-banner-coffee {
     height: 896px;
-    background-size: 2100px;
-    background-position: 80% 66%;
+    background-size: 1700px;
+    background-position: 80% 28%;
   }
 }
-
-#image-banner-coffee-mobile .h1 {
+.image-banner-coffee .h1 {
   font-family: "Fengardo Neue", sans-serif;
   text-transform: uppercase;
   font-size: 2.125rem;
   line-height: 2.652rem;
 }
-#image-banner-coffee-mobile .h2 {
+@media (min-width: 768px) {
+  .image-banner-coffee .h1 {
+    font-size: 3.375rem;
+    line-height: 3.375rem;
+    letter-spacing: 2px;
+  }
+}
+@media (min-width: 1200px) {
+  .image-banner-coffee .h1 {
+    font-size: 3.5rem;
+    line-height: 3.5rem;
+    letter-spacing: 2px;
+  }
+}
+.image-banner-coffee .h2 {
   font-family: "Fengardo Neue", sans-serif;
   font-size: 1.75rem;
+}
+@media (min-width: 768px) {
+  .image-banner-coffee .h2 {
+    font-size: 3.125rem;
+    line-height: 3.375rem;
+  }
+}
+@media (min-width: 1200px) {
+  .image-banner-coffee .h2 {
+    font-size: 3.25rem;
+    line-height: 3.5rem;
+  }
+}
+@media (min-width: 768px) {
+  .image-banner-coffee p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    width: 490px;
+  }
+}
+@media (min-width: 1200px) {
+  .image-banner-coffee .btn-cta {
+    width: 430px;
+  }
 }
 
 .logo svg {
@@ -22028,16 +22065,19 @@ menu-drawer .drawer.slide {
   --bs-btn-line-height: 1.25rem;
 }
 .btn-cta.btn-lg, .btn-group-lg > .btn-cta.btn {
-  --bs-btn-padding-y: 1.25rem;
+  --bs-btn-padding-y: 1.375rem;
+  height: 64px;
 }
 @media (min-width: 768px) {
   .btn-cta.btn-lg, .btn-group-lg > .btn-cta.btn {
-    --bs-btn-padding-y: 1rem;
+    height: 56px;
+    --bs-btn-padding-y: 1.125rem;
   }
 }
 @media (min-width: 1200px) {
   .btn-cta.btn-lg, .btn-group-lg > .btn-cta.btn {
-    --bs-btn-padding-y: 1.25rem;
+    --bs-btn-padding-y: 1.375rem;
+    height: 64px;
   }
 }
 

@@ -11,8 +11,8 @@
 
   @include media-breakpoint-up(md) {
     height: 680px;
-    background-size: 1400px;
-    background-position: 80% 36%;
+    background-size: 1200px;
+    background-position: 78% 6%;
   }
 
   @include media-breakpoint-up(lg) {
@@ -20,28 +20,55 @@
 
   @include media-breakpoint-up(xl) {
     height: 896px;
-    background-size: 2100px;
-    background-position: 80% 66%;
+    background-size: 1700px;
+    background-position: 80% 28%;
   }
 
-}
-
-#image-banner-coffee-mobile {
-    .h1 {
+  .h1 {
       font-family: $secondary-font-family;
       text-transform: uppercase;
       font-size: 2.125rem;
       line-height: 2.652rem;
 
       @include media-breakpoint-up(md) {
+          font-size: 3.375rem;
+          line-height: 3.375rem;
+          letter-spacing: 2px;
       }
 
       @include media-breakpoint-up(xl) {
+          font-size: 3.5rem;
+          line-height: 3.5rem;
+          letter-spacing: 2px;
       }
-    }
+  }
 
-    .h2 {
+  .h2 {
       font-family: $secondary-font-family;
       font-size: 1.75rem;
-    }
+
+      @include media-breakpoint-up(md) {
+          font-size: 3.125rem;
+          line-height: 3.375rem;
+      }
+
+      @include media-breakpoint-up(xl) {
+          font-size: 3.25rem;
+          line-height: 3.5rem;
+      }
+  }
+
+  p {
+      @include media-breakpoint-up(md){
+          font-size: 1rem;
+          line-height: 1.5rem;
+          width: 490px;
+      }
+  }
+
+  .btn-cta {
+      @include media-breakpoint-up(xl) {
+          width: 430px;
+      }
+  }
 }
