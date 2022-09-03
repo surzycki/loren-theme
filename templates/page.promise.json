@@ -8,7 +8,8 @@
     "16622194792fcfcc97": {
       "type": "image-banner-promise",
       "settings": {
-        "image-mobile": "shopify:\/\/shop_images\/background-promise-loren.jpg"
+        "image-desktop": "shopify:\/\/shop_images\/background-promise-loren.jpg",
+        "image-mobile": "shopify:\/\/shop_images\/background-promise-loren-mobile.jpg"
       }
     }
   },
