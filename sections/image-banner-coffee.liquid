@@ -1,5 +1,27 @@
-Hello world coffee
+<style>
+  .image-banner-coffee-mobile--{{ section.id  }} {
+     background-image: url({{section.settings.image-mobile | img_url: 'master'}})
+  }
 
+ .image-banner-coffee-desktop--{{ section.id  }} {
+     background-image: url({{section.settings.image-desktop | img_url: 'master'}})
+  }
+</style>
+
+<div id="image-banner-coffee-mobile" class="d-md-none">
+    <div class="image-banner-coffee image-banner-coffee-mobile--{{ section.id }}">
+        <div class='pt-11 mb-19 text-center'>
+           <h1 class='h1'>A</h1>
+           <h3 class="h3">B</h3>
+           <p>C</p>
+        </div>
+
+    </div>
+
+    <div class="pt-4 px-2">
+        <h2 class='h2 text-center mb-4'>x</h2>
+    </div>
+</div>
 {% schema %}
   {
     "name": "t:sections.image-banner-coffee.name",
@@ -11,13 +33,6 @@ Hello world coffee
         "label": "t:sections.image-banner-coffee.settings.image.label",
         "id": "image-desktop",
         "label": "Image for Desktops",
-        "info": "Dimensions: 2880x1792"
-      },
-      {
-        "type": "image_picker",
-        "label": "t:sections.image-banner-coffee.settings.image.label",
-        "id": "image-tablet",
-        "label": "Image for Tablets",
         "info": "Dimensions: 2880x1792"
       },
       {
