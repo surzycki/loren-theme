@@ -1,0 +1,23 @@
+<div class='bg-black fixed-top'>
+    <div class='notification-bar d-flex align-items-center justify-content-center'>
+        <div class='text-light'>
+            {{ 'general.notification.free-delivery' | t }}
+        </div>
+    </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Notification Bar",
+    "tag": "section",
+    "class": "notification-bar",
+    "settings":[
+    ],
+    "presets": [
+      {
+        "name": "Notification Bar",
+        "category": "Main"
+      }
+    ]
+  }
+{% endschema %}
