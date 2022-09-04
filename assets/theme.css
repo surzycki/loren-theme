@@ -22510,6 +22510,7 @@ footer ul a:hover {
   font-size: 1rem;
   font-weight: 700;
 }
+
 body::before {
   content: "xs";
   position: fixed;
