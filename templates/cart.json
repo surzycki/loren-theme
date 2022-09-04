@@ -1,6 +1,16 @@
 {
   "layout": "cart",
   "sections": {
+    "16623163349ec066be": {
+      "type": "notification-bar",
+      "settings": {
+      }
+    },
+    "16623163490ec11b92": {
+      "type": "main-cart-header",
+      "settings": {
+      }
+    },
     "cart-items": {
       "type": "main-cart-items",
       "settings": {
@@ -13,6 +23,8 @@
     }
   },
   "order": [
+    "16623163349ec066be",
+    "16623163490ec11b92",
     "cart-items",
     "cart-footer"
   ]
