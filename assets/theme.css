@@ -22470,6 +22470,46 @@ footer ul a:hover {
   }
 }
 
+.main-cart-items .cart-item-header {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  color: #858585;
+  letter-spacing: 1px;
+}
+.main-cart-items .cart-item-media img {
+  width: 100px;
+}
+.main-cart-items .cart-item-details a {
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.25rem;
+}
+.main-cart-items .cart-item-price {
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+}
+.main-cart-items .cart-item-size {
+  color: #858585;
+  font-size: 0.75rem;
+}
+.main-cart-items .cart-item-total {
+  letter-spacing: 1px;
+}
+
+.main-cart-footer .h3, .main-cart-footer .h2 {
+  display: inline-block;
+}
+.main-cart-footer .h2 {
+  letter-spacing: 1px;
+  font-size: 1.5rem;
+}
+.main-cart-footer .h3 {
+  font-size: 1.25rem;
+}
+.main-cart-footer p {
+  font-size: 1rem;
+  font-weight: 700;
+}
 body::before {
   content: "xs";
   position: fixed;

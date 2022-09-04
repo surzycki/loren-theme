@@ -1,0 +1,40 @@
+.main-cart-items {
+    .h1 {
+
+    }
+
+   .cart-item-header {
+       text-transform: uppercase;
+       font-size: 0.75rem;
+       color: $grey;
+       letter-spacing: 1px;
+   }
+
+    .cart-item-media {
+        img {
+            width: 100px;
+        }
+    }
+
+    .cart-item-details {
+        a {
+            font-size: 1.125rem;
+            font-weight: 700;
+            line-height: 1.25rem;
+        }
+    }
+
+    .cart-item-price {
+        line-height: 1.25rem;
+        font-size: 0.875rem;
+    }
+
+    .cart-item-size {
+        color: $grey;
+        font-size: 0.75rem;
+    }
+
+    .cart-item-total {
+        letter-spacing: 1px;
+    }
+}

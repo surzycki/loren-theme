@@ -1,1 +1,70 @@
-Hello items
+<div class="container pt-13 pt-md-16 pt-xl-22 px-md-3">
+    <h1 class="h1 mb-3 mb-md-4 text-center text-md-start">
+        {{ "cart.title" | t }}
+    </h1>
+
+    <div class="cart-item-header d-flex justify-content-between">
+        <div class="col-md-8">{{ "cart.product" | t }}</div>
+        <div class="col-md-2 d-none d-md-block">{{ "cart.quantity" | t }}</div>
+        <div class="col-md-2 text-end">{{ "cart.total" | t  }}</div>
+    </div>
+    <hr class="mt-1 mb-1"/>
+
+    {%- for item in cart.items -%}
+        <div class="d-flex justify-content-between py-3 py-md-4">
+            <div class="cart-item-media col-8 col-md-8 text-start">
+                <div class="d-inline-block align-top">
+                    <a href="{{ item.url }}">
+                        <img src={{ item.image | image_url: width: 300  }}
+                                 alt="{{ item.image.alt | escape }}"
+                             loading="lazy">
+                    </a>
+                </div>
+
+                <div class="cart-item-details d-inline-block align-top ps-2 ps-md-4">
+                    <a href={{ item.url }}>
+                        {{ item.product.title | escape }}
+                    </a>
+
+                    <div class="cart-item-price">
+                        {{ item.final_price | money }}
+                    </div>
+
+                    <small class="cart-item-size">
+                        {{ "product.capsules-per-box" | t }}
+                    </small>
+
+                    <div class="cart-item-quantity d-md-none pt-2">
+                        Controls X
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="cart-item-quantity col-md-2 d-none d-md-block">
+                Controls X
+            </div>
+
+            <div class="cart-item-total col-4 col-md-2 text-end">
+                {{ item.final_line_price  | money }}
+            </div>
+        </div>
+        <hr/>
+    {%- endfor -%}
+</div>
+
+{% schema %}
+  {
+    "name": "Cart Items",
+    "tag": "section",
+    "class": "main-cart-items",
+    "settings":[
+    ],
+    "presets": [
+      {
+        "name": "Cart Items",
+        "category": "Cart"
+      }
+    ]
+  }
+{% endschema %}

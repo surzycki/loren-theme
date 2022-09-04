@@ -43,10 +43,19 @@
     }
   },
   "cart": {
+    "title": "Votre panier",
+    "continue": "Continuer les achats",
+    "product": "Coffee",
+    "total": "Total",
+    "ttc": "TTC",
+    "quantity": "Quantité",
     "general": {
-      "checkout": "Checkout",
+      "checkout": "Procéder au paiement",
       "add-to-cart": "Ajouter au panier",
       "thank-you": "Merci, c'est noté"
+    },
+    "delivery": {
+      "information": "Taxes et frais d'éxpedition incluses"
     }
   },
   "our-promise": {

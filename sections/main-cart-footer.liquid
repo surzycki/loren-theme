@@ -1,1 +1,36 @@
-Hello footer
+<div class="container text-center text-md-end pt-4 pb-7 pt-md-5 pb-md-14" >
+    <div class="col align-self-end mb-3">
+        <h3 class="h3 pe-1">
+            {{ "cart.total" | t  }} {{ "cart.ttc" | t }}
+        </h3>
+
+        <h2 class="h2">
+            {{ cart.total_price | money }}
+        </h2>
+    </div>
+
+    <p class="mb-md-1">
+        {{ "cart.delivery.information" | t  }}
+    </p>
+
+    <button type="submit" id="checkout" class="btn btn-cta btn-lg px-8" name="checkout"{% if cart == empty %} disabled{% endif %} form="cart">
+        {{ 'cart.general.checkout' | t }}
+    </button>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Cart Footer",
+    "tag": "section",
+    "class": "main-cart-footer",
+    "settings":[
+    ],
+    "presets": [
+      {
+        "name": "Cart Footer",
+        "category": "Cart"
+      }
+    ]
+  }
+{% endschema %}
