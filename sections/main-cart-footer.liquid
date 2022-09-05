@@ -12,10 +12,10 @@
     <p class="mb-md-1">
         {{ "cart.delivery.information" | t  }}
     </p>
-    <form action={{ routes.cart_url }} method="post" noValidate>
-        <input type="submit" id="checkout" name="checkout" class="btn btn-cta btn-lg px-8" name="checkout"{% if cart == empty %} disabled{% endif %} form="cart">
+    <form action="{{ routes.cart_url }}" method="post">
+        <button type="submit" id="checkout" name="checkout" class="btn btn-cta btn-lg px-8">
             {{ 'cart.general.checkout' | t }}
-        </input>
+        </button>
     </form>
 </div>
 

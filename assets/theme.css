@@ -22494,6 +22494,47 @@ footer ul a:hover {
 }
 .main-cart-items .cart-item-total {
   letter-spacing: 1px;
+  font-size: 0.875rem;
+}
+@media (min-width: 768px) {
+  .main-cart-items .cart-item-total {
+    font-size: 1rem;
+  }
+}
+.main-cart-items trash-button svg {
+  width: 14px;
+  height: 24px;
+}
+@media (min-width: 768px) {
+  .main-cart-items trash-button svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+.main-cart-items quantity-input button {
+  border-color: #222222;
+}
+.main-cart-items quantity-input button:first-of-type {
+  border-right: 0;
+}
+.main-cart-items quantity-input button:last-of-type {
+  border-left: 0;
+}
+.main-cart-items quantity-input input {
+  flex: initial !important;
+  border-right: 0;
+  border-left: 0;
+  border-color: #222222;
+  width: 40px !important;
+  padding: 0 !important;
+}
+@media (min-width: 768px) {
+  .main-cart-items quantity-input input {
+    width: 70px !important;
+  }
+}
+.main-cart-items quantity-input input:focus {
+  border-color: #222222;
 }
 
 .main-cart-footer .h3, .main-cart-footer .h2 {
