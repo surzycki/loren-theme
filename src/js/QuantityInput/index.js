@@ -12,8 +12,9 @@ const QuantityInput= ({ initialQuantity, itemKey }) => {
   const [quantity, setQuantity] = useState(initialQuantity);
 
   const updateCart = (quantity) => {
+    setQuantity(quantity);
+
     cart.updateItem(itemKey, { quantity }).then(data => {
-      setQuantity(quantity);
       if(data.item_count === 0) {
         window.location.reload(false);
       }
