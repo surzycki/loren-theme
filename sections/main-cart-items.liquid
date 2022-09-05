@@ -34,51 +34,28 @@
                         {{ "product.capsules-per-box" | t }}
                     </small>
 
-                    <div class="cart-item-quantity d-md-none pt-1">
-                        <quantity-input class="d-inline-block">
-                            <div class="input-group">
-                                <button class="btn btn-sm btn-outline-secondary px-1 py-1" type="button">
-                                    {% render 'icon-minus' %}
-                                </button>
-
-                                <input type="text" class="form-control text-center pe-none user-select-none" value="{{ item.quantity }}" aria-label="" min="0">
-
-                                <button class="btn btn-sm btn-outline-secondary px-1 py-1" type="button">
-                                    {% render 'icon-plus' %}
-                                </button>
-                            </div>
-
+                    <div id="mobile-quantity-controls-{{ item.index | plus: 1 }}" class="cart-item-quantity d-md-none pt-1">
+                        <quantity-input class="d-inline-block" data-quantity="{{ item.quantity }}" data-key="{{ item.key }}">
                         </quantity-input>
 
-                        <trash-button class="ps-1 d-inline-block">
+                        <a href="{{ item.url_to_remove }}" class="btn-trash ps-1 d-inline-block">
                             {% render 'icon-trash' %}
-                        </trash-button>
+                        </a>
                     </div>
                 </div>
             </div>
 
 
-            <div class="cart-item-quantity col-md-3 d-none d-md-block">
-                <quantity-input class="d-inline-block">
-                    <div class="input-group">
-                        <button class="btn btn-sm btn-outline-secondary px-2 py-2" type="button">
-                            {% render 'icon-minus' %}
-                        </button>
-
-                        <input type="text" class="form-control text-center pe-none user-select-none" value="{{ item.quantity }}" aria-label="" min="0">
-
-                        <button class="btn btn-sm btn-outline-secondary px-2 py-2" type="button">
-                            {% render 'icon-plus' %}
-                        </button>
-                    </div>
+            <div id="desktop-quantity-controls-{{ item.index | plus: 1 }}" class="cart-item-quantity col-md-3 d-none d-md-block">
+                <quantity-input class="d-inline-block" data-quantity="{{ item.quantity }}" data-key="{{ item.key }}">
                 </quantity-input>
 
-                <trash-button class="ps-2 d-inline-block">
+                <a href="{{ item.url_to_remove}}" class="btn-trash ps-2 d-inline-block">
                     {% render 'icon-trash' %}
-                </trash-button>
+                </a>
             </div>
 
-            <div class="cart-item-total col-3 col-md-2 text-end">
+            <div class="cart-item-total col-3 col-md-2 text-end pt-2">
                 {{ item.final_line_price  | money }}
             </div>
         </div>

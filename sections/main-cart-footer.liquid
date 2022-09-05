@@ -13,7 +13,7 @@
         {{ "cart.delivery.information" | t  }}
     </p>
     <form action="{{ routes.cart_url }}" method="post">
-        <button type="submit" id="checkout" name="checkout" class="btn btn-cta btn-lg px-8">
+        <button type="submit" id="checkout" name="checkout" {% if cart == empty %} disabled{% endif %} class="btn btn-cta btn-lg px-8">
             {{ 'cart.general.checkout' | t }}
         </button>
     </form>

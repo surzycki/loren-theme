@@ -42,7 +42,7 @@
         }
     }
 
-    trash-button {
+    .btn-trash {
         svg {
             width: 14px;
             height: 24px;
@@ -55,6 +55,10 @@
 
     quantity-input {
         button {
+            padding-right: 0.875rem !important;
+            padding-left: 0.875rem !important;
+            border-color: $black;
+
             &:first-of-type {
                 border-right: 0;
             }
@@ -63,7 +67,10 @@
                 border-left: 0;
             }
 
-            border-color: $black;
+            @include media-breakpoint-up(md) {
+                padding-right: 1rem !important;
+                padding-left: 1rem !important;
+            }
         }
 
         input {

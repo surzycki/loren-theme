@@ -3,6 +3,7 @@ import React from "react";
 import AddToCart from "Components/AddToCart";
 import MenuItemCart from "Components/MenuItemCart";
 import IconCart from "Components/IconCart";
+import QuantityInput from "Components/QuantityInput";
 
 // text to pass to components
 const containerAddToCartText = document.getElementById('add-to-cart-text');
@@ -58,4 +59,15 @@ const containerIconCart = document.getElementById('icon-cart');
 if(containerIconCart) {
   const iconCart = ReactDOM.createRoot(containerIconCart);
   iconCart.render(<IconCart/>);
+}
+
+// quantity input for cart
+const containerQuantityInputs = document.getElementsByTagName('quantity-input');
+if(containerQuantityInputs.length != 0) {
+  for (var containerQuantityInput of containerQuantityInputs) {
+    var quantity = Number(containerQuantityInput?.dataset?.quantity);
+    var key = String(containerQuantityInput?.dataset?.key);
+    const quantityInput = ReactDOM.createRoot(containerQuantityInput);
+    quantityInput.render(<QuantityInput initialQuantity={quantity} itemKey={key} />);
+  }
 }
