@@ -4,7 +4,7 @@ import AddToCart from "Components/AddToCart";
 import MenuItemCart from "Components/MenuItemCart";
 import IconCart from "Components/IconCart";
 import QuantityInput from "Components/QuantityInput";
-import AnimatedNumbers from "Components/AnimatedNumbers";
+import PriceDisplay from "Components/PriceDisplay";
 
 // text to pass to components
 const containerAddToCartText = document.getElementById('add-to-cart-text');
@@ -79,6 +79,6 @@ if(containerPriceDisplays.length != 0) {
     var price = String(containerPriceDisplay?.dataset?.price);
     var key = String(containerPriceDisplay?.dataset?.key);
     const priceDisplay = ReactDOM.createRoot(containerPriceDisplay);
-    priceDisplay.render(<AnimatedNumbers initialValue={price} itemKey={key} />);
+    priceDisplay.render(<PriceDisplay initialValue={price} itemKey={key} />);
   }
 }

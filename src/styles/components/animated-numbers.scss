@@ -1,0 +1,29 @@
+.ticker-view {
+  color: $black;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: row-reverse;
+  overflow: hidden;
+  font-size: 16px;
+  position: relative;
+
+}
+
+.number-placeholder {
+  visibility: hidden;;
+}
+
+.ticker-column-container {
+  position: relative;
+}
+
+.ticker-column {
+  position: absolute;
+  height: 1000%;
+  bottom: 0;
+}
+
+.ticker-digit {
+  height: 10%;
+}

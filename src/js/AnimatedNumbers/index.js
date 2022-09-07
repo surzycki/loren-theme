@@ -1,42 +1,55 @@
-import React, { useEffect, useState } from "react";
-import eventBus from "Components/EventBus";
+import React, { useState, useRef, useEffect } from "react";
+import { motion } from "framer-motion";
 
-import PropTypes from "prop-types";
+function formatForDisplay(number = 0) {
+  return parseFloat(Math.max(number, 0)).toFixed(2).split("").reverse();
+}
 
-import * as cart from "@shopify/theme-cart";
-import classNames from "classnames";
+export default function AnimatedNumbers({ value }) {
+  const numArray = formatForDisplay(value);
 
-const AnimatedNumbers = ({ initialValue, itemKey }) => {
-  const [value, setValue] = useState(initialValue);
 
-  useEffect(() => {
-    eventBus.on("itemUpdated", ({ newValue, key }) => {
-      if(key === itemKey) {
-        setValue(newValue);
-      }
-    })
+  function DecimalColumn() {
+    return (
+      <div>
+        <span>.</span>
+      </div>
+    )
+  }
 
-    eventBus.on("totalUpdated", ({ newValue, key }) => {
-      if(itemKey === 'total') {
-        const total = Number(newValue) + Number(value);
-        setValue(total);
-      }
-    })
-  });
+  function NumberColumn({ digit }) {
+    const [position, setPosition] = useState(0);
+    const columnContainer = useRef();
 
-  const [productCount, setProductCount] = useState(0);
+    const setColumnToNumber = (number) => {
+      setPosition(columnContainer.current.clientHeight * parseInt(number));
+    };
+
+    useEffect(() => setColumnToNumber(digit), [digit]);
+
+    return (
+      <div className="ticker-column-container" ref={ columnContainer }>
+        <motion.div animate={{ y: position }} className="ticker-column">
+          {[9,8,7,6,5,4,3,2,1,0].map((num) => (
+            <div key={num} className="ticker-digit">
+              <span>{num}</span>
+            </div>
+          ))}
+        </motion.div>
+        <span className="number-placeholder">0</span>
+      </div>
+    );
+  }
 
   return (
-    <span>
-        { value }
-    </span>
+    <div className="ticker-view">
+      { numArray.map((number, index) =>
+        number === "." ? (
+          <DecimalColumn key={index} />
+        ): (
+          <NumberColumn key={index} digit={number}/>
+        )
+      )}
+    </div>
   );
-};
-
-
-AnimatedNumbers.propTypes = {
-  initialValue: PropTypes.string.isRequired,
-  itemKey: PropTypes.string.isRequired,
-};
-
-export default AnimatedNumbers;
+}
