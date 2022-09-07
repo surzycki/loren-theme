@@ -21686,6 +21686,22 @@ p {
     opacity: 1;
   }
 }
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  100% {
+    opacity: 1;
+  }
+  0% {
+    opacity: 0;
+  }
+}
 @media (min-width: 768px) {
   header {
     position: absolute;
@@ -22171,6 +22187,12 @@ menu-drawer .drawer.slide {
 .btn-quantity.active {
   background-color: #222222;
   color: #fffcf7;
+  animation: fadeIn 0.5s;
+}
+.btn-quantity.inactive {
+  background-color: transparent;
+  color: #222222;
+  animation: fadeOut 1.5s;
 }
 
 .btn-3d {

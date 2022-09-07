@@ -44,8 +44,17 @@
     padding-top: 0.625rem;
     text-align: center;
 
+
     &.active {
         background-color: $black;
         color: $white;
+        animation: fadeIn 0.5s;
+    }
+
+    &.inactive {
+        background-color: transparent;
+        color: $black;
+        animation: fadeOut 1.5s;
     }
 }
+

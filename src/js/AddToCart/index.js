@@ -17,19 +17,20 @@ const AddToCart = ({ variantId, variantPrice, addToCart, thankYou }) => {
   useEffect(() => localStorage.setItem(variantId, quantity));
 
   const updateCart = () => {
-    setRotating(true);
 
     const timer = setTimeout(() => {
       setRotating(false);
-    }, 3000);
+      setQuantity(0);
+    }, 1500);
 
-    setQuantity(10);
 
     // dispatch event for whoever is listening
     eventBus.dispatch("itemAdded");
   };
 
   const handleAddToCart = () => {
+    setRotating(true);
+
     cart.addItem(variantId, { quantity }).then((item) => {
       updateCart();
     });
@@ -39,6 +40,7 @@ const AddToCart = ({ variantId, variantPrice, addToCart, thankYou }) => {
     return classNames({
       "btn-quantity": true,
       active: value == quantity,
+      inactive: value != quantity
     });
   };
 

@@ -27,9 +27,15 @@ export default function AnimatedNumbers({ value }) {
 
     useEffect(() => setColumnToNumber(digit), [digit]);
 
+    const spring = {
+      type: "spring",
+      damping: 20,
+      stiffness: 200
+    }
+
     return (
-      <div className="ticker-column-container" ref={ columnContainer }>
-        <motion.div animate={{ y: position }} className="ticker-column">
+      <div className="ticker-column-container pe-none" ref={ columnContainer }>
+        <motion.div transition={spring} animate={{ y: position }} className="ticker-column">
           {[9,8,7,6,5,4,3,2,1,0].map((num) => (
             <div key={num} className="ticker-digit">
               <span>{num}</span>
