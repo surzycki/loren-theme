@@ -22575,7 +22575,7 @@ footer ul a:hover {
   display: flex;
   flex-direction: row-reverse;
   overflow: hidden;
-  font-size: 16px;
+  font-size: 17px;
   position: relative;
 }
 
@@ -22595,6 +22595,10 @@ footer ul a:hover {
 
 .ticker-digit {
   height: 10%;
+}
+
+price-display.lg .ticker-view {
+  font-size: 24px !important;
 }
 
 body::before {

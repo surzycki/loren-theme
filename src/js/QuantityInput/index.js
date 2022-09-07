@@ -19,12 +19,13 @@ const QuantityInput= ({ initialQuantity, itemKey }) => {
     setQuantity(quantity);
 
     eventBus.dispatch("itemUpdated", { newValue: (quantity * 390), key: itemKey});
-    eventBus.dispatch("itemUpdated", { newValue: (quantity * 390), key: "total" });
 
     cart.updateItem(itemKey, { quantity }).then(data => {
       if(quantity <= 0) {
         window.location.reload(false);
       }
+
+      eventBus.dispatch("itemUpdated", { newValue: data.total_price, key: "total" });
     });
   };
 
