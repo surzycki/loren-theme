@@ -12,10 +12,17 @@ const QuantityInput= ({ initialQuantity, itemKey }) => {
   const [quantity, setQuantity] = useState(initialQuantity);
 
   const updateCart = (quantity) => {
+    if(quantity < 0 ) {
+      return;
+    }
+
     setQuantity(quantity);
 
+    eventBus.dispatch("itemUpdated", { newValue: (quantity * 390), key: itemKey});
+    eventBus.dispatch("totalUpdated", { newValue: (quantity * 390), key: "total" });
+
     cart.updateItem(itemKey, { quantity }).then(data => {
-      if(data.item_count === 0) {
+      if(quantity <= 0) {
         window.location.reload(false);
       }
     });

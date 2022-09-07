@@ -4,6 +4,7 @@ import AddToCart from "Components/AddToCart";
 import MenuItemCart from "Components/MenuItemCart";
 import IconCart from "Components/IconCart";
 import QuantityInput from "Components/QuantityInput";
+import AnimatedNumbers from "Components/AnimatedNumbers";
 
 // text to pass to components
 const containerAddToCartText = document.getElementById('add-to-cart-text');
@@ -69,5 +70,15 @@ if(containerQuantityInputs.length != 0) {
     var key = String(containerQuantityInput?.dataset?.key);
     const quantityInput = ReactDOM.createRoot(containerQuantityInput);
     quantityInput.render(<QuantityInput initialQuantity={quantity} itemKey={key} />);
+  }
+}
+
+const containerPriceDisplays = document.getElementsByTagName('price-display');
+if(containerPriceDisplays.length != 0) {
+  for (var containerPriceDisplay of containerPriceDisplays) {
+    var price = String(containerPriceDisplay?.dataset?.price);
+    var key = String(containerPriceDisplay?.dataset?.key);
+    const priceDisplay = ReactDOM.createRoot(containerPriceDisplay);
+    priceDisplay.render(<AnimatedNumbers initialValue={price} itemKey={key} />);
   }
 }

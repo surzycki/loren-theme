@@ -5,7 +5,9 @@
         </h3>
 
         <h2 class="h2">
-            {{ cart.total_price | money }}
+            <span>€</span>
+            <price-display data-price={{ cart.total_price }} data-key="total">
+            </price-display>
         </h2>
     </div>
 
