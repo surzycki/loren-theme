@@ -22623,6 +22623,24 @@ price-display.lg .ticker-view {
   font-size: 24px !important;
 }
 
+#text-morph-container {
+  /* Center the text in the viewport. */
+  position: absolute;
+  margin: auto;
+  width: 100vw;
+  height: 1rem;
+  top: 0;
+  bottom: 0;
+  filter: url(#threshold) blur(0.6px);
+}
+#text-morph-container .text1, #text-morph-container .text2 {
+  position: absolute;
+  width: 100%;
+  display: inline-block;
+  font-size: 1rem;
+  user-select: none;
+}
+
 body::before {
   content: "xs";
   position: fixed;

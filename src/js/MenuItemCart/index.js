@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import eventBus from "Components/EventBus";
+import TextMorph from "Components/TextMorph";
 
 import PropTypes from "prop-types";
 
@@ -13,7 +14,7 @@ const MenuItemCart = ({ label }) => {
     getCartData();
 
     return () => eventBus.remove("itemAdded");
-  });
+  }, []);
 
   const [productCount, setProductCount] = useState(0);
 
@@ -33,7 +34,8 @@ const MenuItemCart = ({ label }) => {
 
   return (
     <span className={labelClass} onClick={handleClick}>
-      {label} ({productCount})
+      {console.log(`render menu ${productCount}`)}
+      <TextMorph textValue1={`${label} (${productCount})`} textValue2="Gratzi"/>
     </span>
   );
 };
