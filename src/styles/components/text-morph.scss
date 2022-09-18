@@ -1,19 +1,18 @@
 #text-morph-container {
-    /* Center the text in the viewport. */
-    position: absolute;
-    margin: auto;
-    width: 100vw;
-    height: 1rem;
-    top: 0;
-    bottom: 0;
-
-    filter: url(#threshold) blur(0.6px);
+    filter: url(#threshold) blur(0.1px);
+    display: grid;
+    grid-template-columns: 100% 1fr;
+    grid-template-rows: 18px 1fr;
 
     .text1, .text2 {
-        position: absolute;
-        width: 100%;
+        grid-area: 1 / 1 / 2 / 2;
         display: inline-block;
         font-size: 1rem;
         user-select: none;
+        text-align: center;
+    }
+
+    #filters {
+        display: none;
     }
 }

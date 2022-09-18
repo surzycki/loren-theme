@@ -1,32 +1,39 @@
-import React, { useRef, useEffect, useState } from "react";
-import eventBus from "Components/EventBus";
+import React, { useRef, useEffect } from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
 
-const TextMorph = ({ textValue1, textValue2 }) => {
+const TextMorph = ({ textValue1, textValue2, shouldAnimate }) => {
   const text1El = useRef(null);
   const text2El = useRef(null);
   const requestRef = useRef(null);
-  const [texts, setTexts] = useState([textValue1, textValue2])
 
+  // Controls the speed of morphing.
+  const morphTime = 1;
+  const cooldownTime = 0.25;
+  let texts = [textValue1, textValue2];
+  let textIndex = texts.length - 1;
+
+  let time = new Date();
+  let morph = 0;
+  let cooldown = cooldownTime;
 
   useEffect(() => {
-    setTexts([textValue1, textValue2])
+    // cancel running animation
+    if(requestRef.current) {
+      cancelAnimationFrame(requestRef.current)
+    }
 
-    eventBus.on("itemAdded", () => {
-      console.log('itemAdded')
-      console.log(textValue1)
+    // animate
+    if(shouldAnimate) {
+      texts = [textValue1, textValue2];
       animate()
-    })
-
-    console.log(`useeffect ${textValue1}`)
+    }
 
     return () => {
-      cancelAnimationFrame(requestRef.current);
-      eventBus.remove("itemAdded");
-      console.log("removing stuff")
+      cancelAnimationFrame(requestRef.currest)
     }
-  }, [textValue1, textValue2]);
+  }, [textValue1]);
+
 
   const doMorph = () => {
     morph -= cooldown;
@@ -52,17 +59,11 @@ const TextMorph = ({ textValue1, textValue2 }) => {
 
     text1El.current.textContent = texts[textIndex % texts.length];
     text2El.current.textContent = texts[(textIndex + 1) % texts.length];
-    console.log("setMorph")
-    console.log(texts)
-    //console.log(texts[textIndex % texts.length])
-	  //console.log(texts[(textIndex + 1) % texts.length])
-    //console.log("----")
   }
 
   const doCooldown = () => {
     morph = 0;
-
-    if(text2El.current && text1El.current) {
+    if(text2El.current.textContent && text1El.current.textContent) {
       text2El.current.style.filter = "";
       text2El.current.style.opacity = "100%";
 
@@ -71,10 +72,21 @@ const TextMorph = ({ textValue1, textValue2 }) => {
     }
   }
 
-  // Animation loop, which is called every frame.
-  const animate = () => {
+  const reset = () => {
+      textIndex = texts.length - 1;
+      text2El.current.textContent = ''
+      cancelAnimationFrame(requestRef.current)
+  }
 
-    requestRef.current = requestAnimationFrame(animate);
+  //Animation loop, which is called every frame.
+  const animate = () => {
+    if(textIndex >= 4) {
+      reset();
+      return;
+    } else{
+      requestRef.current = requestAnimationFrame(animate);
+    }
+
     let newTime = new Date();
     let shouldIncrementIndex = cooldown > 0;
     let dt = (newTime - time) / 1000;
@@ -84,7 +96,7 @@ const TextMorph = ({ textValue1, textValue2 }) => {
 
     if (cooldown <= 0) {
         if (shouldIncrementIndex) {
-            textIndex++;
+          textIndex++;
         }
 
       doMorph();
@@ -93,22 +105,11 @@ const TextMorph = ({ textValue1, textValue2 }) => {
     }
   }
 
-  // Controls the speed of morphing.
-  const morphTime = 1;
-  const cooldownTime = 0.25;
-
-
-  let textIndex = texts.length - 1;
-  let time = new Date();
-  let morph = 0;
-  let cooldown = cooldownTime;
-
 
   return (
     <span id="text-morph-container">
-      { console.log(`render text morph ${textValue1}`) }
-      <span ref={ text1El } className="text1">{textValue1}</span>
-      <span ref={ text2El } className="text2"></span>
+      <span ref={text1El} className="text1">{textValue1}</span>
+      <span ref={text2El} className="text2"></span>
       <svg id="filters">
         <defs>
           <filter id="threshold">
@@ -129,6 +130,7 @@ const TextMorph = ({ textValue1, textValue2 }) => {
 TextMorph.propTypes = {
   textValue1: PropTypes.string.isRequired,
   textValue2: PropTypes.string.isRequired,
+  shouldAnimate: PropTypes.bool.isRequired
 };
 
 export default TextMorph;

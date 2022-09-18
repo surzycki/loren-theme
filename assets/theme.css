@@ -22183,6 +22183,7 @@ menu-drawer .drawer.slide {
   height: 3rem;
   padding-top: 0.625rem;
   text-align: center;
+  cursor: pointer;
 }
 .btn-quantity.active {
   background-color: #222222;
@@ -22624,21 +22625,20 @@ price-display.lg .ticker-view {
 }
 
 #text-morph-container {
-  /* Center the text in the viewport. */
-  position: absolute;
-  margin: auto;
-  width: 100vw;
-  height: 1rem;
-  top: 0;
-  bottom: 0;
-  filter: url(#threshold) blur(0.6px);
+  filter: url(#threshold) blur(0.1px);
+  display: grid;
+  grid-template-columns: 100% 1fr;
+  grid-template-rows: 18px 1fr;
 }
 #text-morph-container .text1, #text-morph-container .text2 {
-  position: absolute;
-  width: 100%;
+  grid-area: 1/1/2/2;
   display: inline-block;
   font-size: 1rem;
   user-select: none;
+  text-align: center;
+}
+#text-morph-container #filters {
+  display: none;
 }
 
 body::before {

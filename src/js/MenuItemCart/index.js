@@ -9,22 +9,29 @@ import classNames from "classnames";
 
 const MenuItemCart = ({ label }) => {
   useEffect(() => {
-    eventBus.on("itemAdded", () => getCartData());
+    eventBus.on("itemAdded", () => {
+      getCartData({init: false})
+    });
 
-    getCartData();
+    // get cart data one time
+    getCartData({init: true});
 
     return () => eventBus.remove("itemAdded");
   }, []);
 
   const [productCount, setProductCount] = useState(0);
+  const [shouldAnimate, setShouldAnimate] = useState(false)
 
   const handleClick = () => {
     eventBus.dispatch("toggleCart");
   };
 
-  const getCartData = () => {
+  const getCartData = ({ init }) => {
     cart.getState().then((data) => {
       setProductCount(data.item_count);
+      if(!init) {
+        setShouldAnimate(true)
+      }
     });
   };
 
@@ -35,7 +42,7 @@ const MenuItemCart = ({ label }) => {
   return (
     <span className={labelClass} onClick={handleClick}>
       {console.log(`render menu ${productCount}`)}
-      <TextMorph textValue1={`${label} (${productCount})`} textValue2="Gratzi"/>
+      <TextMorph textValue1={`${label} (${productCount})`} textValue2="Gratzi" shouldAnimate={shouldAnimate}/>
     </span>
   );
 };
