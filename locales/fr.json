@@ -6,14 +6,18 @@
       "recycle": "recyclable"
     },
     "notification": {
-      "free-delivery": "Livraison Offert"
+      "free-delivery": "Livraison Offert",
+      "free_delivery": ""
     },
     "navigation": {
       "our-coffee": "Nos Cafés",
       "our-promise": "Notre Promesse",
       "contact-us": "Contacter",
       "home": "Home",
-      "shopping-cart": "Panier"
+      "shopping-cart": "Panier",
+      "our_coffee": "",
+      "contact_us": "Contact",
+      "shopping_cart": ""
     },
     "hero": {
       "title": "Espresso Biologico",
