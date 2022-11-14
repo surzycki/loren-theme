@@ -84,5 +84,17 @@
   },
   "product": {
     "capsules-per-box": "Étui de 10 capsules"
+  },
+  "shopify": {
+    "checkout": {
+      "shop_policies": {
+        "legal_notice": "Mentions légales"
+      }
+    }
+  },
+  "customer_accounts": {
+    "shop_policies": {
+      "legal_notice": "Mentions légales"
+    }
   }
 }
