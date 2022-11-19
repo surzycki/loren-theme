@@ -12,12 +12,9 @@
     "navigation": {
       "our-coffee": "Nos Cafés",
       "our-promise": "Notre Promesse",
-      "contact-us": "Contacter",
-      "home": "Home",
-      "shopping-cart": "Panier",
-      "our_coffee": "",
-      "contact_us": "Contact",
-      "shopping_cart": ""
+      "contact-us": "Contact",
+      "home": "Espresso Biologico",
+      "shopping-cart": "Panier"
     },
     "hero": {
       "title": "Espresso Biologico",
@@ -40,7 +37,7 @@
       "order": "Commandez"
     },
     "footer": {
-      "terms-of-service": "Conditions générales",
+      "terms-of-sale": "CGV ",
       "privacy-policy": "Politique de confidentialité",
       "legal-notice": "Mentions légales",
       "what-we-do": "Voyez ce que nous faisons"

@@ -22641,6 +22641,40 @@ price-display.lg .ticker-view {
   display: none;
 }
 
+.shopify-policy__container {
+  padding-top: 8rem;
+}
+
+.shopify-policy__title {
+  text-transform: uppercase;
+  padding-bottom: 2rem;
+}
+.shopify-policy__title h1, .shopify-policy__title .h1 {
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 1.75rem;
+}
+
+.shopify-policy__body {
+  text-align: left;
+}
+.shopify-policy__body h1, .shopify-policy__body .h1 {
+  font-size: 1.375rem;
+  line-height: 1.5rem;
+  padding-bottom: 1rem;
+}
+.shopify-policy__body h2, .shopify-policy__body .h2 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  padding-bottom: 1rem;
+  font-weight: 700;
+}
+.shopify-policy__body p {
+  font-size: 0.875rem;
+  padding-bottom: 1rem;
+  line-height: 1.5rem;
+}
+
 body::before {
   content: "xs";
   position: fixed;

@@ -1,0 +1,35 @@
+.shopify-policy__container {
+    padding-top: 8rem;
+}
+.shopify-policy__title {
+    text-transform: uppercase;
+    padding-bottom: 2rem;
+
+    h1 {
+        font-weight: 700;
+        letter-spacing: 2px;
+        font-size: 1.75rem;
+    }
+}
+
+.shopify-policy__body {
+    text-align: left;
+    h1 {
+        font-size: 1.375rem;
+        line-height: 1.5rem;
+        padding-bottom: 1rem;
+    }
+
+    h2 {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        padding-bottom: 1rem;
+        font-weight: 700;
+    }
+
+    p {
+        font-size: 0.875rem;
+        padding-bottom: 1rem;
+        line-height: 1.5rem
+    }
+}
