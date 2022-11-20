@@ -22641,6 +22641,27 @@ price-display.lg .ticker-view {
   display: none;
 }
 
+.form-contact .h1 {
+  font-family: "Fengardo Neue", sans-serif;
+  text-transform: uppercase;
+  font-size: 2.125rem;
+  line-height: 2.652rem;
+}
+@media (min-width: 768px) {
+  .form-contact .h1 {
+    font-size: 3.375rem;
+    line-height: 3.375rem;
+    letter-spacing: 2px;
+  }
+}
+@media (min-width: 1200px) {
+  .form-contact .h1 {
+    font-size: 3.5rem;
+    line-height: 3.5rem;
+    letter-spacing: 2px;
+  }
+}
+
 .shopify-policy__container {
   padding-top: 8rem;
 }

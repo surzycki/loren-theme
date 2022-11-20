@@ -1,9 +1,53 @@
-<div class='pt-12 text-center'>
-    <h1 class='h1'>
-        Contact Form
-    </h1>
-</div>
+<div class="form-contact container">
+    <div class='pt-12 text-center'>
+        <h1 class='h1'>
+            {{ 'contact.title' | t }}
+        </h1>
+        <p>
+            {{ 'contact.sub-title' | t }}
+        </p>
+    </div>
 
+    {% form 'contact' %}
+        {{ form.errors | default_errors }}
+
+        <input class="form-control form-control-lg"
+               name="contact[name]"
+               type="text"
+               placeholder={{ 'contact.name' | t }}
+               aria-label={{ 'contact.name' | t }}/>
+
+
+            <input class="btn btn-cta text-uppercase w-100"
+                   type="submit"
+                   value={{ 'contact.send' | t }}>
+
+        <!-- <div class="contact__fields">
+             <div class="contact__field">
+             {{ form.name | label_tag: 'contact.name' | default_label }}
+             {{ form.name | default_text }}
+             </div>
+
+             <div class="contact__field">
+             {{ form.email | label_tag: 'contact.email' | default_label }}
+             {{ form.email | default_text }}
+             </div>
+
+             <div class="contact__field">
+             {{ form.phone | label_tag: 'contact.phone' | default_label }}
+             {{ form.phone | default_text }}
+             </div>
+
+             <div class="contact__field">
+             {{ form.message | label_tag: 'contact.message' | default_label }}
+             {{ form.message | default_textarea }}
+             </div>
+             </div> -->
+
+    {% endform %}
+
+
+</div>
 
 {% schema %}
   {

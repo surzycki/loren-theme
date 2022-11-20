@@ -82,6 +82,15 @@
   "product": {
     "capsules-per-box": "Étui de 10 capsules"
   },
+  "contact": {
+    "title": "Contactez-nous",
+    "sub-title": "Vous avez une question ou un commentaire ? Vous souhaitez passer une commande en gros ? Prenez contact avec nous et nous répondrons à votre message dès que possible.",
+    "name": "Nom",
+    "email": "Email",
+    "phone": "Téléphone",
+    "message": "Message",
+    "send": "Envoyer"
+  },
   "shopify": {
     "checkout": {
       "shop_policies": {
