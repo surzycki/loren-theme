@@ -1,10 +1,5 @@
 {
   "sections": {
-    "page": {
-      "type": "page-contact",
-      "settings": {
-      }
-    },
     "f96cdf79-749e-413c-af68-e5f2e813146b": {
       "type": "form-contact",
       "settings": {
@@ -12,7 +7,6 @@
     }
   },
   "order": [
-    "page",
     "f96cdf79-749e-413c-af68-e5f2e813146b"
   ]
 }
