@@ -12,41 +12,46 @@
         {{ form.errors | default_errors }}
 
         <input class="form-control form-control-lg"
-               name="contact[name]"
-               type="text"
-               placeholder={{ 'contact.name' | t }}
-               aria-label={{ 'contact.name' | t }}/>
+            name="contact[name]"
+            type="text"
+            autocomplete="name"
+            required="required"
+            placeholder={{ 'contact.name' | t }}
+            aria-label={{ 'contact.name' | t }}/>
 
 
-            <input class="btn btn-cta text-uppercase w-100"
-                   type="submit"
-                   value={{ 'contact.send' | t }}>
+        <input class="form-control form-control-lg"
+            name="contact[email]"
+            type="email"
+            autocomplete="email"
+            required="required"
+            spellcheck="false"
+            autocapitalize="off"
+            placeholder={{ 'contact.email' | t }}
+            aria-label={{ 'contact.email' | t }}/>
 
-        <!-- <div class="contact__fields">
-             <div class="contact__field">
-             {{ form.name | label_tag: 'contact.name' | default_label }}
-             {{ form.name | default_text }}
-             </div>
+        <input class="form-control form-control-lg"
+            name="contact[phone]"
+            autocomplete="tel"
+            pattern="[0-9\-\.]*"
+            type="tel"
+            required="required"
+            placeholder={{ 'contact.phone' | t }}
+            aria-label={{ 'contact.phone' | t }}/>
 
-             <div class="contact__field">
-             {{ form.email | label_tag: 'contact.email' | default_label }}
-             {{ form.email | default_text }}
-             </div>
+        <textarea
+            rows="10"
+            class="form-control form-control-lg"
+            name="contact[message]"
+            placeholder={{ 'contact.message' | t }}>
+            {{- form.body -}}
+        </textarea>
 
-             <div class="contact__field">
-             {{ form.phone | label_tag: 'contact.phone' | default_label }}
-             {{ form.phone | default_text }}
-             </div>
-
-             <div class="contact__field">
-             {{ form.message | label_tag: 'contact.message' | default_label }}
-             {{ form.message | default_textarea }}
-             </div>
-             </div> -->
+        <input class="btn btn-cta text-uppercase w-100"
+            type="submit"
+            value={{ 'contact.send' | t }}>
 
     {% endform %}
-
-
 </div>
 
 {% schema %}
