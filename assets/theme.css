@@ -22664,6 +22664,9 @@ price-display.lg .ticker-view {
 .form-contact textarea {
   resize: none;
 }
+.form-contact .field-error {
+  border: 1px solid #dc3545;
+}
 
 .shopify-policy__container {
   padding-top: 8rem;

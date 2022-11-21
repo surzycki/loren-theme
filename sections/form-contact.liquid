@@ -20,19 +20,27 @@
             name="contact[name]"
             type="text"
             autocomplete="name"
-            required="required"
             placeholder={{ 'contact.name' | t }}
             aria-label={{ 'contact.name' | t }}/>
 
-        <input class="form-control form-control-lg mb-2"
+
+
+        <input class="form-control form-control-lg mb-2 {% if form.errors contains 'email' %} field-error {% endif %}"
             name="contact[email]"
             type="email"
             autocomplete="email"
-            required="required"
             spellcheck="false"
             autocapitalize="off"
             placeholder={{ 'contact.email' | t }}
             aria-label={{ 'contact.email' | t }}/>
+
+        {%- if form.errors contains 'email' -%}
+            <div class="mt-n1 mb-1">
+                <span class="text-danger">{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}</span>
+            </div>
+        {%- endif -%}
+
+
 
         <input class="form-control form-control-lg mb-2"
             name="contact[phone]"
@@ -44,12 +52,17 @@
 
         <textarea
             rows="6"
-            class="form-control form-control-lg mb-2"
+            class="form-control form-control-lg mb-2 {% if form.errors contains 'message' %} field-error {% endif %}"
             name="contact[message]"
-            required="required"
             placeholder={{ 'contact.message' | t }}>
             {{- form.body -}}
         </textarea>
+
+        {%- if form.errors contains 'message' -%}
+            <div class="mt-n1 mb-1">
+                <span class="text-danger">{{ form.errors.translated_fields['message'] | capitalize }} {{ form.errors.messages['message'] }}</span>
+            </div>
+        {%- endif -%}
 
         <input class="btn btn-cta text-uppercase w-100 mb-6"
             type="submit"
