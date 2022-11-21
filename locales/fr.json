@@ -89,7 +89,8 @@
     "email": "Email",
     "phone": "Téléphone",
     "message": "Message",
-    "send": "Envoyer"
+    "send": "Envoyer",
+    "post_success": "Merci, votre message a bien été envoyé."
   },
   "shopify": {
     "checkout": {

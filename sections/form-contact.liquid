@@ -1,6 +1,6 @@
-<div class="form-contact container">
-    <div class='pt-12 text-center'>
-        <h1 class='h1'>
+<div class="form-contact container pt-14">
+    <div class='text-center pb-3'>
+        <h1 class='h1 pb-1'>
             {{ 'contact.title' | t }}
         </h1>
         <p>
@@ -9,9 +9,14 @@
     </div>
 
     {% form 'contact' %}
-        {{ form.errors | default_errors }}
+        {%- if form.posted_successfully? -%}
+            <p class="text-center text-primary" autofocus>
+                <strong>{{ 'contact.post_success' | t }}
+                </strong>
+            </p>
+        {%- endif -%}
 
-        <input class="form-control form-control-lg"
+        <input class="form-control form-control-lg mb-2"
             name="contact[name]"
             type="text"
             autocomplete="name"
@@ -19,8 +24,7 @@
             placeholder={{ 'contact.name' | t }}
             aria-label={{ 'contact.name' | t }}/>
 
-
-        <input class="form-control form-control-lg"
+        <input class="form-control form-control-lg mb-2"
             name="contact[email]"
             type="email"
             autocomplete="email"
@@ -30,24 +34,24 @@
             placeholder={{ 'contact.email' | t }}
             aria-label={{ 'contact.email' | t }}/>
 
-        <input class="form-control form-control-lg"
+        <input class="form-control form-control-lg mb-2"
             name="contact[phone]"
             autocomplete="tel"
-            pattern="[0-9\-\.]*"
+            pattern="[0-9\-\.\+]*"
             type="tel"
-            required="required"
             placeholder={{ 'contact.phone' | t }}
             aria-label={{ 'contact.phone' | t }}/>
 
         <textarea
-            rows="10"
-            class="form-control form-control-lg"
+            rows="6"
+            class="form-control form-control-lg mb-2"
             name="contact[message]"
+            required="required"
             placeholder={{ 'contact.message' | t }}>
             {{- form.body -}}
         </textarea>
 
-        <input class="btn btn-cta text-uppercase w-100"
+        <input class="btn btn-cta text-uppercase w-100 mb-6"
             type="submit"
             value={{ 'contact.send' | t }}>
 
