@@ -26,7 +26,7 @@
     {{- 'theme.css' | asset_url | stylesheet_tag -}}
   </head>
 
-  <body>
+  <body class="d-flex flex-column h-100">
     <script defer type='module' src="{{ 'bundle.js' | asset_url }}"></script>
 
     {% section 'header' %}

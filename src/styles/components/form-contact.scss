@@ -1,28 +1,28 @@
 .form-contact {
-    .h1 {
-        font-family: $secondary-font-family;
-        text-transform: uppercase;
-        font-size: 2.125rem;
-        line-height: 2.652rem;
+  .h1 {
+    font-family: $secondary-font-family;
+    text-transform: uppercase;
+    font-size: 2.125rem;
+    line-height: 2.652rem;
 
-        @include media-breakpoint-up(md) {
-            font-size: 3.375rem;
-            line-height: 3.375rem;
-            letter-spacing: 2px;
-        }
-
-        @include media-breakpoint-up(xl) {
-            font-size: 3.5rem;
-            line-height: 3.5rem;
-            letter-spacing: 2px;
-        }
+    @include media-breakpoint-up(md) {
+      font-size: 3rem;
+      line-height: 3rem;
+      letter-spacing: 2px;
     }
 
-    textarea {
-        resize: none;
+    @include media-breakpoint-up(xl) {
+      font-size: 3.5rem;
+      line-height: 3.5rem;
+      letter-spacing: 2px;
     }
+  }
 
-    .field-error {
-        border: 1px solid $danger;
-    }
+  textarea {
+    resize: none;
+  }
+
+  .field-error {
+    border: 1px solid $danger;
+  }
 }

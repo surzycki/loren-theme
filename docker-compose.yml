@@ -6,6 +6,8 @@ services:
     entrypoint: "tail -f /dev/null"
     hostname: loren-theme
     container_name: loren-theme
+    volumes:
+      - .:/var/www:cached
     ports:
       - 127.0.0.1:3456:3456
       - 127.0.0.1:9292:9292

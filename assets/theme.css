@@ -22649,8 +22649,8 @@ price-display.lg .ticker-view {
 }
 @media (min-width: 768px) {
   .form-contact .h1 {
-    font-size: 3.375rem;
-    line-height: 3.375rem;
+    font-size: 3rem;
+    line-height: 3rem;
     letter-spacing: 2px;
   }
 }
