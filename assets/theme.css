@@ -3827,7 +3827,7 @@ textarea.form-control-lg {
   opacity: var(--bs-btn-disabled-opacity);
 }
 
-.btn-primary, .btn-cta {
+.btn-primary, .shopify-challenge__button, .btn-cta {
   --bs-btn-color: #222222;
   --bs-btn-bg: #F05022;
   --bs-btn-border-color: #F05022;
@@ -22141,11 +22141,11 @@ menu-drawer .drawer.slide {
   height: 80px !important;
 }
 
-.btn-primary, .btn-cta {
+.btn-primary, .shopify-challenge__button, .btn-cta {
   color: #fffcf7 !important;
   line-height: 1.25rem !important;
 }
-.btn-primary:hover, .btn-cta:hover {
+.btn-primary:hover, .shopify-challenge__button:hover, .btn-cta:hover {
   background-color: #ce3613;
 }
 
@@ -22666,6 +22666,18 @@ price-display.lg .ticker-view {
 }
 .form-contact .field-error {
   border: 1px solid #dc3545;
+}
+
+.shopify-challenge__container {
+  padding-top: 20rem;
+}
+
+.shopify-challenge__message {
+  margin-bottom: 1rem !important;
+}
+
+.shopify-challenge__button {
+  margin-top: 2rem !important;
 }
 
 .shopify-policy__container {

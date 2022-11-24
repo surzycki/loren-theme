@@ -26,3 +26,16 @@
     border: 1px solid $danger;
   }
 }
+
+.shopify-challenge__container {
+  padding-top: 20rem;
+}
+
+.shopify-challenge__message {
+  margin-bottom: 1rem !important;
+}
+
+.shopify-challenge__button {
+  margin-top: 2rem !important;
+  @extend .btn-primary;
+}
