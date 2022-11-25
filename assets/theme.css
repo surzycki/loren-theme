@@ -22539,6 +22539,16 @@ footer ul a:hover {
   }
 }
 
+.main-cart-items .h1 {
+  font-size: 2.125rem;
+  line-height: 2.652rem;
+}
+@media (min-width: 768px) {
+  .main-cart-items .h1 {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+}
 .main-cart-items .cart-item-header {
   text-transform: uppercase;
   font-size: 0.75rem;
