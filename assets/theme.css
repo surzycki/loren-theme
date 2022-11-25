@@ -22763,6 +22763,7 @@ body::before {
   z-index: 9999999;
   background-color: #000;
   color: #fff;
+  display: none;
 }
 
 @media (min-width: 576px) {
