@@ -32,6 +32,8 @@ function getWindowSize() {
 function adjustImageSize(width) {
   let element, x;
 
+  console.log(width);
+
   switch (true) {
     case width < 576:
       element = document.getElementById(
