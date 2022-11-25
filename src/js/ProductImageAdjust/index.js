@@ -3,8 +3,6 @@ import PropTypes from "prop-types";
 import classNames from "classnames";
 
 const ProductImageAdjust = ({}) => {
-  console.log("initialValue");
-
   const [windowSize, setWindowSize] = useState(getWindowSize());
 
   useEffect(() => {
