@@ -7,7 +7,7 @@
   background-position: 65% 34%;
 
   @include media-breakpoint-up(sm) {
-    background-position: 70% 64%;
+    background-position: 69% 64%;
   }
 
   @include media-breakpoint-up(md) {
@@ -25,7 +25,6 @@
     background-position: 50% 65%;
     background-size: 2800px 800px;
   }
-
 
   .h1 {
     font-family: $brand-font-family;
@@ -64,4 +63,3 @@
     }
   }
 }
-
