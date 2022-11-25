@@ -6,7 +6,7 @@ body::before {
   z-index: 9999999;
   background-color: #000;
   color: #fff;
-  display: none;
+  //display: none;
 }
 
 @include media-breakpoint-up(sm) {
@@ -30,6 +30,12 @@ body::before {
 @include media-breakpoint-up(xl) {
   body::before {
     content: "xl";
+  }
+}
+
+@include media-breakpoint-up(xxl) {
+  body::before {
+    content: "xxl";
   }
 }
 

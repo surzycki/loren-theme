@@ -22058,24 +22058,43 @@ menu-drawer .drawer.slide {
 }
 
 .image-banner-promise {
-  background-color: #ccc8c0;
+  background-color: #dcdcdc;
   background-repeat: no-repeat;
   height: 712px;
   background-size: 550px;
   background-position: 50% 100%;
 }
+@media (min-width: 576px) {
+  .image-banner-promise {
+    background-size: 774px;
+    background-position: 50% 98%;
+  }
+}
 @media (min-width: 768px) {
   .image-banner-promise {
     height: 680px;
     background-size: 1700px;
-    background-position: 15% 100%;
+    background-position: 11% 100%;
+  }
+}
+@media (min-width: 992px) {
+  .image-banner-promise {
+    background-size: 1760px;
+    background-position: -1% 100%;
   }
 }
 @media (min-width: 1200px) {
   .image-banner-promise {
     height: 896px;
-    background-size: 2300px;
-    background-position: 0% 100%;
+    background-size: 2200px;
+    background-position: 5% 100%;
+  }
+}
+@media (min-width: 1400px) {
+  .image-banner-promise {
+    height: 896px;
+    background-size: 2420px;
+    background-position: 2% 100%;
   }
 }
 .image-banner-promise .h1 {
@@ -22763,7 +22782,6 @@ body::before {
   z-index: 9999999;
   background-color: #000;
   color: #fff;
-  display: none;
 }
 
 @media (min-width: 576px) {
@@ -22784,6 +22802,11 @@ body::before {
 @media (min-width: 1200px) {
   body::before {
     content: "xl";
+  }
+}
+@media (min-width: 1400px) {
+  body::before {
+    content: "xxl";
   }
 }
 div.border {
