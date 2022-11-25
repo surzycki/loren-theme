@@ -21991,13 +21991,13 @@ menu-drawer .drawer.slide {
   background-color: #dcdcdc;
   background-repeat: no-repeat;
   height: 712px;
-  background-size: 550px;
-  background-position: 86% 0%;
+  background-size: 878px;
+  background-position: 100% 110%;
 }
 @media (min-width: 576px) {
   .image-banner-coffee {
-    background-position: 86% 0%;
-    background-size: 550px;
+    background-size: 1200px;
+    background-position: 100% 700%;
   }
 }
 @media (min-width: 768px) {

@@ -3,12 +3,12 @@
   background-repeat: no-repeat;
 
   height: 712px;
-  background-size: 550px;
-  background-position: 86% 0%;
+  background-size: 878px;
+  background-position: 100% 110%;
 
   @include media-breakpoint-up(sm) {
-    background-position: 86% 0%;
-    background-size: 550px;
+    background-size: 1200px;
+    background-position: 100% 700%;
   }
 
   @include media-breakpoint-up(md) {
