@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
 
+// https://planetcalc.com/5992/
 const ProductImageAdjust = ({}) => {
   const [windowSize, setWindowSize] = useState(getWindowSize());
 
