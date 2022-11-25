@@ -5,9 +5,10 @@ import MenuItemCart from "Components/MenuItemCart";
 import IconCart from "Components/IconCart";
 import QuantityInput from "Components/QuantityInput";
 import PriceDisplay from "Components/PriceDisplay";
+import ProductImageAdjust from "Components/ProductImageAdjust";
 
 // text to pass to components
-const containerAddToCartText = document.getElementById('add-to-cart-text');
+const containerAddToCartText = document.getElementById("add-to-cart-text");
 
 let variantId, variantPrice, add, thanks;
 if (containerAddToCartText) {
@@ -18,8 +19,10 @@ if (containerAddToCartText) {
 }
 
 // Button and controls to add to cart
-const containerAddToCartMobile = document.getElementById('add-to-cart-mobile');
-const containerAddToCartDesktop = document.getElementById('add-to-cart-desktop');
+const containerAddToCartMobile = document.getElementById("add-to-cart-mobile");
+const containerAddToCartDesktop = document.getElementById(
+  "add-to-cart-desktop"
+);
 
 if (containerAddToCartMobile) {
   const addToCartMobile = ReactDOM.createRoot(containerAddToCartMobile);
@@ -45,40 +48,47 @@ if (containerAddToCartDesktop) {
   );
 }
 
-
 // Desktop menu item for cart
-const containerMenuItemCart = document.getElementById('menu-item-cart');
-if(containerMenuItemCart) {
-  const menuLabel = String(containerMenuItemCart?.dataset?.label)
+const containerMenuItemCart = document.getElementById("menu-item-cart");
+if (containerMenuItemCart) {
+  const menuLabel = String(containerMenuItemCart?.dataset?.label);
 
   const menuItemCart = ReactDOM.createRoot(containerMenuItemCart);
-  menuItemCart.render(<MenuItemCart label={menuLabel}/>);
+  menuItemCart.render(<MenuItemCart label={menuLabel} />);
 }
 
 // mobile menu item icon for cart
-const containerIconCart = document.getElementById('icon-cart');
-if(containerIconCart) {
+const containerIconCart = document.getElementById("icon-cart");
+if (containerIconCart) {
   const iconCart = ReactDOM.createRoot(containerIconCart);
-  iconCart.render(<IconCart/>);
+  iconCart.render(<IconCart />);
 }
 
 // quantity input for cart
-const containerQuantityInputs = document.getElementsByTagName('quantity-input');
-if(containerQuantityInputs.length != 0) {
+const containerQuantityInputs = document.getElementsByTagName("quantity-input");
+if (containerQuantityInputs.length != 0) {
   for (var containerQuantityInput of containerQuantityInputs) {
     var quantity = Number(containerQuantityInput?.dataset?.quantity);
     var key = String(containerQuantityInput?.dataset?.key);
     const quantityInput = ReactDOM.createRoot(containerQuantityInput);
-    quantityInput.render(<QuantityInput initialQuantity={quantity} itemKey={key} />);
+    quantityInput.render(
+      <QuantityInput initialQuantity={quantity} itemKey={key} />
+    );
   }
 }
 
-const containerPriceDisplays = document.getElementsByTagName('price-display');
-if(containerPriceDisplays.length != 0) {
+const containerPriceDisplays = document.getElementsByTagName("price-display");
+if (containerPriceDisplays.length != 0) {
   for (var containerPriceDisplay of containerPriceDisplays) {
     var price = String(containerPriceDisplay?.dataset?.price);
     var key = String(containerPriceDisplay?.dataset?.key);
     const priceDisplay = ReactDOM.createRoot(containerPriceDisplay);
     priceDisplay.render(<PriceDisplay initialValue={price} itemKey={key} />);
   }
+}
+
+const containerProductImage = document.getElementById("product-image-adjust");
+if (containerProductImage) {
+  const productImage = ReactDOM.createRoot(containerProductImage);
+  productImage.render(<ProductImageAdjust />);
 }

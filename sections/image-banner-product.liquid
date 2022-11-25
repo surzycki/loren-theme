@@ -1,4 +1,4 @@
-<style>
+{%- style -%}
   .image-banner-product-mobile--{{ section.id  }} {
      background-image: url({{ product.images[1] | img_url: 'master'}})
   }
@@ -6,7 +6,8 @@
  .image-banner-product-desktop--{{ section.id  }} {
      background-image: url({{ product.images[2] | img_url: 'master'}})
   }
-</style>
+{%- endstyle -%}
+
 
 <span id="add-to-cart-text" class="d-none"
     data-variant-id={{ product.variants.first.id }}
@@ -53,6 +54,7 @@
     </div>
 </div>
 
+<div id="product-image-adjust"/>
 
 {% schema %}
   {

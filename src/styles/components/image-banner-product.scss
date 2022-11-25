@@ -4,76 +4,80 @@
 
   height: 712px;
   background-size: 1248px;
-  background-position: 40% 40%;
+  background-position: 38% 40%;
 
   @include media-breakpoint-up(sm) {
+    background-position: 37% 40%;
   }
 
   @include media-breakpoint-up(md) {
     height: 680px;
     background-size: 1400px;
-    background-position: 80% 36%;
+    background-position: 62% 36%;
   }
 
   @include media-breakpoint-up(lg) {
+    height: 680px;
+    background-size: 1600px;
+    background-position: 70% 36%;
   }
 
   @include media-breakpoint-up(xl) {
     height: 896px;
     background-size: 2100px;
-    background-position: 80% 66%;
+    background-position: 61% 66%;
   }
-
 }
 
-#image-banner-product-mobile, #image-banner-product-desktop {
-    .h1 {
-      font-family: $brand-font-family;
-      letter-spacing: 2px;
-      text-transform: none;
+#image-banner-product-mobile,
+#image-banner-product-desktop {
+  .h1 {
+    font-family: $brand-font-family;
+    letter-spacing: 2px;
+    text-transform: none;
+    font-size: 5.625rem;
+    line-height: 6rem;
+
+    @include media-breakpoint-up(md) {
+      font-size: 5rem;
+      line-height: 5.375rem;
+    }
+
+    @include media-breakpoint-up(xl) {
       font-size: 5.625rem;
       line-height: 6rem;
-
-      @include media-breakpoint-up(md) {
-        font-size: 5rem;
-        line-height: 5.375rem;
-      }
-
-      @include media-breakpoint-up(xl) {
-        font-size: 5.625rem;
-        line-height: 6rem;
-      }
     }
+  }
 
-    .h2 {
-      font-size: 1rem;
-      line-height: 1.5rem;
+  .h2 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .h3 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+
+    @include media-breakpoint-up(xl) {
+      font-size: 1.25rem;
+      line-height: 2rem;
     }
+  }
 
-    .h3 {
-      font-size: 1rem;
-      line-height: 1.5rem;
+  .h4 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
 
-      @include media-breakpoint-up(xl) {
-        font-size: 1.25rem;
-        line-height: 2rem;
-      }
-    }
+  p {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    color: $grey;
+  }
 
-    .h4 {
-      font-size: 1rem;
-      line-height: 1.5rem;
-    }
-
-    p {
-        font-size: 0.875rem;
-        line-height: 1.25rem;
-        color: $grey;
-    }
-
-    svg {
-      height: 48px;
-    }
+  svg {
+    height: 48px;
+  }
 }
 
 #information-desktop {

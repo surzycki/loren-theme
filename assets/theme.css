@@ -21892,24 +21892,37 @@ menu-drawer .drawer.slide {
   background-repeat: no-repeat;
   height: 712px;
   background-size: 1248px;
-  background-position: 40% 40%;
+  background-position: 38% 40%;
+}
+@media (min-width: 576px) {
+  .image-banner-product {
+    background-position: 37% 40%;
+  }
 }
 @media (min-width: 768px) {
   .image-banner-product {
     height: 680px;
     background-size: 1400px;
-    background-position: 80% 36%;
+    background-position: 62% 36%;
+  }
+}
+@media (min-width: 992px) {
+  .image-banner-product {
+    height: 680px;
+    background-size: 1600px;
+    background-position: 70% 36%;
   }
 }
 @media (min-width: 1200px) {
   .image-banner-product {
     height: 896px;
     background-size: 2100px;
-    background-position: 80% 66%;
+    background-position: 61% 66%;
   }
 }
 
-#image-banner-product-mobile .h1, #image-banner-product-desktop .h1 {
+#image-banner-product-mobile .h1,
+#image-banner-product-desktop .h1 {
   font-family: "Rainer", serif;
   letter-spacing: 2px;
   text-transform: none;
@@ -21917,41 +21930,49 @@ menu-drawer .drawer.slide {
   line-height: 6rem;
 }
 @media (min-width: 768px) {
-  #image-banner-product-mobile .h1, #image-banner-product-desktop .h1 {
+  #image-banner-product-mobile .h1,
+#image-banner-product-desktop .h1 {
     font-size: 5rem;
     line-height: 5.375rem;
   }
 }
 @media (min-width: 1200px) {
-  #image-banner-product-mobile .h1, #image-banner-product-desktop .h1 {
+  #image-banner-product-mobile .h1,
+#image-banner-product-desktop .h1 {
     font-size: 5.625rem;
     line-height: 6rem;
   }
 }
-#image-banner-product-mobile .h2, #image-banner-product-desktop .h2 {
+#image-banner-product-mobile .h2,
+#image-banner-product-desktop .h2 {
   font-size: 1rem;
   line-height: 1.5rem;
 }
-#image-banner-product-mobile .h3, #image-banner-product-desktop .h3 {
+#image-banner-product-mobile .h3,
+#image-banner-product-desktop .h3 {
   font-size: 1rem;
   line-height: 1.5rem;
 }
 @media (min-width: 1200px) {
-  #image-banner-product-mobile .h3, #image-banner-product-desktop .h3 {
+  #image-banner-product-mobile .h3,
+#image-banner-product-desktop .h3 {
     font-size: 1.25rem;
     line-height: 2rem;
   }
 }
-#image-banner-product-mobile .h4, #image-banner-product-desktop .h4 {
+#image-banner-product-mobile .h4,
+#image-banner-product-desktop .h4 {
   font-size: 1rem;
   line-height: 1.5rem;
 }
-#image-banner-product-mobile p, #image-banner-product-desktop p {
+#image-banner-product-mobile p,
+#image-banner-product-desktop p {
   font-size: 0.875rem;
   line-height: 1.25rem;
   color: #858585;
 }
-#image-banner-product-mobile svg, #image-banner-product-desktop svg {
+#image-banner-product-mobile svg,
+#image-banner-product-desktop svg {
   height: 48px;
 }
 

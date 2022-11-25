@@ -27,7 +27,6 @@
   </head>
 
   <body class="d-flex flex-column h-100">
-    <script defer type='module' src="{{ 'bundle.js' | asset_url }}"></script>
 
     {% section 'header' %}
 
@@ -38,5 +37,6 @@
 
     {% section 'footer' %}
 
+    <script defer type='module' src="{{ 'bundle.js' | asset_url }}"></script>
   </body>
 </html>
