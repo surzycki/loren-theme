@@ -21997,7 +21997,7 @@ menu-drawer .drawer.slide {
 @media (min-width: 576px) {
   .image-banner-coffee {
     background-size: 1200px;
-    background-position: 108% 800%;
+    background-position: center 800%;
   }
 }
 @media (min-width: 768px) {
