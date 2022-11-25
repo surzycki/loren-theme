@@ -31,14 +31,12 @@ function getWindowSize() {
 function adjustImageSize(width) {
   let element, x;
 
-  console.log(width);
-
   switch (true) {
     case width < 576:
       element = document.getElementById(
         "image-banner-product-mobile"
       ).firstElementChild;
-      x = 39;
+      x = 40;
       element.style.backgroundPosition = `${x}% 40%`;
       break;
     case width < 768:
