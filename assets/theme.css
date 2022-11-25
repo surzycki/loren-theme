@@ -21992,12 +21992,12 @@ menu-drawer .drawer.slide {
   background-repeat: no-repeat;
   height: 712px;
   background-size: 878px;
-  background-position: 100% 110%;
+  background-position: center 110%;
 }
 @media (min-width: 576px) {
   .image-banner-coffee {
     background-size: 1200px;
-    background-position: center 800%;
+    background-position: center 400%;
   }
 }
 @media (min-width: 768px) {

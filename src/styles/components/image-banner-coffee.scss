@@ -4,11 +4,11 @@
 
   height: 712px;
   background-size: 878px;
-  background-position: 100% 110%;
+  background-position: center 110%;
 
   @include media-breakpoint-up(sm) {
     background-size: 1200px;
-    background-position: center 800%;
+    background-position: center 400%;
   }
 
   @include media-breakpoint-up(md) {
