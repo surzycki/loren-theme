@@ -88,6 +88,7 @@
  var icon3 = document.getElementById("c");
  var drawer = document.getElementById('drawer');
  var navDrawer = document.getElementById("nav-drawer");
+ var body = document.getElementsByTagName("body")[0];
 
  icon.addEventListener('click', function() {
      icon1.classList.toggle('a');
@@ -95,6 +96,7 @@
      icon3.classList.toggle('b');
      navDrawer.classList.toggle('show');
      drawer.classList.toggle('slide');
+     body.classList.toggle('overflow-hidden')
 });
 </script>
 
