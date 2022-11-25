@@ -21824,7 +21824,7 @@ menu-drawer .drawer.slide {
 }
 @media (min-width: 576px) {
   .image-banner-main {
-    background-position: 70% 64%;
+    background-position: 69% 64%;
   }
 }
 @media (min-width: 768px) {
@@ -21992,7 +21992,7 @@ menu-drawer .drawer.slide {
   background-repeat: no-repeat;
   height: 712px;
   background-size: 878px;
-  background-position: center 110%;
+  background-position: center 100%;
 }
 @media (min-width: 576px) {
   .image-banner-coffee {
