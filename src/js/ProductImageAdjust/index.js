@@ -38,7 +38,7 @@ function adjustImageSize(width) {
       element = document.getElementById(
         "image-banner-product-mobile"
       ).firstElementChild;
-      x = 38;
+      x = 39;
       element.style.backgroundPosition = `${x}% 40%`;
       break;
     case width < 768:
