@@ -8,8 +8,8 @@
     "1662190967420bd91b": {
       "type": "image-banner-coffee",
       "settings": {
-        "image-desktop": "shopify:\/\/shop_images\/background-our-coffee.png",
-        "image-mobile": "shopify:\/\/shop_images\/background-our-coffee-mobile.jpg"
+        "image-desktop": "shopify:\/\/shop_images\/background-our-coffee-desktop.png",
+        "image-mobile": "shopify:\/\/shop_images\/background-our-coffee-desktop.png"
       }
     },
     "16622015535b80ad8b": {
