@@ -1,5 +1,5 @@
 .image-banner-coffee {
-  background-color: #ccc8c0;
+  background-color: #e3e5e6;
   background-repeat: no-repeat;
 
   height: 712px;
@@ -7,6 +7,8 @@
   background-position: 86% 0%;
 
   @include media-breakpoint-up(sm) {
+    background-position: 86% 0%;
+    background-size: 550px;
   }
 
   @include media-breakpoint-up(md) {
@@ -25,50 +27,50 @@
   }
 
   .h1 {
-      font-family: $secondary-font-family;
-      text-transform: uppercase;
-      font-size: 2.125rem;
-      line-height: 2.652rem;
+    font-family: $secondary-font-family;
+    text-transform: uppercase;
+    font-size: 2.125rem;
+    line-height: 2.652rem;
 
-      @include media-breakpoint-up(md) {
-          font-size: 3.375rem;
-          line-height: 3.375rem;
-          letter-spacing: 2px;
-      }
+    @include media-breakpoint-up(md) {
+      font-size: 3.375rem;
+      line-height: 3.375rem;
+      letter-spacing: 2px;
+    }
 
-      @include media-breakpoint-up(xl) {
-          font-size: 3.5rem;
-          line-height: 3.5rem;
-          letter-spacing: 2px;
-      }
+    @include media-breakpoint-up(xl) {
+      font-size: 3.5rem;
+      line-height: 3.5rem;
+      letter-spacing: 2px;
+    }
   }
 
   .h2 {
-      font-family: $secondary-font-family;
-      font-size: 1.75rem;
+    font-family: $secondary-font-family;
+    font-size: 1.75rem;
 
-      @include media-breakpoint-up(md) {
-          font-size: 3.125rem;
-          line-height: 3.375rem;
-      }
+    @include media-breakpoint-up(md) {
+      font-size: 3.125rem;
+      line-height: 3.375rem;
+    }
 
-      @include media-breakpoint-up(xl) {
-          font-size: 3.25rem;
-          line-height: 3.5rem;
-      }
+    @include media-breakpoint-up(xl) {
+      font-size: 3.25rem;
+      line-height: 3.5rem;
+    }
   }
 
   p {
-      @include media-breakpoint-up(md){
-          font-size: 1rem;
-          line-height: 1.5rem;
-          width: 490px;
-      }
+    @include media-breakpoint-up(md) {
+      font-size: 1rem;
+      line-height: 1.5rem;
+      width: 490px;
+    }
   }
 
   .btn-cta {
-      @include media-breakpoint-up(xl) {
-          width: 430px;
-      }
+    @include media-breakpoint-up(xl) {
+      width: 430px;
+    }
   }
 }
