@@ -3,6 +3,8 @@
     "4dffe98f-69d1-4cb7-b572-3ea3f52799aa": {
       "type": "image-banner-main",
       "settings": {
+        "image-desktop": "shopify:\/\/shop_images\/landing-background-2.jpg",
+        "image-mobile": "shopify:\/\/shop_images\/mobile.jpg"
       }
     },
     "16614558663fb4a2dc": {
