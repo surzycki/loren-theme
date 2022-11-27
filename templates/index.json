@@ -1,5 +1,10 @@
 {
   "sections": {
+    "4dffe98f-69d1-4cb7-b572-3ea3f52799aa": {
+      "type": "image-banner-main",
+      "settings": {
+      }
+    },
     "16614558663fb4a2dc": {
       "type": "recall",
       "settings": {
@@ -7,6 +12,7 @@
     }
   },
   "order": [
+    "4dffe98f-69d1-4cb7-b572-3ea3f52799aa",
     "16614558663fb4a2dc"
   ]
 }
