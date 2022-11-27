@@ -4,44 +4,9 @@
       "type": "page-coffee",
       "settings": {
       }
-    },
-    "1662190967420bd91b": {
-      "type": "image-banner-coffee",
-      "settings": {
-        "image-desktop": "shopify:\/\/shop_images\/background-our-coffee-desktop.png",
-        "image-mobile": "shopify:\/\/shop_images\/background-our-coffee-mobile.png"
-      }
-    },
-    "16622015535b80ad8b": {
-      "type": "product-expose",
-      "settings": {
-        "product": "mattino"
-      }
-    },
-    "1662204921fce6b3e3": {
-      "type": "product-expose",
-      "settings": {
-        "product": "aperitivo"
-      }
-    },
-    "166220494633773b6e": {
-      "type": "product-expose",
-      "settings": {
-        "product": "digestivo"
-      }
-    },
-    "16622050966787b9ac": {
-      "type": "recall",
-      "settings": {
-      }
     }
   },
   "order": [
-    "page",
-    "1662190967420bd91b",
-    "16622015535b80ad8b",
-    "1662204921fce6b3e3",
-    "166220494633773b6e",
-    "16622050966787b9ac"
+    "page"
   ]
 }
