@@ -41,9 +41,10 @@
     "762b2159-ac70-4911-8c6b-22956c17d35f": {
       "type": "image-with-text",
       "settings": {
-        "image-text": "",
-        "position": "center",
-        "theme": "dark"
+        "image": "shopify:\/\/shop_images\/background-piu-capsules.png",
+        "image-text": "Des capsules compostables, un emballage entièrement recyclable, et un système de vente directe, pour préserver la fraîcheur des arômes et l’environnement, notamment grâce à nos capsules compostables.",
+        "position": "right",
+        "theme": "light"
       }
     },
     "be4191c7-25e9-436a-ae1a-fa1225893aed": {
