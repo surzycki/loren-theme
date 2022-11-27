@@ -22639,6 +22639,10 @@ footer ul a:hover {
   font-weight: 700;
 }
 
+.main-cart-header .btn-close {
+  position: absolute;
+  right: 2rem;
+}
 @media (min-width: 768px) {
   .main-cart-header .btn-close {
     background-size: 32px;
@@ -22798,6 +22802,7 @@ body::before {
   z-index: 9999999;
   background-color: #000;
   color: #fff;
+  display: none;
 }
 
 @media (min-width: 576px) {
