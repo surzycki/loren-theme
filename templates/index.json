@@ -11,10 +11,17 @@
       "type": "recall",
       "settings": {
       }
+    },
+    "fdfec342-e2e7-4363-803a-4afaf004efee": {
+      "type": "featured-products",
+      "settings": {
+        "collection": "featured-products"
+      }
     }
   },
   "order": [
     "4dffe98f-69d1-4cb7-b572-3ea3f52799aa",
-    "16614558663fb4a2dc"
+    "16614558663fb4a2dc",
+    "fdfec342-e2e7-4363-803a-4afaf004efee"
   ]
 }
