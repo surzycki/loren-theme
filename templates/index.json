@@ -1,24 +1,5 @@
 {
   "sections": {
-    "1661090984338c6e56": {
-      "type": "image-banner-main",
-      "settings": {
-        "image-desktop": "shopify:\/\/shop_images\/landing-background-2.jpg",
-        "image-mobile": "shopify:\/\/shop_images\/mobile.jpg"
-      }
-    },
-    "16612821478300e31c": {
-      "type": "featured-products",
-      "settings": {
-        "collection": "featured-products"
-      }
-    },
-    "1661367455a1391dbe": {
-      "type": "advantages",
-      "settings": {
-        "image-desktop": "shopify:\/\/shop_images\/background-coffee.png"
-      }
-    },
     "16614558663fb4a2dc": {
       "type": "recall",
       "settings": {
@@ -26,9 +7,6 @@
     }
   },
   "order": [
-    "1661090984338c6e56",
-    "16612821478300e31c",
-    "1661367455a1391dbe",
     "16614558663fb4a2dc"
   ]
 }
