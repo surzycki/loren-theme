@@ -13,16 +13,10 @@
   </head>
 
   <body>
-    {% include 'announcement-bar' %}
-    {% section 'header' %}
-
-    <main class="content">
-      {{ content_for_layout }}
-    </main>
-
-    {% section 'footer' %}
-
+    <div id="react-cart"></div>
+    {{ content_for_layout }}
     <script defer type='module' src="{{ 'react-cart-control.bundle.js' | asset_url }}"></script>
     <script defer type='module' src="{{ 'react-cart.bundle.js' | asset_url }}"></script>
+    <script src="{{ 'theme.js' | asset_url }}"></script>
   </body>
 </html>

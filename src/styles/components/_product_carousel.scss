@@ -1,0 +1,16 @@
+.product-carousel {
+  .item {
+    .active {
+      color: $accent1;
+    }
+  }
+  .carousel-item {
+    p {
+      max-width: 504px;
+    }
+  }
+
+  .carousel-control-prev {
+    left: -3rem !important;
+  }
+}

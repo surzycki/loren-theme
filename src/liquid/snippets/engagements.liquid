@@ -1,36 +1,52 @@
 {% comment %}
     Requires the following arguments:
 
-    - settings: {
-    engagement_image
-    }
-
-
+- settings:
+- id:
 {% endcomment %}
 
 
-
-{% assign keys = 'capsule,free-trade,recycle' | split: ',' %}
+{% assign engagements = 'capsule,free-trade,recycle' | split: ',' %}
 
 <style>
-    #engagement-image {
-        background-image: url({{ settings.engagement_image | img_url: 'master' }});
+    .engagements--{{ id }} {
+        background-image: url({{ settings.desktop_image | img_url: 'master' }});
 
     }
 </style>
 
-<section class='container'>
-    <div class='row'>
-        <div class='col-12 col-md-6 border-end pt-3 pt-sm-5'>
-            <h1 class='h1 text-start mb-8 mb-sm-11 mb-lg-11'>
-                <span>{{ 'general.engagements.title' | t }}</span>
-            </h1>
+<section class='engagements engagements--{{ id }}'>
+    <div class='container pt-13 gx-0'>
 
-            {% render 'engagement-list-item' for keys as key %}
+        <h1 class='h1 text-center text-light mb-17'>
+            {{ 'general.engagements.title' | t }}
+        </h1>
 
-            <div class='pb-24'></div>
+        <div class='row'>
+            {% for engagement in engagements %}
+                {% assign image = 'icon-' | append: engagement %}
+
+                <div class='col-md-4 text-center'>
+                    <img src="{{ image | append: '.png' | asset_img_url: 'master' }}"
+                         srcset="{{ image | append: '@2x.png' | asset_img_url: 'master' }} 2x,
+                              {{ image | append: '@3x.png' | asset_img_url: 'master' }} 3x"
+                         alt='{{ key }}'
+                         class='mb-4'/>
+                    <h2 class='h2 hero text-light'>
+                        {{ 'general.engagements.' | append: engagement | t }}
+                    </h2>
+                </div>
+            {% endfor %}
+
         </div>
-        <div class='d-none d-md-block col-12 col-md-6' id='engagement-image'>
-        </div>
+
+    <!-- <div class='row'>
+         <div class='col-6'>
+
+         <div class='pb-24'></div>
+         </div>
+         <div class='d-none d-md-block col-12 col-md-6' id='engagement-image'>
+         </div>
+         </div> -->
     </div>
 </section>

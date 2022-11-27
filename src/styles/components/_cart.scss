@@ -1,0 +1,44 @@
+.cart {
+  &.closed {
+    .cart--overlay {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .cart--contents {
+      transform: translate(0, 0);
+    }
+  }
+}
+
+.cart--overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  visibility: visible;
+  opacity: 1;
+  transition: all 0.25s ease-in;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(6px);
+  z-index: 1000;
+}
+
+.cart--contents {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 100%;
+  width: 520px;
+  height: 100%;
+  overflow: auto;
+  background-color: $white;
+  transition: all 0.25s ease-in-out;
+  transform: translate(-100%, 0);
+  z-index: 1020; // 1030 is notification bar
+}
+
+.no-scroll {
+  overflow: hidden;
+}

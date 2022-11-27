@@ -1,0 +1,21 @@
+.hero-promise {
+  height: 100vh;
+  min-height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  //background-attachment: fixed;
+
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  width: 100%;
+
+  h2.hero {
+    max-width: 650px;
+  }
+
+  h3 {
+    max-width: 670px;
+  }
+}

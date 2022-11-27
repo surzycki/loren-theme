@@ -1,0 +1,5 @@
+# Start file sync
+mutagen project start || mutagen project terminate
+
+# make sure can get the file and proper certs
+wget -P /tmp https://piu-cafe.myshopify.com/meta.json

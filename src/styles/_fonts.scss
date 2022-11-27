@@ -1,29 +1,43 @@
 @font-face {
-    font-family: 'Articulat CF';
-    src: url('articulatcf-normal.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
+  font-family: "Articulat CF";
+  src: url("articulatcf-normal.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Articulat CF';
-    src: url('articulatcf-bold.woff') format('woff');
-    font-weight: 700;
-    font-style: normal;
+  font-family: "Articulat CF";
+  src: url("articulatcf-bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Rainer';
-    src: url('Rainerv04.woff2') format('woff2'),
-         url('Rainerv04.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
+  font-family: "Fengardo Neue";
+  src: url("fengardoneue_regular-webfont.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Rainer';
-    src: url('Rainerv04-Medium.woff2') format('woff2'),
-         url('Rainerv04-Medium.woff') format('woff');
-    font-weight: 700;
-    font-style: normal;
+  font-family: "Fengardo Neue";
+  src: url("fengardoneue_black-webfont.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Rainer";
+  src: url("Rainerv04.woff2") format("woff2"),
+    url("Rainerv04.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Rainer";
+  src: url("Rainerv04-Medium.woff2") format("woff2"),
+    url("Rainerv04-Medium.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
 }

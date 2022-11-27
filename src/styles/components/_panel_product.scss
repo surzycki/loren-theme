@@ -1,0 +1,36 @@
+.panel-product {
+  .information {
+    width: 432px;
+    border: 1px solid #838383;
+
+    border-bottom: 0;
+
+    p {
+      height: 144px;
+    }
+  }
+
+  .icon {
+    text-align: center;
+    margin: auto;
+    width: 56px;
+    height: 56px;
+  }
+}
+
+.quantity-button {
+  text-align: center;
+  width: 48px;
+  height: 48px;
+  border: 2px solid #dedede;
+  font-size: 1.5rem;
+  line-height: 48px;
+  cursor: pointer;
+
+  &.active {
+    font-weight: 700;
+    color: $accent1;
+    border: 2px solid $accent1;
+    transition: border 1s, color 1s, font-weight 1s;
+  }
+}

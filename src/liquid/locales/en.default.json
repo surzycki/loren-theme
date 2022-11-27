@@ -1,13 +1,13 @@
 {
-    "general": {
-        "notification": {
-            "free_delivery": "Free Delivery!"
-        },
-        "navigation": {
-            "our_coffee": "Our Coffee",
-            "value_chain": "Our Mission",
-            "contact_us": "Contact Us",
-            "shopping_cart": "Carrello"
-        }
+  "general": {
+    "notification": {
+      "free_delivery": "Free Delivery!"
+    },
+    "navigation": {
+      "our_coffee": "Our Coffee",
+      "our-promise": "Our Promise",
+      "contact_us": "Contact Us",
+      "shopping_cart": "Carrello"
     }
+  }
 }

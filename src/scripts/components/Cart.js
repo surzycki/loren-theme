@@ -1,78 +1,114 @@
 import "unfetch/polyfill";
 import React, { useEffect, useState } from "react";
-import { formatPrice } from "./Utils";
-
+import classNames from "classnames";
 import * as cart from "@shopify/theme-cart";
 
-import CartItem from "./CartItem";
+import EmptyCart from "./EmptyCart";
+import CartForm from "./CartForm";
+import eventBus from "./EventBus";
 
 const getData = () => {
+  console.log("get data called");
   return cart.getState();
 };
 
-const updateCart = (value) => {
-  document.getElementById("desktop-cart-count").innerHTML = value;
-};
+const Cart = () => {
+  // we are not using boolean to store the closed state, as setting the
+  // default below can get wonky
+  const initialToggleState =
+    localStorage.getItem("CartToggleState") || "closed";
 
-const Cart = ({ route }) => {
-  const [data, setData] = useState(null);
   useEffect(() => {
-    getData().then((data) => setData(data));
+    eventBus.on("toggleCart", () => handleToggle());
+    eventBus.on("itemAdded", () => {
+      getData().then((data) => setData(data));
+    });
+
+    localStorage.setItem("CartToggleState", toggle);
+
+    scrollState();
+
+    return () => {
+      eventBus.remove("toggleCart");
+    };
   }, []);
+
+  // start closed
+  const [toggle, setToggle] = useState(initialToggleState);
+  const [data, setData] = useState(null);
+
+  const handleToggle = () => {
+    if (toggle == "closed") {
+      setToggle("opened");
+    } else {
+      setToggle("closed");
+    }
+    scrollState();
+  };
+
+  const scrollState = () => {
+    // preventing the body from scrolling when cart open
+    const body = document.getElementsByTagName("BODY")[0];
+
+    // if (toggle == "closed") {
+    //   body.classList.remove("no-scroll");
+    // } else {
+    //   body.classList.add("no-scroll");
+    // }
+  };
 
   const onRemove = ({ key }) => {
     cart.removeItem(key).then((data) => {
       setData(data);
-      updateCart(data.item_count);
     });
   };
 
   const onUpdate = ({ key }, quantity) => {
     cart.updateItem(key, { quantity }).then((data) => {
       setData(data);
-      updateCart(data.item_count);
     });
   };
 
-  console.log(data);
+  const cartClass = classNames({
+    cart: true,
+    closed: toggle == "closed",
+  });
+
+  const logo1xSrc = "https://example.com";
+  const logo2xSrc = "https://2example.com";
+  const logo3xSrc = "https://3example.com";
+  const submitRoute = "https://example.com";
+
+  const cartContents = () => {
+    return (
+      <>
+        <h1 className="h1">H</h1>
+        <img
+          src={logo1xSrc}
+          srcSet={`${logo2xSrc} 2x, ${logo3xSrc} 3x`}
+          alt="Piu Cafe"
+        />
+      </>
+    );
+  };
 
   return (
-    <section className="container">
-      {data && data.item_count === 0 && <h2 className="h2">Cart Empty</h2>}
-      {data && data.item_count > 0 && (
-        <form action={route} method="post" noValidate>
-          {data.items.map((item, index) => {
-            return (
-              <CartItem
-                key={index}
-                item={item}
-                onRemove={onRemove}
-                onUpdate={onUpdate}
-              />
-            );
-          })}
-
-          <div className="row">
-            <div className="col-8"></div>
-            <div className="col-4 text-end">
-              <span className="h3">{formatPrice(data.total_price)}</span>
-            </div>
-          </div>
-
-          <div className="row mb-5">
-            <div className="col-8"></div>
-            <div className="col-4 text-end py-2">
-              <input
-                className="btn btn-lg btn-success"
-                type="submit"
-                name="checkout"
-                value="Checkout"
-              />
-            </div>
-          </div>
-        </form>
-      )}
-    </section>
+    <div className={cartClass}>
+      <div className="cart--overlay" onClick={handleToggle} />
+      <div className="cart--contents">
+        <div className="container pt-5">
+          {data && data.item_count === 0 && <EmptyCart />}
+          {data && data.item_count > 0 && (
+            <CartForm
+              lineItems={data.items}
+              onUpdate={onUpdate}
+              onRemove={onRemove}
+              submitRoute={submitRoute}
+            />
+          )}
+        </div>
+      </div>
+    </div>
   );
 };
 

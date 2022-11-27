@@ -1,0 +1,40 @@
+sync:
+  defaults:
+    mode: "two-way-resolved"
+    flushOnCreate: true
+    ignore:
+      vcs: true
+  dev:
+    alpha: "."
+    beta: "docker://loren-theme/var/www"
+    ignore:
+      paths:
+        - ".git"
+        - "log"
+        - "tmp"
+        - "node_modules"
+
+forward:
+  http:
+    source: "tcp::80"
+    destination: "docker://loren-theme:tcp:0.0.0.0:80"
+
+# Set up the service and any volumes before creating sessions.
+beforeCreate:
+  - docker-compose -f docker-compose.yml up --build --detach
+
+# Set up the main services after creating sessions. At this point, sessions will
+# have been established and code pushed to the shared volume.
+# After this is done, we can start up the deployment scripts.
+afterCreate:
+  - docker-compose -f docker-compose.yml up --build --detach
+  - docker-compose exec dev yarn install
+  - docker-compose exec dev yarn start || true
+
+# Tear down all services and remove the code volume after terminating sessions.
+afterTerminate:
+  - docker-compose -f docker-compose.yml stop || true
+
+# Define common utility commands.
+commands:
+  setup: docker-compose -f docker-compose.yml exec dev bin/setup

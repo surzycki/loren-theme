@@ -1,0 +1,36 @@
+{% comment %}
+    Requires the following arguments:
+
+- settings:
+- id:
+{% endcomment %}
+
+<style>
+    .hero-promise--{{ id }} {
+        background-image: url({{ settings.desktop_image | img_url: 'master' }});
+    }
+</style>
+
+<section class='hero-promise hero-promise--{{ id }}'>
+    <div class='container'>
+        {% render 'header' %}
+
+        <div class='pt-17'>
+            <h1 class='h1 hero mb-5'>
+                {{ 'our-promise.hero.title' | t }}
+            </h1>
+
+            <h2 class='h2 hero mb-4'>
+                {{ 'our-promise.hero.sub-title' | t }}
+            </h2>
+
+            <h3 class='h3 mb-6'>
+                {{ 'our-promise.hero.content' | t }}
+            </h3>
+
+            <a class='btn btn-lg btn-outline-secondary text-uppercase' href='/products/mattino'>
+                {{ 'general.button.order-now' | t }}
+            </a>
+        </div>
+    </div>
+</section>

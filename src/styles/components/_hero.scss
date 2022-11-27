@@ -1,9 +1,0 @@
-.hero--subheading {
-    @include media-breakpoint-up(lg) {
-        width: 864px;
-    }
-
-    @include media-breakpoint-up(md) {
-        max-width: 864px;
-    }
-}
