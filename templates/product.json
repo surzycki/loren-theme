@@ -23,7 +23,8 @@
     "841d1933-7363-4f0e-935d-244473f2af1c": {
       "type": "image-with-text",
       "settings": {
-        "image-text": "",
+        "image": "shopify:\/\/shop_images\/background-grinder.png",
+        "image-text": "Des graines de café biologiques et issues du commerce équitable et des meilleurs régions productrices de café d’Amérique latine.",
         "position": "center",
         "theme": "dark"
       }
