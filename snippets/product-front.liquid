@@ -1,0 +1,4 @@
+<img src="{{ product.featured_image | img_url: 'x190' }}"
+    srcset="{{ product.featured_image | img_url: 'x190', scale: 2 }} 2x"
+    alt="{{ product.featured_image.alt }}"
+    class='product-image'/>

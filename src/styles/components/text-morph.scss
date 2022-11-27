@@ -1,0 +1,18 @@
+#text-morph-container {
+    filter: url(#threshold) blur(0.1px);
+    display: grid;
+    grid-template-columns: 100% 1fr;
+    grid-template-rows: 18px 1fr;
+
+    .text1, .text2 {
+        grid-area: 1 / 1 / 2 / 2;
+        display: inline-block;
+        font-size: 1rem;
+        user-select: none;
+        text-align: center;
+    }
+
+    #filters {
+        display: none;
+    }
+}

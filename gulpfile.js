@@ -1,22 +1,12 @@
-const { series } = require('gulp');
+const gulp = require('gulp');
+const sass = require('gulp-sass')(require('sass'));
 
-const build = require('./workflow/tasks/build');
-const clean = require('./workflow/tasks/clean');
-const deploy = require('./workflow/tasks/deploy');
-const images = require('./workflow/tasks/images');
-const open = require('./workflow/tasks/open');
-const static = require('./workflow/tasks/static');
-const svg = require('./workflow/tasks/svg');
-const watcher = require('./workflow/tasks/watcher');
+gulp.task('sass', function() {
+  return gulp.src('styles/*.scss')
+             .pipe(sass())
+             .pipe(gulp.dest('assets'))
+});
 
-module.exports = {
-  build: series(clean, build, svg, images, static),
-  clean,
-  deploy: series(clean, build, svg, images, static, deploy),
-  images,
-  open,
-  start: series(clean, build, svg, images, static, deploy, open, watcher),
-  static,
-  svg,
-  watch: series(open, watcher),
-};
+gulp.task('watch', function() {
+  gulp.watch('styles/**/*.scss', gulp.series('sass'));
+})

@@ -118,5 +118,7 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
+mutagen.yml.lock
+
 # Mac
 .DS_Store

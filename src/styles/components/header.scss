@@ -1,0 +1,22 @@
+header {
+  @include media-breakpoint-up(md) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  #nav-mobile-bar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      .nav-item {
+          width: 4.5rem;
+      }
+  }
+
+  #nav-drawer {
+    visibility: hidden;
+  }
+}

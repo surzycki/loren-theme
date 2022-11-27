@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# bind to proper adapter
+shopify theme serve --host 0.0.0.0

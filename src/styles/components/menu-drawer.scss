@@ -1,0 +1,117 @@
+menu-drawer {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  position: absolute;
+  overflow: auto;
+
+  .icon-1, .icon-2, .icon-3 {
+      position: absolute;
+      left: 25%;
+      top: 50%;
+      width: 28px;
+      height: 3px;
+      background-color: $background-dark;
+      transition: all 400ms cubic-bezier(.84,.06,.52,1.8);
+  }
+
+  .icon-1 {
+    transform: translateY(-8px);
+    animation-delay: 100ms;
+  }
+
+  .icon-3 {
+    transform: translateY(8px);
+    animation-delay: 250ms;
+  }
+
+  .hamburger-icon {
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    top: 1.4rem;
+    left: 0;
+    z-index: 1000;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .icon-1.a {
+    transform: rotate(40deg);
+  }
+  .icon-3.b {
+    transform: rotate(-40deg);
+  }
+  .icon-2.c {
+    opacity: 0;
+  }
+
+  .clear {
+    clear: both;
+  }
+
+  nav {
+    background: $background-light;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    z-index: 10;
+    opacity: 0;
+
+    transition: all 600ms cubic-bezier(.62,.04,.3,1.56);
+    transition-delay: 100ms;
+    ul {
+      margin: 0;
+      position: absolute;
+      top: 22%;
+      left: 20%;
+      li {
+        white-space: nowrap;
+        list-style: none;
+        font-size: 1.5rem;
+        line-height: 2.4;
+      }
+    }
+  }
+
+  nav.show {
+    visibility: visible !important;
+    width: 75%;
+    opacity: 1;
+  }
+
+  .drawer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: $background-light;
+    height: 100%;
+    width: 0%;
+    transition: all 500ms cubic-bezier(.62,.04,.3,1.8);
+    transition-delay: 50ms;
+    z-index: 5;
+    opacity: 1;
+  }
+
+  .drawer.slide {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+
+// .content {
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   width: 100%;
+//   transform: translate(-50%, -50%);
+//   text-align: center;
+//   h1 {
+//     font-size: 70px;
+//     animation: shotup 600ms ease-in-out;
+//     animation-delay: 300ms;
+//   }
+// }

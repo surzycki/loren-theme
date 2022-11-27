@@ -1,0 +1,44 @@
+body::before {
+  content: "xs";
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999999;
+  background-color: #000;
+  color: #fff;
+  display: none;
+}
+
+@include media-breakpoint-up(sm) {
+  body::before {
+    content: "sm";
+  }
+}
+
+@include media-breakpoint-up(md) {
+  body::before {
+    content: "md";
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  body::before {
+    content: "lg";
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  body::before {
+    content: "xl";
+  }
+}
+
+@include media-breakpoint-up(xxl) {
+  body::before {
+    content: "xxl";
+  }
+}
+
+div.border {
+  border: solid 1px #9999ff;
+}

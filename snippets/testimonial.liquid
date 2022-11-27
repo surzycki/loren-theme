@@ -1,0 +1,16 @@
+<div class='d-flex' style='max-width: 500px'>
+    <div class='flex-shrink-0'>
+        <img src="{{ image | img_url: '64x64' }}"
+             srcset="{{ image | img_url: '64x64', scale: 2, format: 'pjpg' }} 2x,
+                  {{ image | img_url: '64x64', scale: 3, format: 'pjpg' }} 3x"
+             alt='Expert'>
+    </div>
+    <div class='flex-grow-1 ps-2 fs-5' style='margin-top: -4px;'>
+        <p style='margin-top: 4px; letter-spacing: 0px'>
+            <strong><i>{{ author }}</i></strong>
+        </p>
+
+        <small> {{ content  }} </small>
+    </div>
+</div>
+

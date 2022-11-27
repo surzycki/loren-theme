@@ -1,0 +1,39 @@
+<div class="container text-center text-md-end pt-4 pb-7 pt-md-5 pb-md-14 px-md-4" >
+    <div class="col align-self-end mb-3">
+        <h3 class="h3 pe-1">
+            {{ "cart.total" | t }} {{ "cart.ttc" | t }}
+        </h3>
+
+        <h2 class="h2">
+            <span>€</span>
+            <price-display class="d-inline-block lg" data-price={{ cart.total_price }} data-key="total">
+            </price-display>
+        </h2>
+    </div>
+
+    <p class="mb-md-1">
+        {{ "cart.delivery.information" | t  }}
+    </p>
+    <form action="{{ routes.cart_url }}" method="post">
+        <button type="submit" id="checkout" name="checkout" {% if cart == empty %} disabled{% endif %} class="btn btn-cta btn-lg px-8">
+            {{ 'cart.general.checkout' | t }}
+        </button>
+    </form>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Cart Footer",
+    "tag": "section",
+    "class": "main-cart-footer",
+    "settings":[
+    ],
+    "presets": [
+      {
+        "name": "Cart Footer",
+        "category": "Cart"
+      }
+    ]
+  }
+{% endschema %}

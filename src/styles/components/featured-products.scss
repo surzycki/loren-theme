@@ -1,0 +1,45 @@
+#featured-products {
+   .h1 {
+       font-size: 2.125rem;
+       line-height: 3.125rem;
+
+       @include media-breakpoint-up(md) {
+           font-size: 3rem;
+           line-height: 3.625rem;
+       }
+   }
+
+   p {
+       line-height: 1.25rem;
+       @include media-breakpoint-up(md) {
+           font-size: 0.875rem;
+           height: 40px;
+       }
+
+       @include media-breakpoint-up(xl) {
+           font-size: 1.125rem;
+           height: 40px;
+       }
+   }
+
+   .accent {
+       background-color: $black;
+       color: $white;
+       white-space: nowrap;
+       padding: 0.4rem 0.4rem;
+
+       @include media-breakpoint-up(md) {
+           padding: 0.3rem 1rem;
+       }
+   }
+
+   .product-image {
+       @include media-breakpoint-up(md) {
+           width: 250px;
+       }
+
+       @include media-breakpoint-up(xl) {
+           width: 344px;
+       }
+   }
+}

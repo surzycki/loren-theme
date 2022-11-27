@@ -1,0 +1,82 @@
+<div class="container pt-3 pt-md-10 pt-xl-14 px-md-4">
+    <h1 class="h1 mb-3 mb-md-4 text-center text-md-start">
+        {{ "cart.title" | t }}
+    </h1>
+
+    <div class="cart-item-header d-flex justify-content-between">
+        <div class="col-md-7">{{ "cart.product" | t }}</div>
+        <div class="col-md-2 d-none d-md-block">{{ "cart.quantity" | t }}</div>
+        <div class="col-md-3 text-end">{{ "cart.total" | t  }}</div>
+    </div>
+    <hr class="mt-1 mb-1"/>
+
+    {%- for item in cart.items -%}
+        <div class="d-flex justify-content-between py-3 py-md-4">
+            <div class="cart-item-media col-9 col-md-7 text-start">
+                <div class="d-inline-block align-top">
+                    <a href="{{ item.url }}">
+                        <img src={{ item.image | image_url: width: 300  }}
+                                 alt="{{ item.image.alt | escape }}"
+                             loading="lazy">
+                    </a>
+                </div>
+
+                <div class="cart-item-details d-inline-block align-top ps-2 ps-md-4">
+                    <a href={{ item.url }}>
+                        {{ item.product.title | escape }}
+                    </a>
+
+                    <div class="cart-item-price">
+                        {{ item.final_price | money }}
+                    </div>
+
+                    <small class="cart-item-size">
+                        {{ "product.capsules-per-box" | t }}
+                    </small>
+
+                    <div id="mobile-quantity-controls-{{ item.index | plus: 1 }}" class="cart-item-quantity d-md-none pt-1">
+                        <quantity-input class="d-inline-block" data-quantity="{{ item.quantity }}" data-key="{{ item.key }}">
+                        </quantity-input>
+
+                        <a href="{{ item.url_to_remove }}" class="btn-trash ps-1 d-inline-block">
+                            {% render 'icon-trash' %}
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="desktop-quantity-controls-{{ item.index | plus: 1 }}" class="cart-item-quantity col-md-3 d-none d-md-block">
+                <quantity-input class="d-inline-block" data-quantity="{{ item.quantity }}" data-key="{{ item.key }}">
+                </quantity-input>
+
+                <a href="{{ item.url_to_remove}}" class="btn-trash ps-2 d-inline-block">
+                    {% render 'icon-trash' %}
+                </a>
+            </div>
+
+            <div class="cart-item-total col-3 col-md-2 text-end pt-2">
+                <span>€</span>
+                <price-display class="d-inline-block" data-price={{ item.final_line_price }} data-key="{{ item.key }}">
+                </price-display>
+            </div>
+        </div>
+        <hr/>
+    {%- endfor -%}
+</div>
+
+{% schema %}
+  {
+    "name": "Cart Items",
+    "tag": "section",
+    "class": "main-cart-items",
+    "settings":[
+    ],
+    "presets": [
+      {
+        "name": "Cart Items",
+        "category": "Cart"
+      }
+    ]
+  }
+{% endschema %}

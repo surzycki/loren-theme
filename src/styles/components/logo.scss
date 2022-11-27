@@ -1,0 +1,27 @@
+.logo{
+    svg {
+        display: inline-block;
+        width: 76px;
+        height: 56px;
+
+        @include media-breakpoint-up(md) {
+            width: 86px;
+            height: 64px;
+        }
+
+        @include media-breakpoint-up(lg) {
+            width: 108px;
+            height: 80px;
+        }
+    }
+
+    &.logo-md svg {
+        width: 86px !important;
+        height: 64px !important;
+    }
+
+    &.logo-lg svg {
+        width: 108px !important;
+        height: 80px !important;
+    }
+}

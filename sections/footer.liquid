@@ -1,0 +1,68 @@
+<div class='bg-black text-center'>
+    <div class='container text-light pt-2 pt-md-6'>
+        <div class='row mb-7'>
+            <div class='col-12 col-md-4 order-md-2 mb-6'>
+                <p class='small mb-3'>
+                    {{ 'general.footer.what-we-do' | t }}
+                </p>
+                <div>
+                    <a href='https://www.facebook.com/piu.cafe.italien' target='_blank'>
+                        <span class='px-1'>
+                           {% render 'icon-facebook' %}
+                        </span>
+                    </a>
+                    <a href='https://www.instagram.com/piu.cafe/' target='_blank'>
+                        <span class='px-1'>
+                            {% render 'icon-instagram' %}
+                        </span>
+                    </a>
+                </div>
+            </div>
+
+            <div class='col-12 col-md-4 order-md-3 pt-md-4'>
+                <ul class='list-unstyled fs-5'>
+                    {% for link in linklists.main-menu.links %}
+                        {% assign key = link.title | handleize %}
+                        <li class='mb-2'>
+                            <a href='{{ link.url }}' class='small'>
+                                {{ 'general.navigation.' | append: key | t }}
+                            </a>
+                        </li>
+                    {%  endfor %}
+                </ul>
+            </div>
+
+            <div class='col-12 col-md-4 order-md-1 pt-md-4'>
+                <ul class='list-unstyled'>
+                    {% for link in linklists.footer.links %}
+                        {% assign key = link.title | handleize %}
+                        <li class='mb-2'>
+                            <a href='{{ link.url }}' class='small'>
+                                {{ 'general.footer.' | append: key | t }}
+                            </a>
+                        </li>
+                    {%  endfor %}
+                </ul>
+            </div>
+        </div>
+
+        <div class='row'>
+            <div class='col'>
+                <div class='small mb-1'>
+                    Copyright &copy; {{ 'now' | date: '%Y' }} CFC SAS.
+                </div>
+                <div class='x-small mb-1'>
+                    Made with ♡ by Più
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% schema %}
+  {
+    "name": "Footer",
+    "tag": "footer",
+    "class": "mt-auto",
+    "settings": []
+}
+{% endschema %}

@@ -1,0 +1,36 @@
+.advantages {
+  height: 776px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+
+  @include media-breakpoint-up(md) {
+    height: 520px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    height: 776px;
+  }
+
+  svg polygon {
+    fill: $white;
+  }
+
+  .h2 {
+    @include media-breakpoint-up(md) {
+      font-size: 1.25rem;
+      line-height: 1.5rem;
+    }
+
+    @include media-breakpoint-up(lg) {
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }
+
+    @include media-breakpoint-up(xl) {
+      font-size: 1.875rem;
+      line-height: 2.5rem;
+    }
+  }
+}

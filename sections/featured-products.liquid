@@ -1,0 +1,46 @@
+<div id="featured-products" class='container pt-6 pt-md-9 pt-xl-10 pb-10'>
+  <h1 class='h1 mb-8 mb-md-8 mb-xl-9 text-center'>
+    <span>{{ 'general.featured-products.title.every-hour' | t }}</span>
+    <br/>
+    <span class="accent">{{ 'general.featured-products.title.intensity' | t }}</span>
+  </h1>
+
+  <div class='row'>
+    {% for product in collections[section.settings.collection].products  %}
+      <div class='col mb-7 text-center'>
+        <a class='d-block' href={{ product.url }}>
+          {% render 'product-front', product: product %}
+
+          <p class='mt-n1 px-3 px-sm-18 px-md-2 px-lg-3 mb-2 mb-xl-3'>
+            {{ product.metafields.descriptions.brief.value }}
+          </p>
+        </a>
+
+        <a href={{ product.url }} class="btn btn-outline-secondary btn-sm">
+          {{ 'general.button.order' | t }}
+        </a>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Featured Products",
+    "tag": "section",
+    "settings":[
+      {
+        "type": "collection",
+        "id": "collection",
+        "label": "Collection"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Featured Products",
+        "category": "Main"
+      }
+    ]
+  }
+{% endschema %}

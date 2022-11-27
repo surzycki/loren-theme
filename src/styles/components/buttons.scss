@@ -1,0 +1,60 @@
+.btn-primary {
+    color: $white !important;
+    line-height: 1.25rem !important;
+
+    &:hover {
+        background-color: #ce3613;
+    }
+}
+
+.btn-secondary, .btn-outline-secondary {
+    &.btn-lg {
+        --bs-btn-padding-y: 1.2rem;
+        width: 342px;
+    }
+}
+
+.btn-cta {
+    @extend .btn-primary;
+    --bs-btn-padding-x: 3.2rem;
+    --bs-btn-font-size: 1.25rem;
+    --bs-btn-line-height: 1.25rem;
+
+    &.btn-lg {
+        --bs-btn-padding-y: 1.375rem;
+        height: 64px;
+
+        @include media-breakpoint-up(md) {
+            height: 56px;
+            --bs-btn-padding-y: 1.125rem;
+        }
+
+        @include media-breakpoint-up(xl) {
+            --bs-btn-padding-y: 1.375rem;
+            height: 64px;
+        }
+    }
+}
+
+.btn-quantity {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    width: 3rem;
+    height: 3rem;
+    padding-top: 0.625rem;
+    text-align: center;
+    cursor: pointer;
+
+    &.active {
+        background-color: $black;
+        color: $white;
+        animation: fadeIn 0.5s;
+    }
+
+    &.inactive {
+        background-color: transparent;
+        color: $black;
+        animation: fadeOut 1.5s;
+    }
+}
+

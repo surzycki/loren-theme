@@ -1,0 +1,79 @@
+.image-with-text-background {
+    height: 448px;
+    background-color: $white;
+    background-repeat: no-repeat;
+    background-size: 688px;
+    background-position: 50% 50%;
+
+    &.left, &.right {
+        background-size: 1200px;
+    }
+
+    @include media-breakpoint-up(md) {
+        height: 460px;
+        max-width: 960px;
+        background-size: 960px;
+
+        &.left, &.right {
+            background-size: 1600px;
+        }
+
+        &.left {
+            background-position: 4% 50%;
+        }
+
+        &.right {
+            background-position: calc(100% + 48px) 50%;
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        height: 576px;
+        max-width: 1200px;
+        background-size: 1200px;
+
+        &.left, &.right {
+            background-size: 2200px;
+        }
+
+        &.left {
+            background-position: 10% 50%;
+        }
+
+        &.right {
+            background-position: 80% 50%;
+        }
+    }
+}
+
+#image-with-text-mobile {
+   .h2 {
+       font-size: 1.25rem;
+       line-height: 1.75rem;
+   }
+}
+
+#image-with-text-desktop {
+
+     .left, .right {
+         @include media-breakpoint-up(md) {
+             .h2 {
+                 width: 528px;
+             }
+         }
+
+         @include media-breakpoint-up(xl) {
+             .h2 {
+                 width: 656px;
+             }
+         }
+     }
+
+    .h2 {
+        font-size: 1.875rem;
+        line-height: 2.5rem;
+        color: $white;
+        width: 656px;
+        text-shadow: 1px 1px 1px rgba(0,0,0,0.50);
+    }
+}

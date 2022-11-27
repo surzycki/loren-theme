@@ -1,0 +1,73 @@
+<style>
+  .image-banner-main-mobile--{{ section.id  }} {
+     background-image: url({{section.settings.image-mobile | img_url: 'master'}})
+  }
+
+  .image-banner-main--{{ section.id  }} {
+     background-image: url({{section.settings.image-desktop | img_url: 'master'}})
+  }
+</style>
+
+<div id="image-banner-main-mobile" class="d-md-none image-banner-main image-banner-main-mobile--{{ section.id }}">
+    <div class='pt-12 text-center'>
+      <h1 class='h1 mb-2'>
+        {{ 'general.hero.title' | t }}
+      </h1>
+
+      <h2 class='h2 mb-22 px-sm-4'>
+        {{ 'general.hero.sub-title' | t }}
+      </h2>
+
+      <a href='/products/mattino' class='mt-11 btn btn-cta btn-lg text-uppercase'>
+        {{ 'general.button.order-now' | t }}
+       </a>
+    </div>
+</div>
+
+<div id="image-banner-main-desktop" class="d-none d-md-block image-banner-main image-banner-main--{{ section.id }}">
+    <div class='container ps-md-3'>
+        <div class='pt-md-20 pt-xl-24'>
+            <h1 class='h1 mb-md-3 mb-xl-8'>
+                {{ 'general.hero.title' | t }}
+            </h1>
+
+            <h2 class='h2 mb-md-6 mb-xl-7'>
+                {{ 'general.hero.sub-title' | t }}
+            </h2>
+
+            <a href='/products/mattino' class='btn btn-cta btn-lg text-uppercase'>
+                {{ 'general.button.order-now' | t }}
+            </a>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+  {
+    "name": "t:sections.image-banner-main.name",
+    "tag": "section",
+    "class": "section",
+    "settings": [
+      {
+        "type": "image_picker",
+        "label": "t:sections.image-banner-main.settings.image.label",
+        "id": "image-desktop",
+        "label": "Image for Desktops",
+        "info": "Dimensions: 2880x1792"
+      },
+      {
+        "type": "image_picker",
+        "label": "t:sections.image-banner-main.settings.image.label",
+        "id": "image-mobile",
+        "label": "Image for Mobile",
+        "info": "Dimensions: 2800x1600"
+      }
+    ],
+    "presets": [
+      {
+        "name": "t:sections.image-banner-main.name",
+        "category": "Main"
+      }
+  ]
+}
+{% endschema %}

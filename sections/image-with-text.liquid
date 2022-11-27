@@ -1,0 +1,105 @@
+{%- liquid
+  if section.settings.position == "left"
+    assign positionClass = "position-absolute top-50 start-0 translate-middle-y ps-md-4"
+  elsif section.settings.position == "center"
+    assign positionClass = "position-absolute top-50 start-50 translate-middle text-center"
+  elsif section.settings.position == "right"
+    assign positionClass = "position-absolute top-50 end-0 translate-middle-y text-end pe-md-4"
+  endif
+
+  if section.settings.theme == "dark"
+    assign themeClass = "text-light"
+  else
+    assign themeClass = "text-dark text-no-shadow"
+  endif
+%}
+
+<style>
+  .image-with-text-background--{{ section.id  }} {
+      background-image: url({{ section.settings.image | img_url: 'master'}});
+    }
+  }
+</style>
+
+
+<div id="image-with-text-mobile" class="d-md-none">
+    <div class="image-with-text-background image-with-text-background--{{section.id}} {{ section.settings.position }}">
+    </div>
+
+    <div class="text-center pt-2 px-2 mb-6">
+        <h2 class="h2">
+           {{ section.settings.image-text }}
+        </h2>
+    </div>
+</div>
+
+<div id="image-with-text-desktop" class="d-none d-md-block pb-4 pb-xl-11">
+    <div class="image-with-text-background image-with-text-background--{{section.id}} position-relative mx-auto {{ section.settings.position  }}">
+        <h2 class="h2 {{ positionClass }} {{ themeClass }} text-xl-center">
+           {{ section.settings.image-text }}
+        </h2>
+    </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Image with text",
+    "tag": "section",
+    "class": "section",
+    "settings": [
+      {
+        "type": "image_picker",
+        "label": "Image",
+        "id": "image",
+        "info": "Minimum Dimensions: 1200x576"
+      },
+      {
+        "type": "text",
+        "label": "Text for image",
+        "id": "image-text"
+      },
+      {
+        "type": "select",
+        "id": "position",
+        "default": "center",
+        "label": "The position of the text on the image",
+        "options": [
+            {
+                "value": "left",
+                "label": "position text to the left"
+            },
+            {
+                "value": "center",
+                "label": "position text in the center"
+            },
+            {
+                "value": "right",
+                "label": "position text to the right"
+            }
+        ]
+      },
+      {
+        "type": "select",
+        "id": "theme",
+        "label": "The color theme of the image",
+        "default": "dark",
+        "options": [
+            {
+                "value": "dark",
+                "label": "The image is dark"
+            },
+            {
+                "value": "light",
+                "label": "The image is light"
+            }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Image with text",
+        "category": "Pages"
+      }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,11 @@
+.main-cart-header {
+  .btn-close {
+    position: absolute;
+    right: 2rem;
+    @include media-breakpoint-up(md) {
+      background-size: 32px;
+      width: 32px;
+      height: 32px;
+    }
+  }
+}

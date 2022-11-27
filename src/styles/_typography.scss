@@ -1,52 +1,43 @@
 .h1 {
   font-family: $secondary-font-family;
-  font-size: 72px;
-  line-height: 80px;
+  font-size: 2.5rem;
+  line-height: 2.625rem;
   font-weight: 700;
-  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 
-  @include media-breakpoint-up(sm) {
-    font-size: 90px;
-    line-height: 96px;
+  &.light {
+    font-weight: 400;
+    letter-spacing: 1px;
   }
 }
 
 .h2 {
   font-family: $primary-font-family;
-  font-size: 20px;
-  line-height: 32px;
+  font-size: 1.5rem;
+  line-height: 2rem;
   font-weight: 400;
-
-  &.hero {
-    font-size: 30px;
-    line-height: 40px;
-  }
-
-  &.hero--subheading {
-    font-size: 24px;
-    line-height: 32px;
-
-    @include media-breakpoint-up(md) {
-      font-size: 30px;
-      line-height: 40px;
-    }
-  }
 }
 
 .h3 {
-  &.hero--list {
-    font-size: 24px;
-    line-height: 32px;
-
-    @include media-breakpoint-up(md) {
-      font-size: 30px;
-      line-height: 40px;
-    }
-  }
+  font-size: 1.25rem;
+  line-height: 2rem;
 }
 
 p {
   margin: 0;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.small {
+  font-size: 0.875rem !important;
+  line-height: 1.5rem !important;
+}
+
+.x-small {
+  font-size: 0.75rem !important;
+  line-height: 1.5rem !important;
 }
 
 .link-hover {
@@ -63,11 +54,12 @@ p {
     transition: all 0.1s ease-in-out;
     transition-duration: 0.2s;
     opacity: 0;
-    background-color: $accent1;
+    background-color: $black;
     left: 0;
   }
 
-  &:hover {
+  &:hover,
+  &.activate-hover {
     text-decoration: none !important;
     cursor: pointer;
     &:before,

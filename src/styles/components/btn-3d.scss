@@ -1,0 +1,66 @@
+// cube rotation effect
+.btn-3d {
+  padding: 0 0;
+  perspective: 800px;
+  height: 64px;
+  width: 100%;
+  cursor: pointer;
+
+  @include media-breakpoint-only(md) {
+    height: 48px;
+  }
+
+  .cube-effect {
+    height: 64px;
+    width: 100%;
+    transform-origin: 50% 50%;
+    transform-style: preserve-3d;
+    transition: 0.4s all;
+    position: relative;
+
+    @include media-breakpoint-only(md) {
+      height: 48px;
+    }
+
+    &.active {
+      transform: rotateX(-90deg);
+    }
+  }
+
+  .cube-front {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding-top: 1.5rem;
+    background: $primary;
+    font-size: 1.25rem;
+    text-align: center;
+    transform: rotateX(0deg) translate3d(0px, 0px, 30px);
+    color: $white;
+    font-weight: 700;
+
+    @include media-breakpoint-only(md) {
+      font-size: 1rem;
+      padding-top: 1rem;
+      transform: rotateX(0deg) translate3d(0px, 0px, 24px);
+    }
+  }
+
+  .cube-top {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding-top: 1.5rem;
+    transform: rotateX(90deg) translate3d(0px, 0px, 32px);
+    background: $accent1;
+    text-align: center;
+    color: $white;
+    font-size: 1.25rem;
+
+    @include media-breakpoint-only(md) {
+      font-size: 1rem;
+      padding-top: 1rem;
+      transform: rotateX(90deg) translate3d(0px, 0px, 24px);
+    }
+  }
+}

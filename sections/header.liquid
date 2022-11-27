@@ -1,0 +1,109 @@
+{%- liquid
+  assign ourCoffeeLink = linklists.main-menu.links | where: "title", "Our Coffee" | first
+  assign ourPromiseLink = linklists.main-menu.links | where: "title", "Our Promise" | first
+  assign contactUsLink = linklists.main-menu.links | where: "title", "Contact Us" | first
+-%}
+
+<div class="d-md-none" id="nav-mobile">
+    <nav id="nav-mobile-bar" class="nav justify-content-between pt-3" >
+        <div class="nav-item"></div>
+        <div class="nav-item">
+            {% render 'logo' %}
+        </div>
+
+        <div class="nav-item pt-2 pe-2 text-end">
+            <a href='{{ routes.cart_url }}' id='icon-cart'></a>
+        </div>
+    </nav>
+
+    <menu-drawer class="d-block pe-none">
+        <div class="hamburger-icon pe-auto" id="icon">
+            <div class="icon-1" id="a"></div>
+            <div class="icon-2" id="b"></div>
+            <div class="icon-3" id="c"></div>
+            <div class="clear"></div>
+        </div>
+
+        <nav id="nav-drawer" class="pe-auto">
+            <ul class='text-uppercase'>
+                <li>
+                    <a href='{{ routes.root_url }}' class='{% if page.url == blank %} link-hover current {% endif %}'>
+                        {{ 'general.navigation.home' | t }}
+                    </a>
+                </li>
+                <li>
+                    <a href='{{ ourCoffeeLink.url }}' class='{% if ourCoffeeLink.current %} link-hover current {% endif %}'>
+                        {{ 'general.navigation.our-coffee' | t }}
+                    </a>
+                </li>
+                <li>
+                    <a href='{{ ourPromiseLink.url }}' class='{% if ourPromiseLink.current %} link-hover current {% endif %}'>
+                        {{ 'general.navigation.our-promise' | t }}
+                    </a>
+                </li>
+                <li>
+                    <a href='{{ contactUsLink.url }}' class='{% if contactUsLink.current %} link-hover current {% endif %}'>
+                        {{ 'general.navigation.contact-us' | t }}
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="drawer" id="drawer"></div>
+    </menu-drawer>
+</div>
+
+<div id="nav-desktop" class='container d-none d-md-block'>
+    <nav class='d-md-flex flex-wrap justify-content-center pt-6 pb-4 pt-md-4 pt-xl-6'>
+        <div class='d-flex align-items-center me-md-auto'>
+            {% render 'logo' %}
+        </div>
+        <ul class='nav d-flex align-items-center text-uppercase'>
+            <li class='px-md-3 px-lg-5'>
+                <a href='{{ ourCoffeeLink.url }}' class='link-hover {% if ourCoffeeLink.current %} current {% endif %}'>
+                    {{ 'general.navigation.our-coffee' | t }}
+                </a>
+            </li>
+            <li class='px-md-3 px-lg-5'>
+                <a href='{{ ourPromiseLink.url }}' class='link-hover {% if ourPromiseLink.current %} current {% endif %}'>
+                    {{ 'general.navigation.our-promise' | t }}
+                </a>
+            </li>
+            <li class='px-md-3 px-lg-5'>
+                <a href='{{ contactUsLink.url }}' class='link-hover {% if contactUsLink.current %} current {% endif %}'>
+                    {{ 'general.navigation.contact-us' | t }}
+                </a>
+            </li>
+            <li class='ps-md-3 ps-lg-5 pe-md-2 pe-lg-3'>
+                <a href='{{ routes.cart_url }}' id='menu-item-cart' class='link-hover' data-label="{{ 'general.navigation.shopping-cart' | t  }}">
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+<script>
+ var icon = document.getElementById("icon");
+ var icon1 = document.getElementById("a");
+ var icon2 = document.getElementById("b");
+ var icon3 = document.getElementById("c");
+ var drawer = document.getElementById('drawer');
+ var navDrawer = document.getElementById("nav-drawer");
+ var body = document.getElementsByTagName("body")[0];
+
+ icon.addEventListener('click', function() {
+     icon1.classList.toggle('a');
+     icon2.classList.toggle('c');
+     icon3.classList.toggle('b');
+     navDrawer.classList.toggle('show');
+     drawer.classList.toggle('slide');
+     body.classList.toggle('overflow-hidden')
+});
+</script>
+
+{% schema %}
+  {
+    "name": "Header",
+    "tag": "header",
+    "settings": []
+}
+{% endschema %}

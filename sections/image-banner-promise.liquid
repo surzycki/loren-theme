@@ -1,0 +1,86 @@
+<style>
+  .image-banner-promise-mobile--{{ section.id  }} {
+     background-image: url({{section.settings.image-mobile | img_url: 'master'}})
+  }
+
+ .image-banner-promise-desktop--{{ section.id  }} {
+     background-image: url({{section.settings.image-desktop | img_url: 'master'}})
+  }
+</style>
+
+<div id="image-banner-promise-mobile" class="d-md-none text-center">
+    <div class="image-banner-promise image-banner-promise-mobile--{{ section.id }}">
+        <div class='pt-13 pt-sm-14 text-center'>
+           <h1 class='h1'>
+             {{ 'our-promise.hero.title' | t }}
+           </h1>
+           <h2 class="h2 px-1 px-sm-4 mb-1">
+             {{ 'our-promise.hero.sub-title' | t }}
+           </h2>
+           <p class="px-1 px-sm-3">
+             {{ 'our-promise.hero.content' | t }}
+           </p>
+        </div>
+    </div>
+
+    <div class="pt-3 pb-4">
+      <a href='/products/mattino' class='btn btn-cta btn-lg text-uppercase'>
+        {{ 'general.button.order-now' | t }}
+       </a>
+    </div>
+</div>
+
+
+<div id="image-banner-promise-desktop" class="d-none d-md-block image-banner-promise image-banner-promise-desktop--{{ section.id }} mb-md-8 mb-xl-10">
+  <div class="container pt-10 pt-xl-14 ps-3">
+    <div class="row justify-content-start pt-12">
+      <div class="col-md-8">
+          <h1 class='h1 mb-2'>
+            {{ 'our-promise.hero.title' | t }}
+          </h1>
+
+          <h2 class="h2 mb-3">
+            {{ 'our-promise.hero.sub-title' | t }}
+          </h2>
+
+          <p class="mb-6">
+            {{ 'our-promise.hero.content' | t }}
+          </p>
+
+          <a href='/products/mattino' class='btn btn-cta btn-lg text-uppercase'>
+              {{ 'general.button.order-now' | t }}
+          </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "t:sections.image-banner-promise.name",
+    "tag": "section",
+    "class": "section",
+    "settings": [
+      {
+        "type": "image_picker",
+        "label": "t:sections.image-banner-promise.settings.image.label",
+        "id": "image-desktop",
+        "label": "Image for Desktops",
+        "info": "Dimensions: 2880x1792"
+      },
+      {
+        "type": "image_picker",
+        "label": "t:sections.image-banner-promise.settings.image.label",
+        "id": "image-mobile",
+        "label": "Image for Mobile",
+        "info": "Dimensions: 2880x1792"
+      }
+    ],
+    "presets": [
+      {
+        "name": "t:sections.image-banner-promise.name",
+        "category": "Pages"
+      }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,36 @@
+{
+  "sections": {
+    "image-banner-product": {
+      "name": "Product Image Banner",
+      "settings": {
+        "image": {
+          "label": "Product Imagee"
+        }
+      }
+    },
+    "image-banner-main": {
+      "name": "Main Image Banner",
+      "settings": {
+        "image": {
+          "label": "Main image"
+        }
+      }
+    },
+    "image-banner-promise": {
+      "name": "Promise Image Banner",
+      "settings": {
+        "image": {
+          "label": "Promise image"
+        }
+      }
+    },
+    "image-banner-coffee": {
+      "name": "Coffee Image Banner",
+      "settings": {
+        "image": {
+          "label": "Coffee image"
+        }
+      }
+    }
+  }
+}

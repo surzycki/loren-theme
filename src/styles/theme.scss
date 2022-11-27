@@ -1,32 +1,56 @@
 @import "./fonts";
 @import "./variables";
-// When Sass is precompiled by its own CLI, it processes @imports by itself, and sometimes thus doesn’t understand ~ notation.
-// We will call node_modules directly.
 @import "node_modules/bootstrap/scss/bootstrap";
-@import "./typography";
 
-@import "./components/navigation";
-@import "./components/hero";
+@import "./typography";
+@import "./effects";
+
+@import "./components/header";
+@import "./components/menu-drawer";
+@import "./components/image-banner-main";
+@import "./components/image-banner-product";
+@import "./components/image-banner-coffee";
+@import "./components/image-banner-promise";
+@import "./components/logo";
 @import "./components/buttons";
+@import "./components/btn-3d";
+@import "./components/featured-products";
+@import "./components/advantages";
+@import "./components/recall";
 @import "./components/footer";
-@import "./components/product_card";
-@import "./components/tag_line";
+@import "./components/add-to-cart";
+@import "./components/image-with-text";
+@import "./components/product-expose";
+@import "./components/main-cart-items";
+@import "./components/main-cart-footer";
+@import "./components/main-cart-header";
+@import "./components/animated-numbers";
+@import "./components/price-display";
+@import "./components/text-morph";
+@import "./components/form-contact";
+
+@import "./components/policy";
+
+@import "./debug.scss";
 
 html {
+  height: 100%;
   font-size: 16px;
 }
 
 body {
+  height: 100%;
   font-family: $primary-font-family;
-  line-height: 24px;
+  line-height: 1rem;
   margin: 0;
-  passing: 0;
+  padding: 0;
 }
 
 hr {
   margin: 0;
   opacity: 1;
-  background-color: #dedede;
+  background-color: $light-grey;
+  color: $light-grey;
 }
 
 ul,
@@ -44,9 +68,9 @@ dl {
 }
 
 .text-accent1 {
-  color: $accent1;
+  color: $accent1 !important;
 }
 
-// [class*=col-] {
-//     border: 1px solid #cccccc;
-// }
+.text-no-shadow {
+  text-shadow: none !important;
+}

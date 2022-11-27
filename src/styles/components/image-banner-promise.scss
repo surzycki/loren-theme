@@ -1,0 +1,91 @@
+.image-banner-promise {
+  background-color: #dcdcdc;
+  background-repeat: no-repeat;
+
+  height: 712px;
+  background-size: 550px;
+  background-position: 50% 100%;
+
+  @include media-breakpoint-up(sm) {
+    background-size: 755px;
+    background-position: 50% 95%;
+  }
+
+  @include media-breakpoint-up(md) {
+    height: 680px;
+    background-size: 1700px;
+    background-position: 11% 100%;
+  }
+
+  @include media-breakpoint-up(lg) {
+    background-size: 1760px;
+    background-position: -1% 100%;
+  }
+
+  @include media-breakpoint-up(xl) {
+    height: 896px;
+    background-size: 2200px;
+    background-position: 5% 100%;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    height: 896px;
+    background-size: 2420px;
+    background-position: 2% 100%;
+  }
+
+  .h1 {
+    font-family: $secondary-font-family;
+    text-transform: uppercase;
+    font-size: 2.125rem;
+    line-height: 2.652rem;
+
+    @include media-breakpoint-up(md) {
+      font-size: 3rem;
+      line-height: 3rem;
+      letter-spacing: 2px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      font-size: 3.5rem;
+      line-height: 3.5rem;
+      letter-spacing: 2px;
+    }
+  }
+
+  .h2 {
+    font-size: 1.5rem;
+    line-height: 1.875rem;
+
+    @include media-breakpoint-up(md) {
+      font-size: 1.75rem;
+      line-height: 2.375rem;
+    }
+
+    @include media-breakpoint-up(xl) {
+      font-size: 1.875rem;
+      line-height: 2.5rem;
+    }
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+
+    @include media-breakpoint-up(md) {
+      font-size: 1.25rem;
+      line-height: 2rem;
+      width: 580px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      width: 680px;
+    }
+  }
+
+  .btn-cta {
+    @include media-breakpoint-up(xl) {
+      width: 430px;
+    }
+  }
+}
