@@ -8,14 +8,12 @@
     "16622194792fcfcc97": {
       "type": "image-banner-promise",
       "settings": {
-        "image-desktop": "shopify:\/\/shop_images\/background-promise-loren-desktop.png",
-        "image-mobile": "shopify:\/\/shop_images\/background-promise-loren-mobile.png"
       }
     },
     "166222996799561727": {
       "type": "image-with-text",
       "settings": {
-        "image": "shopify:\/\/shop_images\/background-coffee-beans.png",
+        "image": "shopify:\/\/shop_images\/background-coffee-beans_d82244e8-233e-4219-b5b7-9cbc75f5b66a.png",
         "image-text": "Des graines de café biologiques et issues du commerce équitable et des meilleurs régions productrices de café d’Amérique latine.",
         "position": "center",
         "theme": "dark"
