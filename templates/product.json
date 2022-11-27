@@ -1,5 +1,10 @@
 {
   "sections": {
+    "7c14962c-2520-4d57-83ce-8a09182f4a4c": {
+      "type": "image-banner-product",
+      "settings": {
+      }
+    },
     "16621323142f946a1a": {
       "type": "image-with-text",
       "settings": {
@@ -7,9 +12,17 @@
         "position": "center",
         "theme": "dark"
       }
+    },
+    "87447e43-69aa-4f5c-b50f-2d85181e6e2d": {
+      "type": "featured-products",
+      "settings": {
+        "collection": ""
+      }
     }
   },
   "order": [
-    "16621323142f946a1a"
+    "7c14962c-2520-4d57-83ce-8a09182f4a4c",
+    "16621323142f946a1a",
+    "87447e43-69aa-4f5c-b50f-2d85181e6e2d"
   ]
 }
