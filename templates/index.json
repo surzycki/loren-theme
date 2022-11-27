@@ -13,6 +13,12 @@
         "collection": "featured-products"
       }
     },
+    "0ce37472-5409-4e2a-ba44-0b53d8266953": {
+      "type": "advantages",
+      "settings": {
+        "image-desktop": "shopify:\/\/shop_images\/background-coffee.png"
+      }
+    },
     "16614558663fb4a2dc": {
       "type": "recall",
       "settings": {
@@ -22,6 +28,7 @@
   "order": [
     "4dffe98f-69d1-4cb7-b572-3ea3f52799aa",
     "fdfec342-e2e7-4363-803a-4afaf004efee",
+    "0ce37472-5409-4e2a-ba44-0b53d8266953",
     "16614558663fb4a2dc"
   ]
 }
