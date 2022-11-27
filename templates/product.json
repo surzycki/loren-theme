@@ -5,6 +5,12 @@
       "settings": {
       }
     },
+    "87447e43-69aa-4f5c-b50f-2d85181e6e2d": {
+      "type": "featured-products",
+      "settings": {
+        "collection": "featured-products"
+      }
+    },
     "16621323142f946a1a": {
       "type": "image-with-text",
       "settings": {
@@ -13,16 +19,43 @@
         "theme": "dark"
       }
     },
-    "87447e43-69aa-4f5c-b50f-2d85181e6e2d": {
-      "type": "featured-products",
+    "841d1933-7363-4f0e-935d-244473f2af1c": {
+      "type": "image-with-text",
       "settings": {
-        "collection": ""
+        "image-text": "",
+        "position": "center",
+        "theme": "dark"
+      }
+    },
+    "7548c56f-5099-4d65-97bd-5d37077a1a23": {
+      "type": "image-with-text",
+      "settings": {
+        "image-text": "",
+        "position": "center",
+        "theme": "dark"
+      }
+    },
+    "762b2159-ac70-4911-8c6b-22956c17d35f": {
+      "type": "image-with-text",
+      "settings": {
+        "image-text": "",
+        "position": "center",
+        "theme": "dark"
+      }
+    },
+    "be4191c7-25e9-436a-ae1a-fa1225893aed": {
+      "type": "recall",
+      "settings": {
       }
     }
   },
   "order": [
     "7c14962c-2520-4d57-83ce-8a09182f4a4c",
+    "87447e43-69aa-4f5c-b50f-2d85181e6e2d",
     "16621323142f946a1a",
-    "87447e43-69aa-4f5c-b50f-2d85181e6e2d"
+    "841d1933-7363-4f0e-935d-244473f2af1c",
+    "7548c56f-5099-4d65-97bd-5d37077a1a23",
+    "762b2159-ac70-4911-8c6b-22956c17d35f",
+    "be4191c7-25e9-436a-ae1a-fa1225893aed"
   ]
 }
