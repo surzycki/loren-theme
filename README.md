@@ -11,8 +11,10 @@ Development is connected to the development store [Piu Development](piu-test.mys
 
 All development should be done on the `development` branch as it is connected to the development store
 
+When merged to master, the production store is updated
+
 Commands:
- 
+
 ```bash
 # setup / start envionment (on host)
 bin/start
@@ -26,9 +28,10 @@ docker-compose exec dev bash
 bin/serve
 ```
 
-```bash
-# shutdown (on host)
-mutagen project terminiate 
+Password for site
+
+```
+coffee
 ```
 
 Reference theme [Dawn](https://github.com/Shopify/dawn)

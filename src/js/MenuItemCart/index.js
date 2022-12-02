@@ -33,7 +33,7 @@ const MenuItemCart = ({ label }) => {
 
   return (
     <span className={labelClass} onClick={handleClick}>
-      {label} ({productCount})
+      {label} ({productCount * 10})
     </span>
   );
 };

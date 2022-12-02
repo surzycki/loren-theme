@@ -1,14 +1,6 @@
 #!/bin/bash
 
-# Register shutdown handler
-function gracefulShutdown ()
-{
-	mutagen project terminate
-    docker-compose stop || true
-    exit 2
-}
-
-trap "gracefulShutdown" 2
-
-# Start file sync
-mutagen project start || mutagen project terminate
+docker-compose -f docker-compose.yml up --build --detach
+docker-compose exec dev yarn install
+docker-compose exec dev shopify login --store piu-test.myshopify.com
+docker-compose exec dev yarn start
