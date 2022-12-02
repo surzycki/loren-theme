@@ -1,5 +1,29 @@
 {
   "current": {
+    "checkout_logo_image": "shopify:\/\/shop_images\/logo.png",
+    "checkout_body_background_color": "#fffcf7",
+    "checkout_input_background_color_mode": "white",
+    "checkout_sidebar_background_color": "#ffffff",
+    "checkout_heading_font": "Helvetica Neue",
+    "checkout_body_font": "Open Sans",
+    "checkout_accent_color": "#222222",
+    "checkout_button_color": "#f05022",
+    "checkout_error_color": "#e22140",
+    "sections": {
+      "header": {
+        "type": "header",
+        "settings": {
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "settings": {
+        }
+      }
+    },
+    "content_for_index": [
+
+    ]
   },
   "presets": {
     "Default": {
