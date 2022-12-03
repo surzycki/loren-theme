@@ -70,6 +70,8 @@ if (containerQuantityInputs.length != 0) {
   for (var containerQuantityInput of containerQuantityInputs) {
     var quantity = Number(containerQuantityInput?.dataset?.quantity);
     var key = String(containerQuantityInput?.dataset?.key);
+    var version = String(containerQuantityInput?.dataset?.version);
+
     const quantityInput = ReactDOM.createRoot(containerQuantityInput);
     quantityInput.render(
       <QuantityInput initialQuantity={quantity} itemKey={key} />
@@ -80,10 +82,10 @@ if (containerQuantityInputs.length != 0) {
 const containerPriceDisplays = document.getElementsByTagName("price-display");
 if (containerPriceDisplays.length != 0) {
   for (var containerPriceDisplay of containerPriceDisplays) {
-    var price = String(containerPriceDisplay?.dataset?.price);
+    var value = String(containerPriceDisplay?.dataset?.value);
     var key = String(containerPriceDisplay?.dataset?.key);
     const priceDisplay = ReactDOM.createRoot(containerPriceDisplay);
-    priceDisplay.render(<PriceDisplay initialValue={price} itemKey={key} />);
+    priceDisplay.render(<PriceDisplay initialValue={value} itemKey={key} />);
   }
 }
 

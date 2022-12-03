@@ -21888,7 +21888,7 @@ menu-drawer .drawer.slide {
 }
 
 .image-banner-product {
-  background-color: #ccc8c0;
+  background-color: #f2eeeb;
   background-repeat: no-repeat;
   height: 712px;
   background-size: 1248px;
@@ -22802,7 +22802,6 @@ body::before {
   z-index: 9999999;
   background-color: #000;
   color: #fff;
-  display: none;
 }
 
 @media (min-width: 576px) {

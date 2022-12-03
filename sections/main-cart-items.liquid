@@ -35,7 +35,7 @@
                     </small>
 
                     <div id="mobile-quantity-controls-{{ item.index | plus: 1 }}" class="cart-item-quantity d-md-none pt-1">
-                        <quantity-input class="d-inline-block" data-quantity="{{ item.quantity }}" data-key="{{ item.key }}">
+                        <quantity-input class="d-inline-block" data-quantity="{{ item.quantity }}" data-key="{{ item.key }}" version="mobile">
                         </quantity-input>
 
                         <a href="{{ item.url_to_remove }}" class="btn-trash ps-1 d-inline-block">
@@ -47,17 +47,17 @@
 
 
             <div id="desktop-quantity-controls-{{ item.index | plus: 1 }}" class="cart-item-quantity col-md-3 d-none d-md-block">
-                <quantity-input class="d-inline-block" data-quantity="{{ item.quantity }}" data-key="{{ item.key }}">
+                <quantity-input class="d-inline-block" data-quantity="{{ item.quantity }}" data-key="{{ item.key }}" version="desktop">
                 </quantity-input>
 
-                <a href="{{ item.url_to_remove}}" class="btn-trash ps-2 d-inline-block">
+                <a href="{{ item.url_to_remove}}" class="btn-trash ps-md-0 ps-lg-2 d-inline-block">
                     {% render 'icon-trash' %}
                 </a>
             </div>
 
             <div class="cart-item-total col-3 col-md-2 text-end pt-2">
                 <span>€</span>
-                <price-display class="d-inline-block" data-price={{ item.final_line_price }} data-key="{{ item.key }}">
+                <price-display class="d-inline-block" data-value={{ item.final_line_price }} data-key="{{ item.key }}">
                 </price-display>
             </div>
         </div>
