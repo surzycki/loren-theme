@@ -22875,3 +22875,13 @@ dl {
 .text-no-shadow {
   text-shadow: none !important;
 }
+
+
+.cart-item__image-link {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    background-size: cover;
+    background-color: #000;
+    border-radius: 50%;
+}
